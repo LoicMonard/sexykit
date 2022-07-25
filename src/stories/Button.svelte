@@ -1,5 +1,5 @@
 <script>
-  import './button.css';
+  import './button.scss';
   import { createEventDispatcher } from 'svelte';
   /**
    * Is this the principal call to action on the page?
