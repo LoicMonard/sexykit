@@ -1,0 +1,36 @@
+@import './reset.css';
+
+@font-face {
+  font-family: "Pulp ExtraLight";
+  font-weight: 400;
+  src: url("../../static/PulpDisplay-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Pulp Light";
+  font-weight: 400;
+  src: url("../../static/PulpDisplay-Light.ttf");
+}
+@font-face {
+  font-family: "Pulp Regular";
+  font-weight: 500;
+  src: url("../../static/PulpDisplay-Regular.ttf");
+}
+@font-face {
+  font-family: "Pulp Medium";
+  font-weight: 600;
+  src: url("../../static/PulpDisplay-Medium.ttf");
+}
+@font-face {
+  font-family: "Pulp SemiBold";
+  font-weight: 700;
+  src: url("../../static/PulpDisplay-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Pulp Bold";
+  font-weight: 800;
+  src: url("../../static/PulpDisplay-Bold.ttf");
+}
+
+* {
+  font-family: 'Pulp Light';
+}

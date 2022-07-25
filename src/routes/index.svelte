@@ -8,3 +8,7 @@
 import Button from "$components/Button.svelte";
 </script>
 
+<style lang="scss">
+@import '../stories/global.scss';
+</style>
+

@@ -6,7 +6,7 @@ const config = {
 		adapter: adapter(),
 		alias: {
       $components: 'src/stories'
-    }
+    },
 	}
 };
 
