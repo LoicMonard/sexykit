@@ -1,42 +1,63 @@
 <script>
-  import './button.scss';
-  import { createEventDispatcher } from 'svelte';
-  /**
-   * Is this the principal call to action on the page?
-   */
-  export let primary = false;
+	import './button.scss';
+	import { createEventDispatcher } from 'svelte';
+	/**
+	 * Is this the principal call to action on the page?
+	 */
+	export let primary = false;
+	/**
+	 * How large should the button be?
+	 */
+	export let size = 'medium';
+	/**
+	 * Button contents
+	 */
+	export let label = '';
+	/**
+	 * Button left icon
+	 */
+	export let leftIcon = '';
+	/**
+	 * Button right icon
+	 */
+	export let rightIcon = '';
+	/**
+	 * Rounded button
+	 */
+	export let rounded = false;
+	/**
+	 * Icon button
+	 */
+	export let icon = false;
 
-  /**
-   * What background color to use
-   */
-  export let backgroundColor;
-  /**
-   * How large should the button be?
-   */
-  export let size = 'medium';
-  /**
-   * Button contents
-   */
-  export let label = '';
+	let mode = primary ? 'button--primary' : 'button--secondary';
 
-  let mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+	const dispatch = createEventDispatcher();
 
-  let style = backgroundColor ? `background-color: ${backgroundColor}` : '';
-
-  const dispatch = createEventDispatcher();
-
-  /**
-   * Optional click handler
-   */
-  function onClick(event) {
-    dispatch('click', event);
-  }
+	/**
+	 * Optional click handler
+	 */
+	function onClick(event) {
+		dispatch('click', event);
+	}
 </script>
 
 <button
-  type="button"
-  class={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-  {style}
-  on:click={onClick}>
-  {label}
+	type="button"
+	class={[
+		'button',
+		`button--${size}`,
+		mode,
+		rounded ? 'button--rounded' : '',
+		icon ? 'button--icon' : ''
+	].join(' ')}
+	on:click={onClick}
+>
+	{#if leftIcon}
+		<i class="left-icon fa-solid fa-{leftIcon}" />
+	{/if}
+	{label}
+	{#if rightIcon}
+		<i class="right-icon fa-solid fa-{rightIcon}" />
+	{/if}
 </button>

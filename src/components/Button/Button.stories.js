@@ -38,6 +38,38 @@ Secondary.args = {
   label: 'Button',
 };
 
+export const Rounded = Template.bind({});
+Rounded.args = {
+  label: 'Rounded',
+  rounded: true,
+};
+
+export const WithLeftIcon = Template.bind({});
+WithLeftIcon.args = {
+  primary: true,
+  label: 'Add',
+  leftIcon: 'add',
+};
+
+export const WithRightIcon = Template.bind({});
+WithRightIcon.args = {
+  label: 'Delete',
+  rightIcon: 'trash',
+};
+
+export const SquaredIconButton = Template.bind({});
+SquaredIconButton.args = {
+  leftIcon: 'plus',
+  icon: true,
+};
+
+export const RoundedIconButton = Template.bind({});
+RoundedIconButton.args = {
+  leftIcon: 'plus',
+  icon: true,
+  rounded: true,
+};
+
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
