@@ -5,7 +5,8 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-      $components: 'src/stories'
+      $components: 'src/components',
+      $styles: 'src/styles',
     },
 	}
 };
