@@ -1,0 +1,51 @@
+<script>
+	import './textfield.scss';
+	import { createEventDispatcher } from 'svelte';
+
+	/**
+	 * The value attached to the input
+	 */
+	export let value = '';
+	/**
+	 * Input placeholder
+	 */
+	export let placeholder = 'Recherche';
+	/**
+	 * How large should the button be?
+	 */
+	export let size = 'medium';
+	/**
+	 * Icon button
+	 */
+	export let icon = null;
+
+	const dispatch = createEventDispatcher();
+
+	const handleInput = (e) => {
+		value = e.target.value;
+		dispatch('input', e);
+	};
+
+	const handleChange = (e) => {
+		value = e.target.value;
+		dispatch('change', e);
+	};
+</script>
+
+{#if icon}
+	<i class="left-icon fa-solid fa-{icon}" />
+{/if}
+<input
+	type="text"
+	class={['textfield', `textfield--${size}`].join(' ')}
+	{placeholder}
+	{value}
+	on:click
+	on:mouseover
+	on:mouseleave
+	on:mouseenter
+	on:blur
+	on:focus
+	on:input={handleInput}
+	on:change={handleChange}
+/>
