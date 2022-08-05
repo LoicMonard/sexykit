@@ -5,9 +5,9 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		alias: {
-      $components: 'src/components',
-      $styles: 'src/styles',
-    },
+			$components: 'src/components',
+			$styles: 'src/styles'
+		}
 	}
 };
 
