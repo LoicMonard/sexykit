@@ -3,7 +3,7 @@
 .button {
 	font-family: 'Pulp Regular';
 	border: 0;
-	border-radius: 0.3em;
+	border-radius: $baseBorderRadius;
 	cursor: pointer;
 	display: inline-block;
 	line-height: 1;
