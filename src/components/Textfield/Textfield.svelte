@@ -7,6 +7,10 @@
 	 */
 	export let value = '';
 	/**
+	 * The label for the input
+	 */
+	export let label = 'Label';
+	/**
 	 * Input placeholder
 	 */
 	export let placeholder = 'Recherche';
@@ -32,20 +36,26 @@
 	};
 </script>
 
-{#if icon}
-	<i class="left-icon fa-solid fa-{icon}" />
-{/if}
-<input
-	type="text"
-	class={['textfield', `textfield--${size}`].join(' ')}
-	{placeholder}
-	{value}
-	on:click
-	on:mouseover
-	on:mouseleave
-	on:mouseenter
-	on:blur
-	on:focus
-	on:input={handleInput}
-	on:change={handleChange}
-/>
+<div class={['textfield', `textfield--${size}`].join(' ')}>
+	<label class="textfield__label" for="input">{label}</label>
+	<div class="textfield__wrapper">
+		{#if icon}
+			<i class="textfield__icon fa-solid fa-{icon}" />
+		{/if}
+		<input
+			type="text"
+			class="textfield__inner"
+			name="input"
+			{placeholder}
+			{value}
+			on:click
+			on:mouseover
+			on:mouseleave
+			on:mouseenter
+			on:blur
+			on:focus
+			on:input={handleInput}
+			on:change={handleChange}
+		/>
+	</div>
+</div>

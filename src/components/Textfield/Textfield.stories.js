@@ -5,11 +5,11 @@ import Textfield from './Textfield.svelte';
 export default {
 	title: 'Inputs/Textfield',
 	component: Textfield,
-  parameters: {
-    actions: {
-      handles: ['mouseover', 'input', 'click'],
-    },
-  },
+	parameters: {
+		actions: {
+			handles: ['mouseover', 'input', 'click']
+		}
+	},
 	argTypes: {
 		placeholder: { control: 'text' },
 		icon: { control: 'text' },
@@ -23,11 +23,25 @@ export default {
 // More on component templates: https://storybook.js.org/docs/svelte/writing-stories/introduction#using-args
 const Template = (args) => ({
 	Component: Textfield,
-	props: args,
+	props: args
 });
 
 export const Default = Template.bind({});
 Default.args = {
-	placeholder: 'Placeholder',
-	label: 'Button'
+	placeholder: 'Placeholder'
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+	placeholder: 'Enter a username',
+	icon: 'user',
+	label: 'Username'
+};
+
+export const Small = Template.bind({});
+Small.args = {
+	placeholder: 'Enter an email',
+	label: 'Email',
+	icon: 'at',
+	size: 'small'
 };

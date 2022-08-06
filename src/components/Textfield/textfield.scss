@@ -1,0 +1,58 @@
+@import '../../styles/global';
+
+.textfield {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	gap: 4px;
+	.textfield__label {
+		font-size: 14px;
+		color: $placeholderText;
+		transition: color $transitionDuration ease;
+	}
+	.textfield__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+		border: 2px solid $baseBorderColor;
+		border-radius: $baseBorderRadius;
+		padding: 6px 10px;
+		transition: border $transitionDuration ease;
+		.textfield__icon {
+			color: $placeholderText;
+			font-size: 12px;
+			transition: color $transitionDuration ease;
+		}
+		.textfield__inner {
+			font-family: 'Pulp ExtraLight';
+			font-size: 14px;
+			&::placeholder {
+				color: $placeholderText;
+				font-size: 14px;
+			}
+		}
+		&:hover {
+			border-color: $tintColor;
+		}
+		&:active,
+		&:focus-within {
+			border-color: $brandColor;
+			.textfield__icon {
+				color: $primaryText;
+			}
+		}
+	}
+	&.textfield--small {
+		.textfield__wrapper {
+			padding: 4px 6px;
+			gap: 6px;
+		}
+	}
+	&:active,
+	&:focus-within {
+		.textfield__label {
+			color: $primaryText;
+		}
+	}
+}

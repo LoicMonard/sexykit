@@ -5,12 +5,12 @@
 
 	const handleClick = (e) => {
 		console.log('click', e);
-	}
-	
+	};
+
 	const handleInput = (e) => {
 		console.log(e.detail);
 	};
-	
+
 	const handleChange = (e) => {
 		console.log(e.detail);
 	};
