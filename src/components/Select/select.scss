@@ -1,0 +1,47 @@
+@import '../../styles/global';
+
+.select {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	gap: 4px;
+	.select__wrapper {
+		position: relative;
+		.select__chevron {
+			font-size: 10px;
+			color: $placeholderText;
+			transition: all $transitionDuration ease;
+			pointer-events: none;
+		}
+		.select__options {
+			width: 100%;
+			position: absolute;
+			transform: translateY(5px);
+			z-index: 1000;
+			box-shadow: 0px 0px 12px rgba(0, 0, 0, .12);
+			.select__option {
+				font-size: 14px;
+				padding: 0 32px 0 20px;
+				position: relative;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				height: 34px;
+				line-height: 34px;
+				box-sizing: border-box;
+				cursor: pointer;
+				&:hover {
+					background-color: #f5f5f5;
+				}
+			}
+		}
+	}
+	&:focus-within {
+		.select__wrapper {
+			.select__chevron {
+				color: $primaryText;
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
