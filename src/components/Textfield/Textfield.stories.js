@@ -45,3 +45,9 @@ Small.args = {
 	icon: 'at',
 	size: 'small'
 };
+
+export const Readonly = Template.bind({});
+Readonly.args = {
+	value: 'Readonly input',
+	readonly: true
+};
