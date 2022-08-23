@@ -38,7 +38,9 @@
 	};
 
 	const selectOption = (option) => {
-		value = valueKey ? option[valueKey] : option;
+		if (!option.disabled) {
+			value = valueKey ? option[valueKey] : option;
+		}
 	};
 </script>
 
@@ -59,12 +61,17 @@
 		{#if open === true}
 			<div class="select__options" transition:fly={{ y: -10, duration: 300 }}>
 				{#each filteredOptions as option}
-					<div class="select__option" on:click={selectOption(option)}>
+					<div
+						class={['select__option', `${option.disabled ? 'select__option--disabled' : ''}`].join(
+							' '
+						)}
+						on:click={selectOption(option)}
+					>
 						<label>{option.label}</label>
 					</div>
 				{/each}
 				{#if filteredOptions.length === 0}
-					<div class="select__option select__option__empty">
+					<div class="select__option select__option--empty">
 						<label>Aucun résultat</label>
 					</div>
 				{/if}

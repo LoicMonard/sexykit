@@ -32,7 +32,14 @@
 				box-sizing: border-box;
 				color: $reguarText;
 				cursor: pointer;
-				&.select__option__empty {
+				&.select__option--disabled {
+					cursor: not-allowed;
+					color: $disabledText;
+					&:hover {
+						background: none;
+					}
+				}
+				&.select__option--empty {
 					cursor: default;
 					text-align: center;
 					color: $disabledText;
