@@ -11,7 +11,9 @@
 	export let options = [];
 	export let valueKey = null;
 
-	$: filteredOptions = options.filter((o) => o.label.includes(displayedValue));
+	$: filteredOptions = options.filter((o) =>
+		o.label.toLowerCase().includes(displayedValue.toLowerCase())
+	);
 
 	$: displayedValue = value ? (valueKey ? value[valueKey] : value.label || '') : '';
 
