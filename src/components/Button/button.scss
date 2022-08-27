@@ -7,10 +7,14 @@
 	cursor: pointer;
 	display: inline-block;
 	line-height: 1;
+	height: fit-content;
 	transition: all 0.3s ease;
 	&.button--primary {
 		color: white;
 		background-color: $brandColor;
+		i {
+			color: white;
+		}
 		&:hover {
 			background-color: lighten($brandColor, 10%);
 		}
