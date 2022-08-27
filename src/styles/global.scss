@@ -34,4 +34,22 @@
 
 * {
 	font-family: 'Pulp Light';
+	color: $primaryText;
+}
+
+h1 {
+	font-size: $h1Size;
+	font-weight: 700;
+}
+h2 {
+	font-size: $h2Size;
+	font-weight: 600;
+}
+h3 {
+	font-size: $h3Size;
+	font-weight: 500;
+}
+h4 {
+	font-size: $h4Size;
+	font-weight: 400;
 }
