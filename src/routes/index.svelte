@@ -3,45 +3,102 @@
 	import Button from '$components/Button/Button.svelte';
 	import Textfield from '$components/Textfield/Textfield.svelte';
 	import Select from '../components/Select/Select.svelte';
+	import Card from '../components/Card/Card.svelte';
+	import Container from '../components/Container/Container.svelte';
+	import Divider from '../components/Divider/Divider.svelte';
 
-	const handleClick = (e) => {
-		console.log('click', e);
-	};
-
-	const handleInput = (e) => {
-		console.log(e.detail);
-	};
-
-	const handleChange = (e) => {
-		console.log(e.detail);
-	};
-
-	const handleMouseover = (e) => {
-		console.log('mouseover');
-	};
-
-	let test = 'test';
+	const selectOptions = [
+		{
+			value: 'option1',
+			label: 'Option 1'
+		},
+		{
+			value: 'option2',
+			label: 'Option 2'
+		},
+		{
+			value: 'option3',
+			label: 'Option 3'
+		}
+	];
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-<Button primary label="Button" icon="user" on:click={handleClick} />
-<Textfield
-	bind:value={test}
-	placeholder="Search"
-	on:input={handleInput}
-	on:mouseover={handleMouseover}
-	on:change={handleChange}
-/>
-{test}
-<Select
-	placeholder="Placeholder"
-	label="Select an option"
-	options={[
-		{ value: 'option1', label: 'Option 1' },
-		{ value: 'option2', label: 'Option 2' }
-	]}
-/>
+<Container direction="column" justify="start" align="start" gap="20px" padding="20px" fullWidth>
+	<Container direction="column" justify="start" fullWidth gap="20px">
+		<h1>Button</h1>
+		<Card fullWidth>
+			<Container gap="10px">
+				<Button size="large" label="Button" />
+				<Button primary label="Button" icon="user" />
+				<Button label="Button" />
+				<Button label="Rounded" rounded />
+				<Button primary label="Add" leftIcon="add" />
+				<Button label="Delete" rightIcon="trash" />
+				<Button leftIcon="plus" icon />
+				<Button leftIcon="plus" icon rounded />
+				<Button size="small" label="Button" />
+			</Container>
+		</Card>
+	</Container>
+
+	<Container direction="column" justify="start" fullWidth gap="20px">
+		<h1>Textfield</h1>
+		<Card fullWidth>
+			<Container gap="10px">
+				<Textfield placeholder="Search" />
+				<Textfield placeholder="Enter a username" icon="user" label="Username" />
+				<Textfield placeholder="Enter an email" label="Email" icon="at" size="small" />
+				<Textfield value="Readonly input" readonly />
+			</Container>
+		</Card>
+	</Container>
+
+	<Container direction="column" justify="start" fullWidth gap="20px">
+		<h1>Select</h1>
+		<Card fullWidth>
+			<Container gap="10px">
+				<Select placeholder="Placeholder" label="Select an option" options={selectOptions} />
+				<Select
+					placeholder="Choose a fruit"
+					label="Fruit"
+					icon="lemon"
+					options={[
+						{ value: 'lemon', label: 'Lemon' },
+						{ value: 'orange', label: 'Orange' }
+					]}
+				/>
+				<Select
+					placeholder="Placeholder"
+					label="Select an option"
+					options={[
+						{ value: 'option1', label: 'Option 1' },
+						{ value: 'option2', label: 'Option 2', disabled: true },
+						{ value: 'option3', label: 'Option 3' }
+					]}
+				/>
+			</Container>
+		</Card>
+	</Container>
+
+	<Container direction="column" justify="start" fullWidth gap="20px">
+		<h1>Card</h1>
+		<Card fullWidth>
+			<Container gap="10px" fullWidth>
+				<Card>
+					<div slot="header">Card title</div>
+					<p>This is a card</p>
+				</Card>
+				<Card>
+					<p>This is a card without title</p>
+				</Card>
+				<Card fullWidth>
+					<div slot="header">Card title</div>
+					<p>This is a full width card</p>
+				</Card>
+			</Container>
+		</Card>
+	</Container>
+</Container>
 
 <style lang="scss">
 	@import '$styles/global.scss';
