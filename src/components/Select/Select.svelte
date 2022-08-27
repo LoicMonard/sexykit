@@ -65,7 +65,7 @@
 						class={['select__option', `${option.disabled ? 'select__option--disabled' : ''}`].join(
 							' '
 						)}
-						on:click={selectOption(option)}
+						on:mousedown={selectOption(option)}
 					>
 						<label>{option.label}</label>
 					</div>

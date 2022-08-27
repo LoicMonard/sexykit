@@ -2,6 +2,7 @@
 	// Import button
 	import Button from '$components/Button/Button.svelte';
 	import Textfield from '$components/Textfield/Textfield.svelte';
+	import Select from '../components/Select/Select.svelte';
 
 	const handleClick = (e) => {
 		console.log('click', e);
@@ -33,7 +34,14 @@
 	on:change={handleChange}
 />
 {test}
-<i class="fa-solid fa-user" />
+<Select
+	placeholder="Placeholder"
+	label="Select an option"
+	options={[
+		{ value: 'option1', label: 'Option 1' },
+		{ value: 'option2', label: 'Option 2' }
+	]}
+/>
 
 <style lang="scss">
 	@import '$styles/global.scss';
