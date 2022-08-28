@@ -1,0 +1,33 @@
+@import '../../styles/global';
+
+.tabs {
+	.tabs__header {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		.tabs__nav-slider {
+			position: absolute;
+			background-color: $brandColor;
+			border-radius: 50px;
+			height: 2px;
+			bottom: -1px;
+			z-index: 1;
+			transition: all 0.3s ease;
+		}
+		.tabs__nav-wrapper {
+			display: flex;
+			flex-direction: row;
+			gap: 20px;
+			border-bottom: 1px solid $baseBorderColor;
+			.tabs__nav {
+				cursor: pointer;
+				padding: 0 10px;
+				line-height: 30px;
+				color: $secondaryText;
+				&.tabs__nav--active {
+					color: $primaryText;
+				}
+			}
+		}
+	}
+}
