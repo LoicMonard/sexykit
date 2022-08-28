@@ -1,7 +1,6 @@
 <script>
 	import { getContext } from 'svelte';
 	import { onMount } from 'svelte';
-	import Button from '$components/Button/Button.svelte';
 
 	import './tab.scss';
 
@@ -9,7 +8,6 @@
 
 	const { registerTab } = getContext('registerTab');
 	const { activeTab } = getContext('activeTab');
-	const { setActiveTab } = getContext('setActiveTab');
 
 	$: active = $activeTab === $$props;
 
@@ -19,7 +17,9 @@
 </script>
 
 {#if active}
-	<div class={['tab', active ? 'tab--active' : '']}>
+	<div
+		class={['tab', active ? 'tab--active' : ''].join(' ')}
+	>
 		<slot />
 	</div>
 {/if}
