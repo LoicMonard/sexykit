@@ -15,7 +15,7 @@
 		o.label.toLowerCase().includes(displayedValue.toLowerCase())
 	);
 
-	$: displayedValue = value ? (valueKey ? value[valueKey] : value.label || '') : '';
+	$: displayedValue = value ? (valueKey ? value : value.label || '') : '';
 
 	let open = false;
 
@@ -47,6 +47,7 @@
 <div class="select">
 	<div class="select__wrapper">
 		<Textfield
+			id="test"
 			type="select"
 			bind:value={displayedValue}
 			{placeholder}
@@ -61,19 +62,19 @@
 		{#if open === true}
 			<div class="select__options" transition:fly={{ y: -10, duration: 300 }}>
 				{#each filteredOptions as option}
-					<div
+					<ul
 						class={['select__option', `${option.disabled ? 'select__option--disabled' : ''}`].join(
 							' '
 						)}
 						on:mousedown={selectOption(option)}
 					>
-						<label>{option.label}</label>
-					</div>
+						<li for="test">{option.label}</li>
+					</ul>
 				{/each}
 				{#if filteredOptions.length === 0}
-					<div class="select__option select__option--empty">
-						<label>Aucun résultat</label>
-					</div>
+					<ul class="select__option select__option--empty">
+						<li>Aucun résultat</li>
+					</ul>
 				{/if}
 			</div>
 		{/if}
