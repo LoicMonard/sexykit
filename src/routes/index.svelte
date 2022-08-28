@@ -6,6 +6,8 @@
 	import Card from '../components/Card/Card.svelte';
 	import Container from '../components/Container/Container.svelte';
 	import Divider from '../components/Divider/Divider.svelte';
+	import Tabs from '../components/Tabs/Tabs.svelte';
+	import Tab from '../components/Tabs/Tab.svelte';
 
 	const selectOptions = [
 		{
@@ -28,7 +30,7 @@
 		<h1>Button</h1>
 		<Card fullWidth>
 			<Container gap="10px">
-				<Button size="large" label="Button" />
+				<Button size="large" label="Large" />
 				<Button primary label="Button" icon="user" />
 				<Button label="Button" />
 				<Button label="Rounded" rounded />
@@ -36,7 +38,7 @@
 				<Button label="Delete" rightIcon="trash" />
 				<Button leftIcon="plus" icon />
 				<Button leftIcon="plus" icon rounded />
-				<Button size="small" label="Button" />
+				<Button size="small" label="Small" />
 			</Container>
 		</Card>
 	</Container>
@@ -62,6 +64,7 @@
 					placeholder="Choose a fruit"
 					label="Fruit"
 					icon="lemon"
+					valueKey="label"
 					options={[
 						{ value: 'lemon', label: 'Lemon' },
 						{ value: 'orange', label: 'Orange' }
@@ -96,6 +99,24 @@
 					<p>This is a full width card</p>
 				</Card>
 			</Container>
+		</Card>
+	</Container>
+
+	<Container direction="column" justify="start" fullWidth gap="20px">
+		<h1>Divider</h1>
+		<Card fullWidth>
+			<Divider />
+		</Card>
+	</Container>
+
+	<Container direction="column" justify="start" fullWidth gap="20px">
+		<h1>Tabs</h1>
+		<Card fullWidth>
+			<Tabs>
+				<Tab name="First tab">Content of the first tab</Tab>
+				<Tab name="Second tab">Content of the second tab</Tab>
+				<Tab name="Third tab">Content of the third tab</Tab>
+			</Tabs>
 		</Card>
 	</Container>
 </Container>
