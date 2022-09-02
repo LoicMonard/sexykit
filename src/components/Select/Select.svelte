@@ -63,9 +63,15 @@
 			<div class="select__options" transition:fly={{ y: -10, duration: 300 }}>
 				{#each filteredOptions as option}
 					<ul
-						class={['select__option', `${option.disabled ? 'select__option--disabled' : ''}`].join(
-							' '
-						)}
+						class={[
+							'select__option',
+							`${option.disabled ? 'select__option--disabled' : ''}`,
+							`${
+								(valueKey ? option[valueKey] : option) === tmpValue
+									? 'select__option--selected'
+									: ''
+							}`
+						].join(' ')}
 						on:mousedown={selectOption(option)}
 					>
 						<li for="test">{option.label}</li>
