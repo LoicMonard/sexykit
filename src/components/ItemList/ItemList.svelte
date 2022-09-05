@@ -2,21 +2,35 @@
 	import './itemlist.scss';
 	import { fly } from 'svelte/transition';
 	import { createEventDispatcher } from 'svelte';
-  
-  export let items = [];
 
-  export let itemLabel = 'label';
-
-  export let noResultText = 'Pas de résultat';
-
+	/**
+	 * The items of the list
+	 */
+	export let items = [];
+	/**
+	 * The key of the desired displayed value of the items
+	 */
+	export let itemLabel = 'label';
+	/**
+	 * The text displayed when the list is empty
+	 */
+	export let noResultText = 'Pas de résultat';
+	/**
+	 * The list of the selected items, used to set the selected class
+	 */
 	export let selectedItems = [];
-
-  const dispatch = createEventDispatcher();
-
-  const handleMousedown = (e) => {
-    dispatch('mousedown', e);
-  };
-  
+	/**
+	 * An event dispatcher
+	 */
+	const dispatch = createEventDispatcher();
+	/**
+	 * A function that dispatches the mousedown event
+	 * 
+	 * @param e contains the clicked item
+	 */
+	const handleMousedown = (e) => {
+		dispatch('mousedown', e);
+	};
 </script>
 
 <div class="itemlist">
@@ -33,9 +47,9 @@
 				<li for="test">{item[itemLabel]}</li>
 			</ul>
 		{/each}
-		{#if !items.length }
+		{#if !items.length}
 			<ul class="itemlist__option itemlist__option--empty">
-				<li>{ noResultText }</li>
+				<li>{noResultText}</li>
 			</ul>
 		{/if}
 	</div>
