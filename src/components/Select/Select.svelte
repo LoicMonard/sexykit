@@ -42,7 +42,7 @@
 	 * A temporary value to keep the state while
 	 * searching in the input
 	 */
-	let tmpValue;
+	let tmpValue = '';
 	/**
 	 * A temporary placeholder to keep the state while
 	 * searching in the input
@@ -117,6 +117,7 @@
 	};
 </script>
 
+{ valueKey }
 <div class="select">
 	<div class="select__wrapper">
 		<Textfield
