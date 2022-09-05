@@ -1,7 +1,8 @@
 <script>
-	import { fly } from 'svelte/transition';
 	import './select.scss';
 	import Textfield from '../Textfield/Textfield.svelte';
+	import ItemList from '../ItemList/ItemList.svelte';
+	import { createEventDispatcher, tick } from 'svelte';
 
 	export let value = '';
 	export let label = 'Label';
@@ -15,7 +16,9 @@
 		o.label.toLowerCase().includes(displayedValue.toLowerCase())
 	);
 
-	$: displayedValue = value ? (valueKey ? value : value.label || '') : '';
+	$: displayedValue = value ? (valueKey ? value[valueKey] : value.label || '') : '';
+
+	$: returnedValue = valueKey ? value[valueKey] : value;
 
 	let open = false;
 
@@ -36,11 +39,16 @@
 		}
 		open = bool;
 	};
+	
+	const dispatch = createEventDispatcher();
 
-	const selectOption = (option) => {
+	const selectOption = async (e) => {
+		const option = e.detail;
 		if (!option.disabled) {
-			value = valueKey ? option[valueKey] : option;
+			value = option;
 		}
+		await tick();
+		dispatch('change', returnedValue);
 	};
 </script>
 
@@ -60,29 +68,12 @@
 			<i class="select__chevron fa-solid fa-chevron-down" />
 		</Textfield>
 		{#if open === true}
-			<div class="select__options" transition:fly={{ y: -10, duration: 300 }}>
-				{#each filteredOptions as option}
-					<ul
-						class={[
-							'select__option',
-							`${option.disabled ? 'select__option--disabled' : ''}`,
-							`${
-								(valueKey ? option[valueKey] : option) === tmpValue
-									? 'select__option--selected'
-									: ''
-							}`
-						].join(' ')}
-						on:mousedown={selectOption(option)}
-					>
-						<li for="test">{option.label}</li>
-					</ul>
-				{/each}
-				{#if filteredOptions.length === 0}
-					<ul class="select__option select__option--empty">
-						<li>Aucun résultat</li>
-					</ul>
-				{/if}
-			</div>
+			<ItemList
+				items={filteredOptions}
+				selectedItems={[tmpValue]}
+				noResultText="Aucun résultat"
+				on:mousedown={selectOption}
+			/>
 		{/if}
 	</div>
 </div>

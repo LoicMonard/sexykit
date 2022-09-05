@@ -1,5 +1,4 @@
 <script>
-	// Import button
 	import Button from '$components/Button/Button.svelte';
 	import Textfield from '$components/Textfield/Textfield.svelte';
 	import Select from '../components/Select/Select.svelte';
@@ -59,8 +58,14 @@
 		<h1>Select</h1>
 		<Card fullWidth>
 			<Container gap="10px">
-				<Select placeholder="Placeholder" label="Select an option" options={selectOptions} />
 				<Select
+					placeholder="Placeholder"
+					label="Select an option"
+					options={selectOptions}
+					on:change={(e) => console.log(e.detail)}
+				/>
+				<Select
+					on:change={(e) => console.log(e.detail)}
 					placeholder="Choose a fruit"
 					label="Fruit"
 					icon="lemon"
