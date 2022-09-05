@@ -31,29 +31,53 @@
 	 */
 	export let readonly = false;
 
-	const dispatch = createEventDispatcher();
-
+	/**
+	 * The input dom element
+	 */
 	let input;
 
-	export const toggleInput = async (e) => {
-		e.preventDefault();
+	/**
+	 * An event dispatcher
+	 */
+	const dispatch = createEventDispatcher();
+
+	/**
+	 * A function that is called when the wrapper of the input is clicked.
+	 * Triggers a focus or a blur on the input depending on the current state
+	 *
+	 */
+	export const toggleInput = async () => {
 		if (input === document.activeElement) {
 			input.blur();
 		} else if (input !== document.activeElement) {
 			input.focus();
 		}
 	};
-
+	/**
+	 * A function that updates the value of the input and dispatch the input
+	 * event
+	 *
+	 * @param e
+	 */
 	const handleInput = (e) => {
 		value = e.target.value;
 		dispatch('input', e);
 	};
-
+	/**
+	 * A function that updates the value of the input and dispatch the change
+	 * event
+	 *
+	 * @param e
+	 */
 	const handleChange = (e) => {
 		value = e.target.value;
 		dispatch('change', e);
 	};
-
+	/**
+	 * A function that dispatch the focus event if the input isn't readonly
+	 *
+	 * @param e
+	 */
 	const handleFocus = (e) => {
 		if (readonly) {
 			e.target.blur();
@@ -67,7 +91,7 @@
 	class={['textfield', `textfield--${size}`, `${readonly ? 'textfield--readonly' : ''}`].join(' ')}
 >
 	<label class="textfield__label" for="input">{label}</label>
-	<div class="textfield__wrapper" on:mousedown={toggleInput}>
+	<div class="textfield__wrapper" on:mousedown|preventDefault={toggleInput}>
 		{#if icon}
 			<i class="textfield__icon fa-solid fa-{icon}" />
 		{/if}
