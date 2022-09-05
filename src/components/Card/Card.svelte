@@ -1,11 +1,13 @@
 <script>
 	import './card.scss';
 
+	/**
+	 * If the card should take the full width of its container
+	 */
 	export let fullWidth = false;
 </script>
 
 <div class="card" style={fullWidth ? 'width: 100%;' : 'width: fit-content'}>
-	<!-- Title slot -->
 	{#if $$slots.header}
 		<div class="card--header">
 			<slot name="header" />
