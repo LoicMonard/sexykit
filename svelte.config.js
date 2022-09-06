@@ -6,7 +6,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			$components: 'src/components',
-			$styles: 'src/styles'
+			$styles: 'src/styles',
+			$utils: 'src/utils'
 		}
 	}
 };
