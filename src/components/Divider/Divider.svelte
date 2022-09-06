@@ -3,7 +3,7 @@
 
 	/**
 	 * The vertical margin of the divider
-	*/
+	 */
 	export let margin = '0px';
 </script>
 

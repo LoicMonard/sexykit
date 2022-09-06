@@ -117,7 +117,6 @@
 	};
 </script>
 
-{ valueKey }
 <div class="select">
 	<div class="select__wrapper">
 		<Textfield
