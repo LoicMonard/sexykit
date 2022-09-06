@@ -1,7 +1,9 @@
 @import '../../styles/global';
 
 .itemlist {
+	position: relative;
 	.itemlist__options {
+		min-width: fit-content;
 		width: 100%;
 		background-color: #fff;
 		position: absolute;
