@@ -1,12 +1,13 @@
 <script>
 	import Button from '$components/Button/Button.svelte';
 	import Textfield from '$components/Textfield/Textfield.svelte';
-	import Select from '../components/Select/Select.svelte';
-	import Card from '../components/Card/Card.svelte';
-	import Container from '../components/Container/Container.svelte';
-	import Divider from '../components/Divider/Divider.svelte';
-	import Tabs from '../components/Tabs/Tabs.svelte';
-	import Tab from '../components/Tabs/Tab.svelte';
+	import Select from '$components/Select/Select.svelte';
+	import Card from '$components/Card/Card.svelte';
+	import Container from '$components/Container/Container.svelte';
+	import Divider from '$components/Divider/Divider.svelte';
+	import Tabs from '$components/Tabs/Tabs.svelte';
+	import Tab from '$components/Tabs/Tab.svelte';
+	import Dropdown from '$components/Dropdown/Dropdown.svelte';
 
 	const selectOptions = [
 		{
@@ -117,11 +118,41 @@
 	<Container direction="column" justify="start" fullWidth gap="20px">
 		<h1>Tabs</h1>
 		<Card fullWidth>
-			<Tabs>
-				<Tab name="First tab">Content of the first tab</Tab>
-				<Tab name="Second tab">Content of the second tab</Tab>
-				<Tab name="Third tab">Content of the third tab</Tab>
-			</Tabs>
+			<Container gap="10px" fullWidth>
+				<Tabs>
+					<Tab name="First tab">Content of the first tab</Tab>
+					<Tab name="Second tab">Content of the second tab</Tab>
+					<Tab name="Third tab">Content of the third tab</Tab>
+				</Tabs>
+			</Container>
+		</Card>
+	</Container>
+
+	<Container direction="column" justify="start" fullWidth gap="20px">
+		<h1>Dropdown</h1>
+		<Card fullWidth>
+			<Container gap="10px" fullWidth>
+				<Dropdown
+					on:change={(e) => console.log(e.detail)}
+					items={[
+						{ value: 'option1', label: 'Action 1' },
+						{ value: 'option2', label: 'Action 2', disabled: true },
+						{ value: 'option3', label: 'Action 3' }
+					]}
+				>
+					<Button label="Dropdown" />
+				</Dropdown>
+				<Dropdown
+					on:change={(e) => console.log(e.detail)}
+					items={[
+						{ value: 'option1', label: 'Action 1' },
+						{ value: 'option2', label: 'Action 2', disabled: true },
+						{ value: 'option3', label: 'Action 3' }
+					]}
+				>
+					<Button leftIcon="plus" icon />
+				</Dropdown>
+			</Container>
 		</Card>
 	</Container>
 </Container>
