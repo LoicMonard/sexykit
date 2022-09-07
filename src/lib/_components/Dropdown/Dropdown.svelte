@@ -1,7 +1,7 @@
 <script>
 	import './dropdown.scss';
 	import { createEventDispatcher, tick } from 'svelte';
-	import { clickOutside } from '$utils/functions';
+	import { clickOutside } from '../../_utils/functions';
 	import ItemList from '../ItemList/ItemList.svelte';
 
 	/**
