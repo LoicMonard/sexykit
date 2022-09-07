@@ -1,13 +1,13 @@
 <script>
-	import Button from '$components/Button/Button.svelte';
-	import Textfield from '$components/Textfield/Textfield.svelte';
-	import Select from '$components/Select/Select.svelte';
-	import Card from '$components/Card/Card.svelte';
-	import Container from '$components/Container/Container.svelte';
-	import Divider from '$components/Divider/Divider.svelte';
-	import Tabs from '$components/Tabs/Tabs.svelte';
-	import Tab from '$components/Tabs/Tab.svelte';
-	import Dropdown from '$components/Dropdown/Dropdown.svelte';
+	import Button from '$lib/_components/Button/Button.svelte';
+	import Textfield from '$lib/_components/Textfield/Textfield.svelte';
+	import Select from '$lib/_components/Select/Select.svelte';
+	import Card from '$lib/_components/Card/Card.svelte';
+	import Container from '$lib/_components/Container/Container.svelte';
+	import Divider from '$lib/_components/Divider/Divider.svelte';
+	import Tabs from '$lib/_components/Tabs/Tabs.svelte';
+	import Tab from '$lib/_components/Tabs/Tab.svelte';
+	import Dropdown from '$lib/_components/Dropdown/Dropdown.svelte';
 
 	const selectOptions = [
 		{
@@ -158,5 +158,4 @@
 </Container>
 
 <style lang="scss">
-	@import '$styles/global.scss';
 </style>
