@@ -1,4 +1,4 @@
-import Textfield from './Textfield.svelte';
+import Textfield from '../../lib/_components/Textfield/Textfield.svelte';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 // More on argTypes: https://storybook.js.org/docs/svelte/api/argtypes

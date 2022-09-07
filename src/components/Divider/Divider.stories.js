@@ -1,4 +1,4 @@
-import Divider from './Divider.svelte';
+import Divider from '../../lib/_components/Divider/Divider.svelte';
 
 export default {
 	title: 'Components/Divider',

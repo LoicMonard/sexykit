@@ -1,4 +1,4 @@
-import Select from './Select.svelte';
+import Select from '../../lib/_components/Select/Select.svelte';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 // More on argTypes: https://storybook.js.org/docs/svelte/api/argtypes

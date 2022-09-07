@@ -1,4 +1,4 @@
-import Card from './Card.svelte';
+import Card from '../../lib/_components/Card/Card.svelte';
 
 export default {
 	title: 'Components/Card',
