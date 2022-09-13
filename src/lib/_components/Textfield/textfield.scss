@@ -39,7 +39,7 @@
 		&:focus-within {
 			border-color: $brandColor;
 			.textfield__icon {
-				color: $primaryText;
+				color: $brandColor;
 			}
 		}
 	}
