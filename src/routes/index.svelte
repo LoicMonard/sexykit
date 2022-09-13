@@ -8,6 +8,11 @@
 	import Tabs from '$lib/_components/Tabs/Tabs.svelte';
 	import Tab from '$lib/_components/Tabs/Tab.svelte';
 	import Dropdown from '$lib/_components/Dropdown/Dropdown.svelte';
+	import Header from '$lib/_components/Header/Header.svelte';
+	import Text from '$lib/_components/Text/Text.svelte';
+
+	import Logo from '../static/SexykitLogoName.png';
+	import Slogan from '../static/SexykitSlogan.png';
 
 	const selectOptions = [
 		{
@@ -25,7 +30,20 @@
 	];
 </script>
 
-<Container direction="column" justify="start" align="start" gap="20px" padding="20px" fullWidth>
+<Header>
+	<Container class="header--container" direction="row" align="center" justify="space-between" fullWidth fullHeight>
+		<Container class="header--left" align="center" gap="10px" fullHeight>
+			<img src={Logo} alt="Sexykit logo" class="header__logo" />
+			<img src={Slogan} alt="Sexykit logo" class="header__slogan" />
+		</Container>
+		<Container class="header--right" align="center" gap="10px">
+			<Text color="#EE6783" italic>v0.0.1</Text>
+			<Button primary label="Let's go"></Button>
+		</Container>
+	</Container>
+</Header>
+
+<Container direction="column" justify="start" align="start" gap="20px" padding="20px" fullWidth style="margin-top: 64px">
 	<Container direction="column" justify="start" fullWidth gap="20px">
 		<h1>Button</h1>
 		<Card fullWidth>
