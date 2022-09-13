@@ -1,0 +1,19 @@
+@import '../../_styles/global';
+
+.text {
+  &.text--regular {
+    font-size: 14px;
+  }
+  &.text--small {
+    font-size: 12px;
+  }
+  &.text--large {
+    font-size: 16px;
+  }
+  &.text--bold {
+    font-weight: bold;
+  }
+  &.text--italic {
+    font-style: italic;
+  }
+}
