@@ -31,147 +31,168 @@
 </script>
 
 <Header>
-	<Container class="header--container" direction="row" align="center" justify="space-between" fullWidth fullHeight>
-		<Container class="header--left" align="center" gap="10px" fullHeight>
-			<img src={Logo} alt="Sexykit logo" class="header__logo" />
-			<img src={Slogan} alt="Sexykit logo" class="header__slogan" />
-		</Container>
-		<Container class="header--right" align="center" gap="10px">
-			<Text color="#EE6783" italic>v0.0.1</Text>
-			<Button primary label="Let's go"></Button>
+	<Container fullWidth justify="center" fullHeight>
+		<Container
+			class="header--container"
+			direction="row"
+			align="center"
+			justify="space-between"
+			fullWidth
+			fullHeight
+			maxWidth="1280px"
+		>
+			<Container class="header--left" align="center" gap="10px" fullHeight>
+				<img src={Logo} alt="Sexykit logo" class="header__logo" />
+				<img src={Slogan} alt="Sexykit logo" class="header__slogan" />
+			</Container>
+			<Container class="header--right" align="center" gap="10px">
+				<Text color="#EE6783" italic>v0.0.1</Text>
+				<Button primary label="Let's go" />
+			</Container>
 		</Container>
 	</Container>
 </Header>
 
-<Container direction="column" justify="start" align="start" gap="20px" padding="20px" fullWidth style="margin-top: 64px">
-	<Container direction="column" justify="start" fullWidth gap="20px">
-		<h1>Button</h1>
-		<Card fullWidth>
-			<Container gap="10px">
-				<Button size="large" label="Large" />
-				<Button primary label="Button" icon="user" />
-				<Button label="Button" />
-				<Button label="Rounded" rounded />
-				<Button primary label="Add" leftIcon="add" />
-				<Button label="Delete" rightIcon="trash" />
-				<Button leftIcon="plus" icon />
-				<Button leftIcon="plus" icon rounded />
-				<Button size="small" label="Small" />
-			</Container>
-		</Card>
-	</Container>
-
-	<Container direction="column" justify="start" fullWidth gap="20px">
-		<h1>Textfield</h1>
-		<Card fullWidth>
-			<Container gap="10px">
-				<Textfield placeholder="Search" />
-				<Textfield placeholder="Enter a username" icon="user" label="Username" />
-				<Textfield placeholder="Enter an email" label="Email" icon="at" size="small" />
-				<Textfield value="Readonly input" readonly />
-			</Container>
-		</Card>
-	</Container>
-
-	<Container direction="column" justify="start" fullWidth gap="20px">
-		<h1>Select</h1>
-		<Card fullWidth>
-			<Container gap="10px">
-				<Select
-					placeholder="Placeholder"
-					label="Select an option"
-					options={selectOptions}
-					on:change={(e) => console.log(e.detail)}
-				/>
-				<Select
-					on:change={(e) => console.log(e.detail)}
-					placeholder="Choose a fruit"
-					label="Fruit"
-					icon="lemon"
-					valueKey="label"
-					options={[
-						{ value: 'lemon', label: 'Lemon' },
-						{ value: 'orange', label: 'Orange' }
-					]}
-				/>
-				<Select
-					placeholder="Placeholder"
-					label="Select an option"
-					options={[
-						{ value: 'option1', label: 'Option 1' },
-						{ value: 'option2', label: 'Option 2', disabled: true },
-						{ value: 'option3', label: 'Option 3' }
-					]}
-				/>
-			</Container>
-		</Card>
-	</Container>
-
-	<Container direction="column" justify="start" fullWidth gap="20px">
-		<h1>Card</h1>
-		<Card fullWidth>
-			<Container gap="10px" fullWidth>
-				<Card>
-					<div slot="header">Card title</div>
-					<p>This is a card</p>
-				</Card>
-				<Card>
-					<p>This is a card without title</p>
-				</Card>
-				<Card fullWidth>
-					<div slot="header">Card title</div>
-					<p>This is a full width card</p>
-				</Card>
-			</Container>
-		</Card>
-	</Container>
-
-	<Container direction="column" justify="start" fullWidth gap="20px">
-		<h1>Divider</h1>
-		<Card fullWidth>
-			<Divider />
-		</Card>
-	</Container>
-
-	<Container direction="column" justify="start" fullWidth gap="20px">
-		<h1>Tabs</h1>
-		<Card fullWidth>
-			<Container gap="10px" fullWidth>
-				<Tabs>
-					<Tab name="First tab">Content of the first tab</Tab>
-					<Tab name="Second tab">Content of the second tab</Tab>
-					<Tab name="Third tab">Content of the third tab</Tab>
-				</Tabs>
-			</Container>
-		</Card>
-	</Container>
-
-	<Container direction="column" justify="start" fullWidth gap="20px">
-		<h1>Dropdown</h1>
-		<Card fullWidth>
-			<Container gap="10px" fullWidth>
-				<Dropdown
-					on:change={(e) => console.log(e.detail)}
-					items={[
-						{ value: 'option1', label: 'Action 1' },
-						{ value: 'option2', label: 'Action 2', disabled: true },
-						{ value: 'option3', label: 'Action 3' }
-					]}
-				>
-					<Button label="Dropdown" />
-				</Dropdown>
-				<Dropdown
-					on:change={(e) => console.log(e.detail)}
-					items={[
-						{ value: 'option1', label: 'Action 1' },
-						{ value: 'option2', label: 'Action 2', disabled: true },
-						{ value: 'option3', label: 'Action 3' }
-					]}
-				>
+<Container fullWidth justify="center">
+	<Container
+		direction="column"
+		justify="start"
+		align="start"
+		gap="20px"
+		padding="20px"
+		fullWidth
+		maxWidth="1280px"
+		style="margin-top: 64px"
+	>
+		<Container direction="column" justify="start" fullWidth gap="20px">
+			<h1>Button</h1>
+			<Card fullWidth>
+				<Container gap="10px">
+					<Button size="large" label="Large" />
+					<Button primary label="Button" icon="user" />
+					<Button label="Button" />
+					<Button label="Rounded" rounded />
+					<Button primary label="Add" leftIcon="add" />
+					<Button label="Delete" rightIcon="trash" />
 					<Button leftIcon="plus" icon />
-				</Dropdown>
-			</Container>
-		</Card>
+					<Button leftIcon="plus" icon rounded />
+					<Button size="small" label="Small" />
+				</Container>
+			</Card>
+		</Container>
+
+		<Container direction="column" justify="start" fullWidth gap="20px">
+			<h1>Textfield</h1>
+			<Card fullWidth>
+				<Container gap="10px">
+					<Textfield placeholder="Search" />
+					<Textfield placeholder="Enter a username" icon="user" label="Username" />
+					<Textfield placeholder="Enter an email" label="Email" icon="at" size="small" />
+					<Textfield value="Readonly input" readonly />
+				</Container>
+			</Card>
+		</Container>
+
+		<Container direction="column" justify="start" fullWidth gap="20px">
+			<h1>Select</h1>
+			<Card fullWidth>
+				<Container gap="10px">
+					<Select
+						placeholder="Placeholder"
+						label="Select an option"
+						options={selectOptions}
+						on:change={(e) => console.log(e.detail)}
+					/>
+					<Select
+						on:change={(e) => console.log(e.detail)}
+						placeholder="Choose a fruit"
+						label="Fruit"
+						icon="lemon"
+						valueKey="label"
+						options={[
+							{ value: 'lemon', label: 'Lemon' },
+							{ value: 'orange', label: 'Orange' }
+						]}
+					/>
+					<Select
+						placeholder="Placeholder"
+						label="Select an option"
+						options={[
+							{ value: 'option1', label: 'Option 1' },
+							{ value: 'option2', label: 'Option 2', disabled: true },
+							{ value: 'option3', label: 'Option 3' }
+						]}
+					/>
+				</Container>
+			</Card>
+		</Container>
+
+		<Container direction="column" justify="start" fullWidth gap="20px">
+			<h1>Card</h1>
+			<Card fullWidth>
+				<Container gap="10px" fullWidth>
+					<Card>
+						<div slot="header">Card title</div>
+						<p>This is a card</p>
+					</Card>
+					<Card>
+						<p>This is a card without title</p>
+					</Card>
+					<Card fullWidth>
+						<div slot="header">Card title</div>
+						<p>This is a full width card</p>
+					</Card>
+				</Container>
+			</Card>
+		</Container>
+
+		<Container direction="column" justify="start" fullWidth gap="20px">
+			<h1>Divider</h1>
+			<Card fullWidth>
+				<Divider />
+			</Card>
+		</Container>
+
+		<Container direction="column" justify="start" fullWidth gap="20px">
+			<h1>Tabs</h1>
+			<Card fullWidth>
+				<Container gap="10px" fullWidth>
+					<Tabs>
+						<Tab name="First tab">Content of the first tab</Tab>
+						<Tab name="Second tab">Content of the second tab</Tab>
+						<Tab name="Third tab">Content of the third tab</Tab>
+					</Tabs>
+				</Container>
+			</Card>
+		</Container>
+
+		<Container direction="column" justify="start" fullWidth gap="20px">
+			<h1>Dropdown</h1>
+			<Card fullWidth>
+				<Container gap="10px" fullWidth>
+					<Dropdown
+						on:change={(e) => console.log(e.detail)}
+						items={[
+							{ value: 'option1', label: 'Action 1' },
+							{ value: 'option2', label: 'Action 2', disabled: true },
+							{ value: 'option3', label: 'Action 3' }
+						]}
+					>
+						<Button label="Dropdown" />
+					</Dropdown>
+					<Dropdown
+						on:change={(e) => console.log(e.detail)}
+						items={[
+							{ value: 'option1', label: 'Action 1' },
+							{ value: 'option2', label: 'Action 2', disabled: true },
+							{ value: 'option3', label: 'Action 3' }
+						]}
+					>
+						<Button leftIcon="plus" icon />
+					</Dropdown>
+				</Container>
+			</Card>
+		</Container>
 	</Container>
 </Container>
 

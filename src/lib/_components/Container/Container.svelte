@@ -24,7 +24,11 @@
 	/**
 	 * If the container should take the full height of its container
 	 */
-	 export let fullHeight = false;
+	export let fullHeight = false;
+	/**
+	 * The max width of the container
+	 */
+	export let maxWidth = '100%';
 	/**
 	 * The padding of the container
 	 */
@@ -41,6 +45,7 @@
 		padding: {padding}; 
 		width: {fullWidth ? '100%' : 'fit-content'};
 		height: {fullHeight ? '100%' : 'fit-content'};
+		max-width: {maxWidth};
 	"
 >
 	<slot />
