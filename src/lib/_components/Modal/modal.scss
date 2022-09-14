@@ -1,0 +1,30 @@
+@import '../../_styles/global';
+
+.modal {
+	.modal__content-wrapper {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.modal__overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: #000;
+			opacity: 0.5;
+      z-index: -1;
+		}
+		.modal__content {
+			background-color: $baseBackground;
+			border-radius: 4px;
+			padding: 32px;
+		}
+	}
+}
