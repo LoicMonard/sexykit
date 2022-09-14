@@ -2,6 +2,10 @@
 	import './container.scss';
 
 	/**
+	 * The id of the component
+	 */
+	export let id;
+	/**
 	 * The direction of the container
 	 */
 	export let direction = 'row';
@@ -35,11 +39,12 @@
 	export let padding = '0px';
 	/**
 	 * Additionnal style added to the container
-	*/
+	 */
 	export let style = '';
 </script>
 
 <div
+	{id}
 	class="container"
 	style="
 		flex-direction: {direction};

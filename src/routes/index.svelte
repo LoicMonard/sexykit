@@ -10,9 +10,57 @@
 	import Dropdown from '$lib/_components/Dropdown/Dropdown.svelte';
 	import Header from '$lib/_components/Header/Header.svelte';
 	import Text from '$lib/_components/Text/Text.svelte';
+	import Modal from '$lib/_components/Modal/Modal.svelte';
 
 	import Logo from '../static/SexykitLogoName.png';
 	import Slogan from '../static/SexykitSlogan.png';
+
+	const indexCategories = [
+		{
+			label: 'Button',
+			value: 'button'
+		},
+		{
+			label: 'Textfield',
+			value: 'textfield'
+		},
+		{
+			label: 'Select',
+			value: 'select'
+		},
+		{
+			label: 'Card',
+			value: 'card'
+		},
+		{
+			label: 'Container',
+			value: 'container'
+		},
+		{
+			label: 'Divider',
+			value: 'divider'
+		},
+		{
+			label: 'Tabs',
+			value: 'tabs'
+		},
+		{
+			label: 'Dropdown',
+			value: 'dropdown'
+		},
+		{
+			label: 'Header',
+			value: 'header'
+		},
+		{
+			label: 'Text',
+			value: 'text'
+		},
+		{
+			label: 'Modal',
+			value: 'modal'
+		}
+	];
 
 	const selectOptions = [
 		{
@@ -44,6 +92,12 @@
 			<Container class="header--left" align="center" gap="10px" fullHeight>
 				<img src={Logo} alt="Sexykit logo" class="header__logo" />
 				<img src={Slogan} alt="Sexykit logo" class="header__slogan" />
+				<Select
+					placeholder="Placeholder"
+					options={indexCategories}
+					valueKey="value"
+					on:change={(e) => window.scroll({top :document.getElementById(e.detail).offsetTop - 74, behavior: 'smooth'})}
+				/>
 			</Container>
 			<Container class="header--right" align="center" gap="10px">
 				<Text color="#EE6783" italic>v0.0.1</Text>
@@ -53,7 +107,7 @@
 	</Container>
 </Header>
 
-<Container fullWidth justify="center" style={"margin-top: 64px"}>
+<Container fullWidth justify="center" style={'margin-top: 64px'}>
 	<Container
 		direction="column"
 		justify="start"
@@ -63,7 +117,7 @@
 		fullWidth
 		maxWidth="1280px"
 	>
-		<Container direction="column" justify="start" fullWidth gap="20px">
+		<Container direction="column" justify="start" fullWidth gap="20px" id="button">
 			<h1>Button</h1>
 			<Card fullWidth>
 				<Container gap="10px">
@@ -80,19 +134,19 @@
 			</Card>
 		</Container>
 
-		<Container direction="column" justify="start" fullWidth gap="20px">
+		<Container direction="column" justify="start" fullWidth gap="20px" id="textfield">
 			<h1>Textfield</h1>
 			<Card fullWidth>
 				<Container gap="10px">
-					<Textfield placeholder="Search" />
+					<Textfield placeholder="Search" label="Label" />
 					<Textfield placeholder="Enter a username" icon="user" label="Username" />
 					<Textfield placeholder="Enter an email" label="Email" icon="at" size="small" />
-					<Textfield value="Readonly input" readonly />
+					<Textfield value="Readonly input" label="Readonly input" readonly />
 				</Container>
 			</Card>
 		</Container>
 
-		<Container direction="column" justify="start" fullWidth gap="20px">
+		<Container direction="column" justify="start" fullWidth gap="20px" id="select">
 			<h1>Select</h1>
 			<Card fullWidth>
 				<Container gap="10px">
@@ -115,7 +169,7 @@
 					/>
 					<Select
 						placeholder="Placeholder"
-						label="Select an option"
+						label="Disabled option"
 						options={[
 							{ value: 'option1', label: 'Option 1' },
 							{ value: 'option2', label: 'Option 2', disabled: true },
@@ -126,16 +180,22 @@
 			</Card>
 		</Container>
 
-		<Container direction="column" justify="start" fullWidth gap="20px">
+		<Container direction="column" justify="start" fullWidth gap="20px" id="card">
 			<h1>Card</h1>
 			<Card fullWidth>
 				<Container gap="10px" fullWidth>
 					<Card>
 						<div slot="header">Card title</div>
-						<p>This is a card</p>
+						<p>This is a card with a title</p>
 					</Card>
 					<Card>
 						<p>This is a card without title</p>
+					</Card>
+					<Card shadow="always">
+						<p>This is a card with a persistent shadow</p>
+					</Card>
+					<Card shadow="never">
+						<p>This is a card without any shadow</p>
 					</Card>
 					<Card fullWidth>
 						<div slot="header">Card title</div>
@@ -145,14 +205,14 @@
 			</Card>
 		</Container>
 
-		<Container direction="column" justify="start" fullWidth gap="20px">
+		<Container direction="column" justify="start" fullWidth gap="20px" id="divider">
 			<h1>Divider</h1>
 			<Card fullWidth>
 				<Divider />
 			</Card>
 		</Container>
 
-		<Container direction="column" justify="start" fullWidth gap="20px">
+		<Container direction="column" justify="start" fullWidth gap="20px" id="tabs">
 			<h1>Tabs</h1>
 			<Card fullWidth>
 				<Container gap="10px" fullWidth>
@@ -165,7 +225,7 @@
 			</Card>
 		</Container>
 
-		<Container direction="column" justify="start" fullWidth gap="20px">
+		<Container direction="column" justify="start" fullWidth gap="20px" id="dropdown">
 			<h1>Dropdown</h1>
 			<Card fullWidth>
 				<Container gap="10px" fullWidth>
@@ -193,21 +253,35 @@
 			</Card>
 		</Container>
 
-		
-		<Container direction="column" justify="start" fullWidth gap="20px">
+		<Container direction="column" justify="start" fullWidth gap="20px" id="text">
 			<h1>Text</h1>
 			<Card fullWidth>
 				<Container gap="10px">
-					<Text size="small">Salut</Text>
-					<Text>Salut</Text>
-					<Text size="large">Salut</Text>
-					<Text bold>Salut</Text>
-					<Text italic>Salut</Text>
-					<Text color="#EE6783">Salut</Text>
+					<Text size="small">Hello</Text>
+					<Text>Hello</Text>
+					<Text size="large">Hello</Text>
+					<Text bold>Hello</Text>
+					<Text italic>Hello</Text>
+					<Text color="#EE6783">Hello</Text>
 				</Container>
 			</Card>
 		</Container>
 
+		<Container direction="column" justify="start" fullWidth gap="20px" id="modal">
+			<h1>Modal</h1>
+			<Card fullWidth>
+				<Container gap="10px">
+					<Modal>
+						<Button label="Modal" slot="trigger" />
+						This is the simplest modal template ever.
+					</Modal>
+					<Modal title="Short story">
+						<Button label="Modal with title" slot="trigger" />
+						Here is a short story about this modal.
+					</Modal>
+				</Container>
+			</Card>
+		</Container>
 	</Container>
 </Container>
 
