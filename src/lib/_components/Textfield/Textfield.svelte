@@ -13,7 +13,7 @@
 	/**
 	 * The label for the input
 	 */
-	export let label = 'Label';
+	export let label = '';
 	/**
 	 * Input placeholder
 	 */
@@ -90,7 +90,9 @@
 <div
 	class={['textfield', `textfield--${size}`, `${readonly ? 'textfield--readonly' : ''}`].join(' ')}
 >
-	<label class="textfield__label" for="input">{label}</label>
+	{#if label}
+		<label class="textfield__label" for="input">{label}</label>
+	{/if}
 	<div class="textfield__wrapper" on:mousedown|preventDefault={toggleInput}>
 		{#if icon}
 			<i class="textfield__icon fa-solid fa-{icon}" />

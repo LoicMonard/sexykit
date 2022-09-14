@@ -11,7 +11,7 @@
 	/**
 	 * The label attached to the input, passed to the Textfield
 	 */
-	export let label = 'Label';
+	export let label = '';
 	/**
 	 * The placeholder attached to the input, passed to the Textfield
 	 */
