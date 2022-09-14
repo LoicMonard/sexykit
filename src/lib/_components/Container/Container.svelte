@@ -33,6 +33,10 @@
 	 * The padding of the container
 	 */
 	export let padding = '0px';
+	/**
+	 * Additionnal style added to the container
+	*/
+	export let style = '';
 </script>
 
 <div
@@ -46,6 +50,7 @@
 		width: {fullWidth ? '100%' : 'fit-content'};
 		height: {fullHeight ? '100%' : 'fit-content'};
 		max-width: {maxWidth};
+		{style}
 	"
 >
 	<slot />

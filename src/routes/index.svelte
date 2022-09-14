@@ -30,7 +30,7 @@
 	];
 </script>
 
-<Header>
+<Header fixed>
 	<Container fullWidth justify="center" fullHeight>
 		<Container
 			class="header--container"
@@ -53,7 +53,7 @@
 	</Container>
 </Header>
 
-<Container fullWidth justify="center">
+<Container fullWidth justify="center" style={"margin-top: 64px"}>
 	<Container
 		direction="column"
 		justify="start"
@@ -62,7 +62,6 @@
 		padding="20px"
 		fullWidth
 		maxWidth="1280px"
-		style="margin-top: 64px"
 	>
 		<Container direction="column" justify="start" fullWidth gap="20px">
 			<h1>Button</h1>
@@ -193,6 +192,22 @@
 				</Container>
 			</Card>
 		</Container>
+
+		
+		<Container direction="column" justify="start" fullWidth gap="20px">
+			<h1>Text</h1>
+			<Card fullWidth>
+				<Container gap="10px">
+					<Text size="small">Salut</Text>
+					<Text>Salut</Text>
+					<Text size="large">Salut</Text>
+					<Text bold>Salut</Text>
+					<Text italic>Salut</Text>
+					<Text color="#EE6783">Salut</Text>
+				</Container>
+			</Card>
+		</Container>
+
 	</Container>
 </Container>
 
