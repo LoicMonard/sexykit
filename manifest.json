@@ -1,0 +1,97 @@
+{
+  "src/static/SexykitLogoName.png": {
+    "file": "_app/immutable/assets/SexykitLogoName-d6338b9e.png",
+    "src": "src/static/SexykitLogoName.png"
+  },
+  "src/lib/_static/fonts/PulpDisplay-ExtraLight.ttf": {
+    "file": "_app/immutable/assets/PulpDisplay-ExtraLight-e7cf3dc1.ttf",
+    "src": "src/lib/_static/fonts/PulpDisplay-ExtraLight.ttf"
+  },
+  "src/lib/_static/fonts/PulpDisplay-Light.ttf": {
+    "file": "_app/immutable/assets/PulpDisplay-Light-66208090.ttf",
+    "src": "src/lib/_static/fonts/PulpDisplay-Light.ttf"
+  },
+  "src/lib/_static/fonts/PulpDisplay-Regular.ttf": {
+    "file": "_app/immutable/assets/PulpDisplay-Regular-550e1d93.ttf",
+    "src": "src/lib/_static/fonts/PulpDisplay-Regular.ttf"
+  },
+  "src/lib/_static/fonts/PulpDisplay-Medium.ttf": {
+    "file": "_app/immutable/assets/PulpDisplay-Medium-f64add14.ttf",
+    "src": "src/lib/_static/fonts/PulpDisplay-Medium.ttf"
+  },
+  "src/lib/_static/fonts/PulpDisplay-SemiBold.ttf": {
+    "file": "_app/immutable/assets/PulpDisplay-SemiBold-5ff42df5.ttf",
+    "src": "src/lib/_static/fonts/PulpDisplay-SemiBold.ttf"
+  },
+  "src/lib/_static/fonts/PulpDisplay-Bold.ttf": {
+    "file": "_app/immutable/assets/PulpDisplay-Bold-43e19b7e.ttf",
+    "src": "src/lib/_static/fonts/PulpDisplay-Bold.ttf"
+  },
+  ".svelte-kit/runtime/client/start.js": {
+    "file": "_app/immutable/start-5b63a2d6.js",
+    "src": ".svelte-kit/runtime/client/start.js",
+    "isEntry": true,
+    "imports": [
+      "_index-ee55a5b7.js",
+      "_index-2e0fc21e.js"
+    ],
+    "dynamicImports": [
+      ".svelte-kit/runtime/components/layout.svelte",
+      ".svelte-kit/runtime/components/error.svelte",
+      "src/routes/index.svelte"
+    ]
+  },
+  ".svelte-kit/runtime/components/layout.svelte": {
+    "file": "_app/immutable/layout.svelte-25265d3f.js",
+    "src": ".svelte-kit/runtime/components/layout.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-ee55a5b7.js"
+    ]
+  },
+  ".svelte-kit/runtime/components/error.svelte": {
+    "file": "_app/immutable/error.svelte-08e5558e.js",
+    "src": ".svelte-kit/runtime/components/error.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-ee55a5b7.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "_app/immutable/pages/index.svelte-4b7633a0.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-ee55a5b7.js",
+      "_index-2e0fc21e.js"
+    ],
+    "css": [
+      "_app/immutable/assets/index-6f9da159.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/SexykitLogoName-d6338b9e.png",
+      "_app/immutable/assets/PulpDisplay-ExtraLight-e7cf3dc1.ttf",
+      "_app/immutable/assets/PulpDisplay-Light-66208090.ttf",
+      "_app/immutable/assets/PulpDisplay-Regular-550e1d93.ttf",
+      "_app/immutable/assets/PulpDisplay-Medium-f64add14.ttf",
+      "_app/immutable/assets/PulpDisplay-SemiBold-5ff42df5.ttf",
+      "_app/immutable/assets/PulpDisplay-Bold-43e19b7e.ttf"
+    ]
+  },
+  "_index-ee55a5b7.js": {
+    "file": "_app/immutable/chunks/index-ee55a5b7.js"
+  },
+  "_index-2e0fc21e.js": {
+    "file": "_app/immutable/chunks/index-2e0fc21e.js",
+    "imports": [
+      "_index-ee55a5b7.js"
+    ]
+  },
+  "src/routes/index.css": {
+    "file": "_app/immutable/assets/index-6f9da159.css",
+    "src": "src/routes/index.css"
+  }
+}
