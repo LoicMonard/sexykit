@@ -28,7 +28,7 @@
     "src": "src/lib/_static/fonts/PulpDisplay-Bold.ttf"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "internal/immutable/start-98e73547.js",
+    "file": "internal/immutable/start-a206a54d.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
