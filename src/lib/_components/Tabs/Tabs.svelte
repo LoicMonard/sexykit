@@ -7,7 +7,7 @@
 
 	/**
 	 * The list of the displayed tabs
-	*/
+	 */
 	let tabs = [];
 	/**
 	 * The active tab, which is passed to the tab components.
@@ -21,14 +21,14 @@
 	let sliderWidth;
 	/**
 	 * The computed slider position, based on the active tab
-	*/
+	 */
 	let sliderOffset;
 
 	/**
 	 * A function that is called when a tab is clicked, or during
 	 * tab initialization. It sets the active tab and computes the
 	 * slider position and width
-	 * 
+	 *
 	 * @param tab
 	 */
 	const setActiveTab = async (tab) => {
@@ -51,12 +51,12 @@
 		const tabLeft = document.querySelector('.tabs__header .tabs__nav--active').offsetLeft;
 		sliderOffset = tabLeft;
 	};
-	
+
 	/**
 	 * A function that is called when a tab is initialized.
 	 * It adds the tab to the tabs list and set the first tab as active
 	 * if there is no active tab
-	*/
+	 */
 	setContext('registerTab', {
 		registerTab: (tab) => {
 			tabs = [...tabs, tab];
@@ -67,11 +67,11 @@
 	});
 	/**
 	 * A function that passes the setActiveTab function to the child
-	*/
+	 */
 	setContext('setActiveTab', setActiveTab);
 	/**
 	 * A function that passes the activeTab store to the child
-	*/
+	 */
 	setContext('activeTab', { activeTab });
 </script>
 

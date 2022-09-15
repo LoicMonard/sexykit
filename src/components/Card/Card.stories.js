@@ -14,10 +14,10 @@ export default {
 
 const Template = (args) => ({
 	Component: Card,
-	props: args,
+	props: args
 });
 
 export const Default = Template.bind({});
 Default.args = {
-	fullWidth: true,
+	fullWidth: true
 };

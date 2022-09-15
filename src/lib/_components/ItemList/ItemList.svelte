@@ -25,7 +25,7 @@
 	const dispatch = createEventDispatcher();
 	/**
 	 * A function that dispatches the mousedown event
-	 * 
+	 *
 	 * @param e contains the clicked item
 	 */
 	const handleMousedown = (e) => {

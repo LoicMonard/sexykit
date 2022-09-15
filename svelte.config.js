@@ -7,13 +7,13 @@ const config = {
 	kit: {
 		adapter: adapter({
 			fallback: 'index.html',
-			assets: 'build',
+			assets: 'build'
 		}),
 		paths: {
-			base: dev ? '' : '/sexykit',
+			base: dev ? '' : '/sexykit'
 		},
 		appDir: dev ? 'src' : 'internal',
-    prerender: { entries: [] },
+		prerender: { entries: [] },
 		alias: {
 			$components: 'src/components',
 			$styles: 'src/styles',

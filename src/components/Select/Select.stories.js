@@ -31,10 +31,10 @@ export const Default = Template.bind({});
 Default.args = {
 	placeholder: 'Placeholder',
 	label: 'Select an option',
-  options: [
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2' },
-  ]
+	options: [
+		{ value: 'option1', label: 'Option 1' },
+		{ value: 'option2', label: 'Option 2' }
+	]
 };
 
 export const WithIcon = Template.bind({});
@@ -42,19 +42,19 @@ WithIcon.args = {
 	placeholder: 'Choose a fruit',
 	label: 'Fruit',
 	icon: 'lemon',
-  options: [
-    { value: 'lemon', label: 'Lemon' },
-    { value: 'orange', label: 'Orange' },
-  ]
+	options: [
+		{ value: 'lemon', label: 'Lemon' },
+		{ value: 'orange', label: 'Orange' }
+	]
 };
 
 export const DisabledOption = Template.bind({});
 DisabledOption.args = {
 	placeholder: 'Placeholder',
 	label: 'Select an option',
-  options: [
-    { value: 'option1', label: 'Option 1' },
-    { value: 'option2', label: 'Option 2', disabled: true },
-    { value: 'option3', label: 'Option 3' },
-  ]
+	options: [
+		{ value: 'option1', label: 'Option 1' },
+		{ value: 'option2', label: 'Option 2', disabled: true },
+		{ value: 'option3', label: 'Option 3' }
+	]
 };
