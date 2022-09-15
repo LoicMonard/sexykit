@@ -96,7 +96,11 @@
 					placeholder="Find a component"
 					options={indexCategories}
 					valueKey="value"
-					on:change={(e) => window.scroll({top :document.getElementById(e.detail).offsetTop - 74, behavior: 'smooth'})}
+					on:change={(e) =>
+						window.scroll({
+							top: document.getElementById(e.detail).offsetTop - 74,
+							behavior: 'smooth'
+						})}
 				/>
 			</Container>
 			<Container class="header--right" align="center" gap="10px">

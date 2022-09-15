@@ -33,6 +33,11 @@
 	 * defines the returned value
 	 */
 	export let valueKey = null;
+	/**
+	 * The key of the desired label in the options,
+	 * defines the displayed value
+	 */
+	export let labelKey = null;
 
 	/**
 	 * If the select is toggled
@@ -66,7 +71,7 @@
 	 *
 	 * @type {String}
 	 */
-	$: displayedValue = value ? (valueKey ? value[valueKey] : value.label || '') : '';
+	$: displayedValue = value ? (labelKey ? value[labelKey] : value.label || '') : '';
 	/**
 	 * The returned value, used for the event dispatcher
 	 *
