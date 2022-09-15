@@ -1,6 +1,5 @@
 <script>
-	import { getContext } from 'svelte';
-	import { onMount } from 'svelte';
+	import { onMount, getContext } from 'svelte';
 
 	import './tab.scss';
 

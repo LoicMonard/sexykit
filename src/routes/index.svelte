@@ -11,6 +11,8 @@
 	import Header from '$lib/_components/Header/Header.svelte';
 	import Text from '$lib/_components/Text/Text.svelte';
 	import Modal from '$lib/_components/Modal/Modal.svelte';
+	import Collapse from '$lib/_components/Collapse/Collapse.svelte';
+	import CollapseItem from '$lib/_components/Collapse/CollapseItem.svelte';
 
 	import Logo from '../static/SexykitLogoName.png';
 	import Slogan from '../static/SexyKitSlogan.png';
@@ -59,6 +61,10 @@
 		{
 			label: 'Modal',
 			value: 'modal'
+		},
+		{
+			label: 'Collapse',
+			value: 'collapse'
 		}
 	];
 
@@ -283,6 +289,22 @@
 						<Button label="Modal with title" slot="trigger" />
 						Here is a short story about this modal.
 					</Modal>
+				</Container>
+			</Card>
+		</Container>
+
+		<Container direction="column" justify="start" fullWidth gap="20px" id="collapse">
+			<h1>Collapse</h1>
+			<Card fullWidth>
+				<Container gap="10px">
+					<Collapse activeItems={['collapse-1', 'collapse-2']}>
+						<CollapseItem name="collapse-1">
+							<Text color="#EE6783">Hello</Text>
+						</CollapseItem>
+						<CollapseItem name="collapse-2">
+							<Text color="#EE6783">Hello 2</Text>
+						</CollapseItem>
+					</Collapse>
 				</Container>
 			</Card>
 		</Container>
