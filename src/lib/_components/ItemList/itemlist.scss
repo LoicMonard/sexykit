@@ -3,6 +3,8 @@
 .itemlist {
 	position: relative;
 	.itemlist__options {
+		max-height: 208px;
+		overflow: auto;
 		min-width: fit-content;
 		width: 100%;
 		background-color: #fff;

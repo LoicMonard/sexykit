@@ -52,3 +52,18 @@ h4 {
 	font-size: $h4Size;
 	font-weight: 400;
 }
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+::-webkit-scrollbar-thumb {
+	background-color: rgb(227, 227, 227);
+	border-radius: 10px;
+	transition: all $transitionDuration ease;
+	&:hover {
+		background-color: rgb(200, 200, 200);
+	}
+}
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
