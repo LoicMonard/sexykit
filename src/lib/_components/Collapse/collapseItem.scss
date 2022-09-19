@@ -1,0 +1,26 @@
+@import '../../_styles/global';
+
+.collapse-item {
+	border-bottom: 1px solid $baseBorderColor;
+	overflow: hidden;
+	.collapse-item__header {
+		padding: 20px 0;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.collapse-item__chevron {
+			font-size: 10px;
+			color: #a8abb2;
+			transition: all 0.3s ease;
+			pointer-events: none;
+			&.collapse-item__chevron--open {
+				transform: rotate(90deg);
+			}
+		}
+	}
+	.collapse-item__body {
+		margin-bottom: 20px;
+		transition: all 0.3s ease;
+	}
+}

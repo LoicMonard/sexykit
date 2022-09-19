@@ -296,13 +296,19 @@
 		<Container direction="column" justify="start" fullWidth gap="20px" id="collapse">
 			<h1>Collapse</h1>
 			<Card fullWidth>
-				<Container gap="10px">
-					<Collapse activeItems={['collapse-1', 'collapse-2']}>
-						<CollapseItem name="collapse-1">
-							<Text color="#EE6783">Hello</Text>
+				<Container gap="10px" fullWidth>
+					<Collapse activeItems={['Introduction']}>
+						<CollapseItem name="Introduction">
+							<Text slot="header" color="#EE6783">Custom title</Text>
+							<i class="fas fa-arrow-right" />
+							<Text>Hello, I'm the content of this collapse item</Text>
 						</CollapseItem>
-						<CollapseItem name="collapse-2">
-							<Text color="#EE6783">Hello 2</Text>
+						<CollapseItem name="Custom body">
+							<Card>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, voluptatem error.
+								Corporis illum ea consequuntur eaque, quam a ratione doloribus numquam odit,
+								necessitatibus perspiciatis? A quia eligendi sunt illum fugit.
+							</Card>
 						</CollapseItem>
 					</Collapse>
 				</Container>
