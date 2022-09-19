@@ -1,6 +1,6 @@
 <script>
 	import './itemlist.scss';
-	import { fly } from 'svelte/transition';
+	import { fly, slide } from 'svelte/transition';
 	import { createEventDispatcher } from 'svelte';
 
 	/**
@@ -34,9 +34,10 @@
 </script>
 
 <div class="itemlist">
-	<div class="itemlist__options" transition:fly={{ y: -10, duration: 300 }}>
+	<ul class="itemlist__options" transition:fly={{ y: -10, duration: 300 }}>
 		{#each items as item}
-			<ul
+			<li
+				transition:slide
 				class={[
 					'itemlist__option',
 					`${item.disabled ? 'itemlist__option--disabled' : ''}`,
@@ -44,13 +45,13 @@
 				].join(' ')}
 				on:mousedown={handleMousedown(item)}
 			>
-				<li for="test">{item[itemLabel]}</li>
-			</ul>
+				{item[itemLabel]}
+			</li>
 		{/each}
 		{#if !items.length}
 			<ul class="itemlist__option itemlist__option--empty">
 				<li>{noResultText}</li>
 			</ul>
 		{/if}
-	</div>
+	</ul>
 </div>
