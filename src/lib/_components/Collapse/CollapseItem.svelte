@@ -9,22 +9,38 @@
 
 	const { activeItems } = getContext('activeItems');
 
+	const { updateCollapseItems } = getContext('updateCollapseItems');
+	
+	const toggleCollapse = (name) => {
+		open = !open;
+		updateCollapseItems(name);
+	};
+
 	const toggleHeight = (node, { speed = 1 }) => {
 		return {
 			duration: 200 * speed,
 			css: (t) => `max-height: ${t * node.offsetHeight}px; margin-bottom: ${t * 20}px;`
 		};
 	};
+	
+	$: {
+		if (Array.isArray($activeItems) && $activeItems.includes(name)) {
+			open = true;
+		} else {
+			open = false;
+		}
+	}
 
 	onMount(() => {
-		if (activeItems.includes(name)) {
-			open = true;
-		}
+		// console.log('2')
+		// if (activeItems.includes(name)) {
+		// 	open = true;
+		// }
 	});
 </script>
 
 <div class="collapse-item">
-	<div class="collapse-item__header" on:click={() => (open = !open)}>
+	<div class="collapse-item__header" on:click={toggleCollapse(name)}>
 		{#if $$slots.header}
 			<slot name="header" />
 		{:else}
