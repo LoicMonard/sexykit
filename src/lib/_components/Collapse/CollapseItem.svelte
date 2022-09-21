@@ -1,28 +1,20 @@
 <script>
 	import { getContext } from 'svelte';
-
 	import './collapseItem.scss';
 
+	/**
+	 * The name of the collapse item
+	 */
 	export let name;
 
+	/**
+	 * If the collapse item is toggled
+	 */
 	let open = false;
-
-	const { activeItems } = getContext('activeItems');
-
-	const { updateCollapseItems } = getContext('updateCollapseItems');
-
-	const toggleCollapse = (name) => {
-		open = !open;
-		updateCollapseItems(name);
-	};
-
-	const toggleHeight = (node, { speed = 1 }) => {
-		return {
-			duration: 200 * speed,
-			css: (t) => `max-height: ${t * node.offsetHeight}px; margin-bottom: ${t * 20}px;`
-		};
-	};
-
+	/**
+	 * Reactive property that is updated when the collapse item is toggled
+	 * Opens or closes the collapse item depending on the parent activeItems store
+	 */
 	$: {
 		if (Array.isArray($activeItems) && $activeItems.includes(name)) {
 			open = true;
@@ -30,6 +22,35 @@
 			open = false;
 		}
 	}
+	/**
+	 * The active items store from the parent
+	 */
+	const { activeItems } = getContext('activeItems');
+	/**
+	 * A function to access the parent updateCollapseItems method
+	 */
+	const { updateCollapseItems } = getContext('updateCollapseItems');
+	/**
+	 * A function that toggles the collapse item and updates the active items store
+	 *
+	 * @param name
+	 */
+	const toggleCollapse = (name) => {
+		open = !open;
+		updateCollapseItems(name);
+	};
+	/**
+	 * A transition function that is used to animate the collapse item
+	 *
+	 * @param node
+	 * @param param1
+	 */
+	const toggleHeight = (node, { speed = 1 }) => {
+		return {
+			duration: 200 * speed,
+			css: (t) => `max-height: ${t * node.offsetHeight}px; margin-bottom: ${t * 20}px;`
+		};
+	};
 </script>
 
 <div class="collapse-item">
