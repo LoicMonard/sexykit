@@ -1,31 +1,35 @@
 <script>
 	import './collapse.scss';
-	import { onMount, setContext, tick } from 'svelte';
+	import { onMount, setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 
 	export let activeItemsNames = [];
 
-	let activeItems = writable([]);
-
 	export let accordion = false;
+
+	let activeItems = writable([]);
 
 	setContext('updateCollapseItems', {
 		updateCollapseItems: (collapseName) => {
 			if (accordion) {
-				$activeItems = [collapseName];
+				if ($activeItems[0] === collapseName) {
+					activeItems.set([]);
+				} else {
+					activeItems.set([collapseName]);
+				}
 			}
 		}
 	});
 
+	setContext('activeItems', { activeItems });
+
 	onMount(async () => {
-		if(accordion) {
+		if (accordion) {
 			$activeItems = [activeItemsNames[0] || []];
 		} else {
 			$activeItems = activeItemsNames;
 		}
 	});
-
-	setContext('activeItems', { activeItems });
 </script>
 
 <div class="collapse">

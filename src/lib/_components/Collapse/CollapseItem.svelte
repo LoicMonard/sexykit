@@ -1,5 +1,5 @@
 <script>
-	import { onMount, getContext } from 'svelte';
+	import { getContext } from 'svelte';
 
 	import './collapseItem.scss';
 
@@ -10,7 +10,7 @@
 	const { activeItems } = getContext('activeItems');
 
 	const { updateCollapseItems } = getContext('updateCollapseItems');
-	
+
 	const toggleCollapse = (name) => {
 		open = !open;
 		updateCollapseItems(name);
@@ -22,7 +22,7 @@
 			css: (t) => `max-height: ${t * node.offsetHeight}px; margin-bottom: ${t * 20}px;`
 		};
 	};
-	
+
 	$: {
 		if (Array.isArray($activeItems) && $activeItems.includes(name)) {
 			open = true;
@@ -30,13 +30,6 @@
 			open = false;
 		}
 	}
-
-	onMount(() => {
-		// console.log('2')
-		// if (activeItems.includes(name)) {
-		// 	open = true;
-		// }
-	});
 </script>
 
 <div class="collapse-item">

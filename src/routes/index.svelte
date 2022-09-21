@@ -297,7 +297,7 @@
 			<h1>Collapse</h1>
 			<Card fullWidth>
 				<Container gap="10px" fullWidth>
-					<Collapse activeItemsNames={[]} accordion>
+					<Collapse activeItemsNames={['Introduction', 'Custom Body']} accordion>
 						<CollapseItem name="Introduction">
 							<Text slot="header" color="#EE6783">Custom title</Text>
 							<i class="fas fa-arrow-right" />
@@ -309,6 +309,13 @@
 								Corporis illum ea consequuntur eaque, quam a ratione doloribus numquam odit,
 								necessitatibus perspiciatis? A quia eligendi sunt illum fugit.
 							</Card>
+						</CollapseItem>
+						<CollapseItem name="Conclusion">
+							<Text>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, voluptatem error.
+								Corporis illum ea consequuntur eaque, quam a ratione doloribus numquam odit,
+								necessitatibus perspiciatis? A quia eligendi sunt illum fugit.
+							</Text>
 						</CollapseItem>
 					</Collapse>
 				</Container>
