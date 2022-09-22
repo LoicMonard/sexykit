@@ -1,5 +1,6 @@
 <script>
 	import { getContext } from 'svelte';
+	import { quadOut } from 'svelte/easing';
 	import './collapseItem.scss';
 
 	/**
@@ -47,8 +48,9 @@
 	 */
 	const toggleHeight = (node, { speed = 1 }) => {
 		return {
-			duration: 200 * speed,
-			css: (t) => `max-height: ${t * node.offsetHeight}px; margin-bottom: ${t * 20}px;`
+			duration: 300 * speed,
+			css: (t) => `max-height: ${t * node.offsetHeight}px; margin-bottom: ${t * 20}px;`,
+			easing: quadOut
 		};
 	};
 </script>
