@@ -1,0 +1,1 @@
+import{S as o,i as r,s as i,r as u,u as c,b as l,E as a,h as p}from"../../chunks/index-4f5b7f7b.js";function f(s){let t;return{c(){t=u("Button page")},l(e){t=c(e,"Button page")},m(e,n){l(e,t,n)},p:a,i:a,o:a,d(e){e&&p(t)}}}class d extends o{constructor(t){super(),r(this,t,null,f,i,{})}}export{d as default};
