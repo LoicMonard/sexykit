@@ -117,7 +117,7 @@
 	</Container>
 </Header>
 
-<Container fullWidth justify="center" style={'margin-top: 64px'}>
+<Container fullWidth justify="center">
 	<Container
 		direction="column"
 		justify="start"
