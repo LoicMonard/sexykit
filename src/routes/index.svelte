@@ -1,18 +1,19 @@
 <script>
 	import Button from '$lib/_components/Button/Button.svelte';
-	import Textfield from '$lib/_components/Textfield/Textfield.svelte';
-	import Select from '$lib/_components/Select/Select.svelte';
 	import Card from '$lib/_components/Card/Card.svelte';
-	import Container from '$lib/_components/Container/Container.svelte';
-	import Divider from '$lib/_components/Divider/Divider.svelte';
-	import Tabs from '$lib/_components/Tabs/Tabs.svelte';
-	import Tab from '$lib/_components/Tabs/Tab.svelte';
-	import Dropdown from '$lib/_components/Dropdown/Dropdown.svelte';
-	import Header from '$lib/_components/Header/Header.svelte';
-	import Text from '$lib/_components/Text/Text.svelte';
-	import Modal from '$lib/_components/Modal/Modal.svelte';
 	import Collapse from '$lib/_components/Collapse/Collapse.svelte';
 	import CollapseItem from '$lib/_components/Collapse/CollapseItem.svelte';
+	import Container from '$lib/_components/Container/Container.svelte';
+	import Divider from '$lib/_components/Divider/Divider.svelte';
+	import Dropdown from '$lib/_components/Dropdown/Dropdown.svelte';
+	import Header from '$lib/_components/Header/Header.svelte';
+	import Modal from '$lib/_components/Modal/Modal.svelte';
+	import Select from '$lib/_components/Select/Select.svelte';
+	import Sidenav from '$lib/_components/Sidenav/Sidenav.svelte';
+	import Tab from '$lib/_components/Tabs/Tab.svelte';
+	import Tabs from '$lib/_components/Tabs/Tabs.svelte';
+	import Text from '$lib/_components/Text/Text.svelte';
+	import Textfield from '$lib/_components/Textfield/Textfield.svelte';
 
 	import Logo from '../static/SexykitLogoName.png';
 	import Slogan from '../static/SexyKitSlogan.png';
@@ -82,6 +83,58 @@
 			label: 'Option 3'
 		}
 	];
+
+	const sidenavTree = [
+		{
+			label: 'Home',
+			icon: 'home',
+			children: [
+				{
+					label: 'level 1.1',
+					children: [
+						{
+							label: 'level 1.1.1',
+							children: [
+								{
+									label: 'level 1.1.1.1',
+									children: []
+								}
+							]
+						}
+					]
+				},
+				{
+					label: 'level 1.2',
+					children: []
+				}
+			]
+		},
+		{
+			label: 'Dashboard',
+			icon: 'dashboard',
+			children: [
+				{
+					label: 'level 2.1',
+					children: []
+				},
+				{
+					label: 'level 2.2',
+					children: []
+				},
+				{
+					label: 'level 2.3',
+					children: []
+				}
+			]
+		},
+		{
+			label: 'Settings',
+			icon: 'gear',
+			children: []
+		}
+	];
+
+	let activeSidenavItem = 'Home';
 </script>
 
 <Header fixed>
@@ -127,6 +180,21 @@
 		fullWidth
 		maxWidth="1280px"
 	>
+		<Container direction="column" justify="start" fullWidth gap="20px" id="sidenav">
+			<h1>Sidenav</h1>
+			<Card fullWidth>
+				<Container gap="10px" fullWidth>
+					<Sidenav
+						tree={sidenavTree}
+						activeItem={activeSidenavItem}
+						on:click={(e) => {
+							activeSidenavItem = e.detail.label;
+						}}
+					/>
+				</Container>
+			</Card>
+		</Container>
+
 		<Container direction="column" justify="start" fullWidth gap="20px" id="button">
 			<h1>Button</h1>
 			<Card fullWidth>
