@@ -3,23 +3,42 @@
 	import { createEventDispatcher } from 'svelte';
 	import './sidenavItem.scss';
 
+	/**
+	 * The item object of the SidenavItem, contains the name, the path and the children
+	 */
 	export let item;
-
+	/**
+	 * The depth of the SidenavItem, used to calculate the padding
+	 */
 	export let depth;
-
+	/**
+	 * The currently active SidenavItem, used to determine if the SidenavItem is active
+	 */
 	export let activeItem;
 
+	/**
+	 * If the SidenavItem is expanded
+	 */
 	let showChildren = false;
-
+	/**
+	 * A dispatcher to dispatch the click event
+	 */
 	const dispatch = createEventDispatcher();
-
+	/**
+	 * A method to toggle to SidenavItem
+	 */
 	const toggleCollapse = () => {
 		showChildren = !showChildren;
-		if(!item.children?.length) {
+		if (!item.children?.length) {
 			dispatch('click', item);
 		}
 	};
-
+	/**
+	 * A transition method to animate the SidenavItem toggling
+	 *
+	 * @param node
+	 * @param param1
+	 */
 	const toggleHeight = (node, { speed = 1 }) => {
 		return {
 			duration: 200 * speed,
@@ -54,7 +73,7 @@
 	{#if showChildren}
 		<div transition:toggleHeight class="sidenavItem__children">
 			{#each item.children as child}
-				<svelte:self item={child} depth={depth + 1} {activeItem} on:click/>
+				<svelte:self item={child} depth={depth + 1} {activeItem} on:click />
 			{/each}
 		</div>
 	{/if}

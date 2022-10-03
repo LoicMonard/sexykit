@@ -2,8 +2,13 @@
 	import './sidenav.scss';
 	import SidenavItem from './SidenavItem.svelte';
 
+	/**
+	 * The tree structure of the Sidenav, passed to the SidenavItem components
+	 */
 	export let tree = [];
-
+	/**
+	 * The currently active SidenavItem, passed to the SidenavItem components
+	 */
 	export let activeItem;
 </script>
 
