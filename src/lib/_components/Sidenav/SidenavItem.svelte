@@ -15,14 +15,24 @@
 	 * The currently active SidenavItem, used to determine if the SidenavItem is active
 	 */
 	export let activeItem;
+	/**
+	 * The style for first level SidenavItems
+	 */
+	export let firstLevelItemStyle;
+	/**
+	 * The style for SidenavItems
+	 */
+	export let itemStyle;
+	/**
+	 * The defaultly expanded items
+	 */
+	export let defaultExpandedItems = [];
 
 	/**
 	 * If the SidenavItem is expanded
 	 */
-	let showChildren = false;
-	/**
-	 * A dispatcher to dispatch the click event
-	 */
+	let showChildren = defaultExpandedItems[0] == '*' || defaultExpandedItems.includes(item.label);
+
 	const dispatch = createEventDispatcher();
 	/**
 	 * A method to toggle to SidenavItem
@@ -51,7 +61,7 @@
 <div class="sidenavItem {item.label === activeItem ? 'sidenavItem--active' : ''}">
 	<div
 		class="sidenavItem__trigger"
-		style="padding-left: {(depth + 1) * 20}px"
+		style="padding-left: {(depth + 1) * 20}px; {itemStyle}"
 		on:click={toggleCollapse}
 	>
 		{#if item.icon}
@@ -59,7 +69,7 @@
 				<i class="fa-solid fa-{item.icon}" />
 			</div>
 		{/if}
-		<div class="sidenavItem__label">
+		<div class="sidenavItem__label" style={depth === 0 ? firstLevelItemStyle : ''}>
 			{item.label}
 		</div>
 		{#if item.children?.length}
@@ -73,7 +83,15 @@
 	{#if showChildren}
 		<div transition:toggleHeight class="sidenavItem__children">
 			{#each item.children as child}
-				<svelte:self item={child} depth={depth + 1} {activeItem} on:click />
+				<svelte:self
+					item={child}
+					depth={depth + 1}
+					{activeItem}
+					{itemStyle}
+					{firstLevelItemStyle}
+					{defaultExpandedItems}
+					on:click
+				/>
 			{/each}
 		</div>
 	{/if}
