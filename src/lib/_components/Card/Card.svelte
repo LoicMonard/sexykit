@@ -9,6 +9,10 @@
 	 * If the card should take the full width of its container
 	 */
 	export let shadow = 'hover';
+	/**
+	 * Card body style
+	 */
+	export let bodyStyle = '';
 </script>
 
 <div
@@ -20,7 +24,7 @@
 			<slot name="header" />
 		</div>
 	{/if}
-	<div class="card--body">
+	<div class="card--body" style={bodyStyle}>
 		<slot />
 	</div>
 </div>
