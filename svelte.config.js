@@ -8,13 +8,18 @@ const config = {
 		adapter: adapter({
 			fallback: 'index.html',
 			assets: 'build',
-			pages: 'build',
+			pages: 'build'
 		}),
 		paths: {
 			base: dev ? '' : '/sexykit'
 		},
 		appDir: dev ? 'src' : 'internal',
-		prerender: { entries: [] },
+		prerender: {
+			crawl: true,
+			enabled: true,
+			onError: 'continue',
+			default: true
+		},
 		alias: {
 			$components: 'src/components',
 			$styles: 'src/styles',
