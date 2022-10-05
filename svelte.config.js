@@ -7,7 +7,8 @@ const config = {
 	kit: {
 		adapter: adapter({
 			fallback: 'index.html',
-			assets: 'build'
+			assets: 'build',
+			pages: 'build',
 		}),
 		paths: {
 			base: dev ? '' : '/sexykit'
