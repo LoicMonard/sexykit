@@ -3,6 +3,9 @@
 .collapse-item {
 	border-bottom: 1px solid $baseBorderColor;
 	overflow: hidden;
+	&.collapse-item--no-borders {
+		border: none;
+	}
 	.collapse-item__header {
 		padding: 20px 0;
 		cursor: pointer;
