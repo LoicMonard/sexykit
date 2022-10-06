@@ -15,14 +15,12 @@
 		<Card fullWidth bodyStyle="padding-bottom: 0px">
 			<Container direction="column" gap="20px" fullWidth>
 				<Container gap="10px" fullWidth>
-					<Button size="large" label="Large" />
 					<Button primary label="Button" icon="user" />
 					<Button label="Button" />
 					<Button label="Rounded" rounded />
-					<Button size="small" label="Small" />
 				</Container>
 				<Collapse>
-					<CollapseItem toggleOnTriggerOnly bordered="{false}">
+					<CollapseItem toggleOnTriggerOnly bordered={false}>
 						<Container gap="10px" fullWidth slot="header">
 							<Button leftIcon="plus" icon small />
 						</Container>
