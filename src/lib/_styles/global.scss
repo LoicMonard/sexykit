@@ -1,5 +1,5 @@
-@import './reset.scss';
 @import './_variables.scss';
+@import './reset.scss';
 @import './mixins.scss';
 
 @font-face {
@@ -33,7 +33,7 @@
 	src: url('../../_static/fonts/PulpDisplay-Bold.ttf');
 }
 
-* {
+*:not(pre *) {
 	font-family: 'Pulp Light';
 }
 
@@ -67,4 +67,12 @@ h4 {
 }
 ::-webkit-scrollbar-track {
 	border-radius: 10px;
+}
+pre {
+	white-space: pre-wrap;
+	font-family: monospace !important;
+	tab-size: 2;
+}
+[data-language="svelte"] {
+  --hljs-foreground: rgb(192, 192, 192);
 }

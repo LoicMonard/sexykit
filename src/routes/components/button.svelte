@@ -5,7 +5,24 @@
 	import CollapseItem from '$lib/_components/Collapse/CollapseItem.svelte';
 	import Container from '$lib/_components/Container/Container.svelte';
 	import Text from '$lib/_components/Text/Text.svelte';
+	import xml from 'svelte-highlight/languages/xml';
+	import { onMount } from 'svelte';
+
+	let highlightComponent;
+	let highlightStyles;
+
+	onMount(async () => {
+		xml.name = 'svelte';
+		highlightComponent = (await import('svelte-highlight')).Highlight;
+		highlightStyles = (await import('svelte-highlight/styles/atom-one-dark')).default;
+	});
 </script>
+
+<svelte:head>
+	{#if highlightStyles}
+		{@html highlightStyles}
+	{/if}
+</svelte:head>
 
 <Container direction="column" gap="20px" fullWidth>
 	<Text>Comonly used button</Text>
@@ -25,6 +42,16 @@
 							<Button leftIcon="plus" icon small />
 						</Container>
 						<i class="fa-solid fa-code" slot="trigger" />
+						<svelte:component
+							this={highlightComponent}
+							language={xml}
+							langtag
+							code={`<Container gap="10px" fullWidth>
+	<Button primary label="Button" icon="user" />
+	<Button label="Button" />
+	<Button label="Rounded" rounded />
+</Container>`}
+						/>
 					</CollapseItem>
 				</Collapse>
 			</Container>
