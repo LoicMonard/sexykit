@@ -7,13 +7,13 @@
     "file": "internal/immutable/assets/PulpDisplay-ExtraLight-e7cf3dc1.ttf",
     "src": "src/lib/_static/fonts/PulpDisplay-ExtraLight.ttf"
   },
-  "src/lib/_static/fonts/PulpDisplay-Light.ttf": {
-    "file": "internal/immutable/assets/PulpDisplay-Light-66208090.ttf",
-    "src": "src/lib/_static/fonts/PulpDisplay-Light.ttf"
-  },
   "src/lib/_static/fonts/PulpDisplay-Regular.ttf": {
     "file": "internal/immutable/assets/PulpDisplay-Regular-550e1d93.ttf",
     "src": "src/lib/_static/fonts/PulpDisplay-Regular.ttf"
+  },
+  "src/lib/_static/fonts/PulpDisplay-Light.ttf": {
+    "file": "internal/immutable/assets/PulpDisplay-Light-66208090.ttf",
+    "src": "src/lib/_static/fonts/PulpDisplay-Light.ttf"
   },
   "src/lib/_static/fonts/PulpDisplay-Medium.ttf": {
     "file": "internal/immutable/assets/PulpDisplay-Medium-f64add14.ttf",
@@ -28,7 +28,7 @@
     "src": "src/lib/_static/fonts/PulpDisplay-Bold.ttf"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "internal/immutable/start-a472b860.js",
+    "file": "internal/immutable/start-704c5f79.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -230,13 +230,13 @@
       "internal/immutable/assets/PulpDisplay-Bold-43e19b7e.ttf"
     ]
   },
-  "SexyKitSlogan.css": {
-    "file": "internal/immutable/assets/SexyKitSlogan-89e99aee.css",
-    "src": "SexyKitSlogan.css"
-  },
   "index.css": {
     "file": "internal/immutable/assets/index-772ffe69.css",
     "src": "index.css"
+  },
+  "SexyKitSlogan.css": {
+    "file": "internal/immutable/assets/SexyKitSlogan-89e99aee.css",
+    "src": "SexyKitSlogan.css"
   },
   "Text.css": {
     "file": "internal/immutable/assets/Text-d6f2658b.css",
