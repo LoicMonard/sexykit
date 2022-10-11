@@ -1,4 +1,6 @@
 <script>
+	export const prerender = true;
+
 	import Button from '$lib/_components/Button/Button.svelte';
 	import Card from '$lib/_components/Card/Card.svelte';
 	import Collapse from '$lib/_components/Collapse/Collapse.svelte';

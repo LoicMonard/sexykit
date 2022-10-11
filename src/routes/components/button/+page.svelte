@@ -1,4 +1,6 @@
 <script>
+	export const prerender = true;
+
 	import Button from '$lib/_components/Button/Button.svelte';
 	import Card from '$lib/_components/Card/Card.svelte';
 	import Collapse from '$lib/_components/Collapse/Collapse.svelte';
@@ -38,9 +40,7 @@
 				</Container>
 				<Collapse>
 					<CollapseItem toggleOnTriggerOnly bordered={false}>
-						<Container gap="10px" fullWidth slot="header">
-							<Button leftIcon="plus" icon small />
-						</Container>
+						<Container gap="10px" fullWidth slot="header" />
 						<i class="fa-solid fa-code" slot="trigger" />
 						<svelte:component
 							this={highlightComponent}
@@ -70,7 +70,21 @@
 					<Button leftIcon="plus" icon rounded />
 				</Container>
 				<Collapse>
-					<CollapseItem name="Code here">Hello</CollapseItem>
+					<CollapseItem name="Code here">
+						<Container gap="10px" fullWidth slot="header" />
+						<i class="fa-solid fa-code" slot="trigger" />
+						<svelte:component
+							this={highlightComponent}
+							language={xml}
+							langtag
+							code={`<Container gap="10px" fullWidth>
+  <Button primary label="Add" leftIcon="add" />
+  <Button label="Delete" rightIcon="trash" />
+  <Button leftIcon="plus" icon />
+  <Button leftIcon="plus" icon rounded />
+</Container>`}
+						/>
+					</CollapseItem>
 				</Collapse>
 			</Container>
 		</Card>
@@ -87,7 +101,20 @@
 					<Button size="small" label="Small" />
 				</Container>
 				<Collapse>
-					<CollapseItem name="Code here">Hello</CollapseItem>
+					<CollapseItem name="Code here">
+						<Container gap="10px" fullWidth slot="header" />
+						<i class="fa-solid fa-code" slot="trigger" />
+						<svelte:component
+							this={highlightComponent}
+							language={xml}
+							langtag
+							code={`<Container gap="10px" fullWidth>
+  <Button size="large" label="Large" />
+  <Button primary label="Medium" />
+  <Button size="small" label="Small" />
+</Container>`}
+						/>
+					</CollapseItem>
 				</Collapse>
 			</Container>
 		</Card>
