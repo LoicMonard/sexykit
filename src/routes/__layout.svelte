@@ -1,4 +1,6 @@
 <script>
+	export const prerender = true;
+
 	import Header from '$lib/_components/Header/Header.svelte';
 	import Container from '$lib/_components/Container/Container.svelte';
 	import Select from '$lib/_components/Select/Select.svelte';

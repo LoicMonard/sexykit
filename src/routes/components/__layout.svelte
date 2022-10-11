@@ -1,4 +1,6 @@
 <script>
+	export const prerender = true;
+
 	import Card from '$lib/_components/Card/Card.svelte';
 	import Container from '$lib/_components/Container/Container.svelte';
 	import Sidenav from '$lib/_components/Sidenav/Sidenav.svelte';

@@ -14,12 +14,6 @@ const config = {
 			base: dev ? '' : '/sexykit'
 		},
 		appDir: dev ? 'src' : 'internal',
-		prerender: {
-			crawl: true,
-			enabled: true,
-			onError: 'continue',
-			default: true
-		},
 		alias: {
 			$components: 'src/components',
 			$styles: 'src/styles',
