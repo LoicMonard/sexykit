@@ -4,9 +4,8 @@
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
-		"package": "svelte-kit package",
+		"package": "svelte-package",
 		"preview": "vite preview",
-		"prepare": "svelte-kit sync",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
 		"format": "prettier --write --plugin-search-dir=. .",
 		"storybook": "start-storybook -p 6006",
@@ -31,6 +30,7 @@
 		"@sveltejs/adapter-node": "^1.0.0-next.88",
 		"@sveltejs/adapter-static": "^1.0.0-next.42",
 		"@sveltejs/kit": "^1.0.0-next.513",
+		"@sveltejs/package": "^1.0.0-next.5",
 		"babel-loader": "^8.2.5",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
