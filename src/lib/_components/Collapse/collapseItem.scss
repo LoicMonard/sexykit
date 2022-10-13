@@ -12,6 +12,12 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		&:focus-visible {
+			color: $brandColor;
+			.collapse-item__chevron {
+				color: $brandColor;
+			}
+		}
 		.collapse-item__chevron {
 			font-size: 10px;
 			color: #a8abb2;

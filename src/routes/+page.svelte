@@ -368,11 +368,15 @@
 			<h1>Collapse</h1>
 			<Card fullWidth>
 				<Container gap="10px" fullWidth>
-					<Collapse activeItemsNames={['Introduction', 'Custom Body']} accordion>
-						<CollapseItem name="Introduction">
+					<Collapse activeItemsNames={['Introduction', 'Custom Body']} accordion >
+						<CollapseItem name="Introduction" toggleOnTriggerOnly>
 							<Text slot="header" color="#EE6783">Custom title</Text>
 							<i class="fas fa-arrow-right" />
 							<Text>Hello, I'm the content of this collapse item</Text>
+							<Container gap="4px" slot="trigger" align="center">
+								Custom trigger
+								<i class="fas fa-arrow-right" />
+							</Container>
 						</CollapseItem>
 						<CollapseItem name="Custom Body">
 							<Card>

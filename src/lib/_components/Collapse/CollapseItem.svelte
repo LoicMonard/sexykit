@@ -44,10 +44,12 @@
 	 *
 	 * @param name
 	 */
-	const toggleCollapse = (from, name) => {
+	const toggleCollapse = (from, name, e = null) => {
 		if (
 			(from === 'trigger' && toggleOnTriggerOnly) ||
-			(from === 'header' && !toggleOnTriggerOnly)
+			(from === 'header' && !toggleOnTriggerOnly) ||
+			(from === 'header focus' && !toggleOnTriggerOnly && e?.keyCode === 13) ||
+			(from === 'trigger focus' && toggleOnTriggerOnly && e?.keyCode === 13)
 		) {
 			updateCollapseItems(name);
 			open = !open;
@@ -71,14 +73,26 @@
 </script>
 
 <div class="collapse-item {bordered ? '' : 'collapse-item--no-borders'}">
-	<div class="collapse-item__header" on:click={toggleCollapse('header', name)}>
+	<div
+		class="collapse-item__header"
+		role="button"
+		tabindex="0"
+		on:click={toggleCollapse('header', name)}
+		on:keydown={(e) => toggleCollapse('header focus', name, e)}
+	>
 		{#if $$slots.header}
 			<slot name="header" />
 		{:else}
 			{name}
 		{/if}
 		{#if $$slots.trigger}
-			<div class="collapse-item__trigger" on:click={toggleCollapse('trigger', name)}>
+			<div
+				class="collapse-item__trigger"
+				tabindex="0"
+				role="button"
+				on:click={toggleCollapse('trigger', name)}
+				on:keydown={(e) => toggleCollapse('trigger focus', name, e)}
+			>
 				<slot name="trigger" />
 			</div>
 		{:else}
