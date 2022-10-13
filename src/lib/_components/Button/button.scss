@@ -8,6 +8,7 @@
 	display: inline-block;
 	line-height: 1;
 	height: fit-content;
+	outline: none;
 	transition: all 0.3s ease;
 	&.button--primary {
 		color: white;
@@ -18,6 +19,11 @@
 		&:hover {
 			background-color: lighten($brandColor, 10%);
 		}
+		&:focus-visible {
+			background-color: lighten($brandColor, 10%);
+			outline: 1px solid $brandColor;
+			outline-offset: 1px;
+		}
 	}
 	&.button--secondary {
 		color: #333;
@@ -25,6 +31,11 @@
 		box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 		&:hover {
 			background-color: darken($baseBackground, 5%);
+		}
+		&:focus-visible {
+			background-color: darken($baseBackground, 5%);
+			outline: 1px solid darken($baseBackground, 25%);;
+			outline-offset: 1px;
 		}
 	}
 	&.button--rounded {
@@ -41,9 +52,6 @@
 	&.button--large {
 		font-size: 16px;
 		padding: 12px 24px;
-	}
-	&:hover {
-		background-color: lighten($brandColor, 10%);
 	}
 	> i {
 		width: 14px;
