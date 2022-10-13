@@ -368,7 +368,7 @@
 			<h1>Collapse</h1>
 			<Card fullWidth>
 				<Container gap="10px" fullWidth>
-					<Collapse activeItemsNames={['Introduction', 'Custom Body']} accordion >
+					<Collapse activeItemsNames={['Introduction', 'Custom Body']} accordion>
 						<CollapseItem name="Introduction" toggleOnTriggerOnly>
 							<Text slot="header" color="#EE6783">Custom title</Text>
 							<i class="fas fa-arrow-right" />

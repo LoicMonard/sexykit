@@ -34,7 +34,7 @@
 		}
 		&:focus-visible {
 			background-color: darken($baseBackground, 5%);
-			outline: 1px solid darken($baseBackground, 25%);;
+			outline: 1px solid darken($baseBackground, 25%);
 			outline-offset: 1px;
 		}
 	}

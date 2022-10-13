@@ -11,7 +11,7 @@ const config = {
 			pages: 'build'
 		}),
 		paths: {
-			base: '/sexykit',
+			base: '/sexykit'
 		},
 		appDir: dev ? 'src' : 'internal',
 		alias: {
