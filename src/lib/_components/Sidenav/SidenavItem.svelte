@@ -37,10 +37,12 @@
 	/**
 	 * A method to toggle to SidenavItem
 	 */
-	const toggleCollapse = () => {
-		showChildren = !showChildren;
-		if (!item.children?.length) {
-			dispatch('click', item);
+	const toggleCollapse = (e = null) => {
+		if (e?.type === 'click' || e?.key === 'Enter') {
+			showChildren = !showChildren;
+			if (!item.children?.length) {
+				dispatch('click', item);
+			}
 		}
 	};
 	/**
@@ -62,7 +64,10 @@
 	<div
 		class="sidenavItem__trigger"
 		style="padding-left: {(depth + 1) * 20}px; {itemStyle}"
+		tabindex="0"
+		role="button"
 		on:click={toggleCollapse}
+		on:keydown={toggleCollapse}
 	>
 		{#if item.icon}
 			<div class="sidenavItem__icon">
