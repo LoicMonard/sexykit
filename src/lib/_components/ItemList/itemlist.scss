@@ -25,6 +25,9 @@
 			box-sizing: border-box;
 			color: $regularText;
 			cursor: pointer;
+			&:focus-visible {
+				color: $brandColor;
+			}
 			&.itemlist__option--selected {
 				color: $brandColor;
 				background-color: $selectedColor;

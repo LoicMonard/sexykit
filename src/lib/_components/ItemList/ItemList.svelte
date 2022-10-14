@@ -38,6 +38,8 @@
 		{#each items as item}
 			<li
 				transition:slide
+				tabindex="{item.disabled ? -1 : 0}"
+				role="button"
 				class={[
 					'itemlist__option',
 					`${item.disabled ? 'itemlist__option--disabled' : ''}`,
