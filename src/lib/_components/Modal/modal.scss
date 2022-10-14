@@ -1,6 +1,9 @@
 @import '../../_styles/global';
 
 .modal {
+	.modal__trigger {
+		@include focus-visible;
+	}
 	.modal__content-wrapper {
 		position: fixed;
 		top: 0;

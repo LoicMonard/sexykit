@@ -36,7 +36,7 @@
 	 * A function that is triggered when the dropdown is toggled
 	 */
 	const toggleDropdown = (e = null) => {
-		if (e?.type === 'click' || e?.keyCode === 13) {
+		if (e?.type === 'click' || e?.key === 'Enter') {
 			open = !open;
 		}
 	};

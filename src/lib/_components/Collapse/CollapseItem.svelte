@@ -48,8 +48,8 @@
 		if (
 			(from === 'trigger' && toggleOnTriggerOnly) ||
 			(from === 'header' && !toggleOnTriggerOnly) ||
-			(from === 'header focus' && !toggleOnTriggerOnly && e?.keyCode === 13) ||
-			(from === 'trigger focus' && toggleOnTriggerOnly && e?.keyCode === 13)
+			(from === 'header focus' && !toggleOnTriggerOnly && e?.key === 'Enter') ||
+			(from === 'trigger focus' && toggleOnTriggerOnly && e?.key === 'Enter')
 		) {
 			updateCollapseItems(name);
 			open = !open;

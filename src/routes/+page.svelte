@@ -330,6 +330,16 @@
 					>
 						<Button leftIcon="plus" icon />
 					</Dropdown>
+					<Dropdown
+						on:change={(e) => console.log(e.detail)}
+						items={[
+							{ value: 'option1', label: 'Action 1' },
+							{ value: 'option2', label: 'Action 2', disabled: true },
+							{ value: 'option3', label: 'Action 3' }
+						]}
+					>
+						<Text>Custom trigger</Text>
+					</Dropdown>
 				</Container>
 			</Card>
 		</Container>
