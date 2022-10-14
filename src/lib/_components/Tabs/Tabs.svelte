@@ -82,7 +82,14 @@
 			{#each tabs as tab}
 				<div
 					class={['tabs__nav', tab === $activeTab ? 'tabs__nav--active' : ''].join(' ')}
-					on:click={() => setActiveTab(tab)}
+					tabindex="0"
+					role="button"
+					on:click={setActiveTab(tab)}
+					on:keydown={(e) => {
+						if (e?.key === 'Enter') {
+							setActiveTab(tab);
+						}
+					}}
 				>
 					{tab.name}
 				</div>

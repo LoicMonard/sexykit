@@ -28,6 +28,7 @@
 				&.tabs__nav--active {
 					color: $primaryText;
 				}
+				@include focus-visible;
 			}
 		}
 	}
