@@ -2,4 +2,10 @@
 
 .dropdown {
 	width: fit-content;
+	.dropdown__trigger {
+		&:focus-visible {
+			outline: 1px solid $brandColor;
+			outline-offset: 1px;
+		}
+	}
 }
