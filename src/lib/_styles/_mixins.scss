@@ -7,3 +7,11 @@
 	user-select: $value; /* Non-prefixed version, currently
 													supported by Chrome, Edge, Opera and Firefox */
 }
+
+// Focus-visible mixin
+@mixin focus-visible {
+	&:focus-visible {
+		outline: 1px solid $brandColor;
+		outline-offset: 1px;
+	}
+}
