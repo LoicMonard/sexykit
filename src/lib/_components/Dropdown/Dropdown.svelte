@@ -33,6 +33,14 @@
 		}
 	};
 	/**
+	 * A function that is triggered when the dropdown is toggled
+	 */
+	const toggleDropdown = (e = null) => {
+		if (e?.keyCode === 13 || !e) {
+			open = !open;
+		}
+	};
+	/**
 	 * A function that closes the dropdown items when clicked outside
 	 */
 	const handleClickOutside = () => {
@@ -41,7 +49,7 @@
 </script>
 
 <div class="dropdown" use:clickOutside on:click_outside={handleClickOutside}>
-	<div class="dropdown__trigger" on:click={() => (open = !open)}>
+	<div class="dropdown__trigger" on:click={toggleDropdown} on:keydown={(e) => toggleDropdown(e)}>
 		<slot />
 	</div>
 	{#if open}
