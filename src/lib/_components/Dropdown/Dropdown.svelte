@@ -59,6 +59,13 @@
 		<slot />
 	</div>
 	{#if open}
-		<ItemList {items} on:mousedown={selectOption} />
+		<ItemList
+			{items}
+			on:select={selectOption}
+			on:toggle={toggleDropdown}
+			on:close={(e) => {
+				open = false;
+			}}
+		/>
 	{/if}
 </div>

@@ -40,6 +40,10 @@
 					background: none;
 				}
 			}
+			&.itemlist__option--focused {
+				background-color: $selectedColor;
+				color: $brandColor;
+			}
 			&.itemlist__option--empty {
 				cursor: default;
 				text-align: center;

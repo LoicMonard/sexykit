@@ -142,7 +142,7 @@
 				items={filteredOptions}
 				selectedItems={[tmpValue]}
 				noResultText="Aucun résultat"
-				on:mousedown={selectOption}
+				on:select={selectOption}
 			/>
 		{/if}
 	</div>
