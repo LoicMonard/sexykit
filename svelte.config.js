@@ -19,6 +19,15 @@ const config = {
 			$styles: 'src/styles',
 			$utils: 'src/utils'
 		}
+	},
+	package: {
+		exports: (filepath) => {
+			if (filepath.startsWith('_components/_')) {
+				return false;
+			}
+			return true;
+		},
+		files: () => true
 	}
 };
 
