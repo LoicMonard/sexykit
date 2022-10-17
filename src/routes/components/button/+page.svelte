@@ -6,6 +6,7 @@
 	import Collapse from '$lib/_components/Collapse/Collapse.svelte';
 	import CollapseItem from '$lib/_components/Collapse/CollapseItem.svelte';
 	import Container from '$lib/_components/Container/Container.svelte';
+	import CodeBlock from '$components/CodeBlock/CodeBlock.svelte';
 	import Text from '$lib/_components/Text/Text.svelte';
 	import xml from 'svelte-highlight/languages/xml';
 	import { onMount } from 'svelte';
@@ -38,22 +39,13 @@
 					<Button label="Button" />
 					<Button label="Rounded" rounded />
 				</Container>
-				<Collapse>
-					<CollapseItem toggleOnTriggerOnly bordered={false}>
-						<Container gap="10px" fullWidth slot="header" />
-						<i class="fa-solid fa-code" slot="trigger" />
-						<svelte:component
-							this={highlightComponent}
-							language={xml}
-							langtag
-							code={`<Container gap="10px" fullWidth>
+				<CodeBlock
+					code={`<Container gap="10px" fullWidth>
 	<Button primary label="Button" icon="user" />
 	<Button label="Button" />
 	<Button label="Rounded" rounded />
 </Container>`}
-						/>
-					</CollapseItem>
-				</Collapse>
+				/>
 			</Container>
 		</Card>
 	</Container>
@@ -61,7 +53,7 @@
 	<Container direction="column" gap="20px" fullWidth>
 		<h2>With icon</h2>
 		<Text>Button with icon</Text>
-		<Card fullWidth>
+		<Card fullWidth bodyStyle="padding-bottom: 0px">
 			<Container direction="column" gap="20px" fullWidth>
 				<Container gap="10px" fullWidth>
 					<Button primary label="Add" leftIcon="add" />
@@ -69,23 +61,14 @@
 					<Button leftIcon="plus" icon />
 					<Button leftIcon="plus" icon rounded />
 				</Container>
-				<Collapse>
-					<CollapseItem name="Code here">
-						<Container gap="10px" fullWidth slot="header" />
-						<i class="fa-solid fa-code" slot="trigger" />
-						<svelte:component
-							this={highlightComponent}
-							language={xml}
-							langtag
-							code={`<Container gap="10px" fullWidth>
-  <Button primary label="Add" leftIcon="add" />
-  <Button label="Delete" rightIcon="trash" />
-  <Button leftIcon="plus" icon />
-  <Button leftIcon="plus" icon rounded />
+				<CodeBlock
+					code={`<Container gap="10px" fullWidth>
+	<Button primary label="Add" leftIcon="add" />
+	<Button label="Delete" rightIcon="trash" />
+	<Button leftIcon="plus" icon />
+	<Button leftIcon="plus" icon rounded />
 </Container>`}
-						/>
-					</CollapseItem>
-				</Collapse>
+				/>
 			</Container>
 		</Card>
 	</Container>
@@ -93,29 +76,20 @@
 	<Container direction="column" gap="20px" fullWidth>
 		<h2>Sizes</h2>
 		<Text>Button sizes</Text>
-		<Card fullWidth>
+		<Card fullWidth bodyStyle="padding-bottom: 0px">
 			<Container direction="column" gap="20px" fullWidth>
 				<Container gap="10px" fullWidth>
 					<Button size="large" label="Large" />
 					<Button primary label="Medium" />
 					<Button size="small" label="Small" />
 				</Container>
-				<Collapse>
-					<CollapseItem name="Code here">
-						<Container gap="10px" fullWidth slot="header" />
-						<i class="fa-solid fa-code" slot="trigger" />
-						<svelte:component
-							this={highlightComponent}
-							language={xml}
-							langtag
-							code={`<Container gap="10px" fullWidth>
-  <Button size="large" label="Large" />
-  <Button primary label="Medium" />
-  <Button size="small" label="Small" />
+				<CodeBlock
+					code={`<Container gap="10px" fullWidth>
+	<Button size="large" label="Large" />
+	<Button primary label="Medium" />
+	<Button size="small" label="Small" />
 </Container>`}
-						/>
-					</CollapseItem>
-				</Collapse>
+				/>
 			</Container>
 		</Card>
 	</Container>
