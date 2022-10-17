@@ -6,6 +6,7 @@
 	import Sidenav from '$lib/_components/Sidenav/Sidenav.svelte';
 	import { goto } from '$app/navigation';
 	import Divider from '$lib/_components/Divider/Divider.svelte';
+	import { onMount } from 'svelte';
 
 	const sidenavTree = [
 		{
@@ -111,6 +112,11 @@
 		activeSidenavItem = e.label;
 		goto('/sexykit/components/' + e.path);
 	};
+
+	onMount(() => {
+		const path = window.location.pathname.split('/');
+		activeSidenavItem = path[path.length - 1].charAt(0).toUpperCase() + path[path.length - 1].slice(1);
+	});
 </script>
 
 <Container direction="row" fullWidth padding="20px" gap="20px">
