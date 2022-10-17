@@ -76,3 +76,10 @@ pre {
 [data-language='svelte'] {
 	--hljs-foreground: rgb(192, 192, 192);
 }
+.property {
+	background-color: #f5f5f5;
+	font-family: monospace;
+	color: #303133;
+	padding: 2px 6px;
+	font-size: 12px;
+}
