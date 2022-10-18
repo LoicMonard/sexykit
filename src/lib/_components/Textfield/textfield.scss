@@ -6,7 +6,8 @@
 	width: fit-content;
 	gap: 4px;
 	.textfield__label {
-		font-family: 'Pulp ExtraLight';
+		font-family: 'Pulp Regular';
+		font-weight: 300;
 		font-size: 14px;
 		color: $placeholderText;
 		transition: color $transitionDuration ease;
@@ -26,7 +27,8 @@
 			transition: color $transitionDuration ease;
 		}
 		.textfield__inner {
-			font-family: 'Pulp ExtraLight';
+			font-family: 'Pulp Regular';
+			font-weight: 300;
 			font-size: 14px;
 			&::placeholder {
 				color: $placeholderText;

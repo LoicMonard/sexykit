@@ -3,12 +3,12 @@
 @import './mixins.scss';
 
 @font-face {
-	font-family: 'Pulp ExtraLight';
-	font-weight: 400;
+	font-family: 'Pulp Regular';
+	font-weight: 300;
 	src: url('../../_static/fonts/PulpDisplay-ExtraLight.ttf');
 }
 @font-face {
-	font-family: 'Pulp Light';
+	font-family: 'Pulp Regular';
 	font-weight: 400;
 	src: url('../../_static/fonts/PulpDisplay-Light.ttf');
 }
@@ -18,23 +18,24 @@
 	src: url('../../_static/fonts/PulpDisplay-Regular.ttf');
 }
 @font-face {
-	font-family: 'Pulp Medium';
+	font-family: 'Pulp Regular';
 	font-weight: 600;
 	src: url('../../_static/fonts/PulpDisplay-Medium.ttf');
 }
 @font-face {
-	font-family: 'Pulp SemiBold';
+	font-family: 'Pulp Regular';
 	font-weight: 700;
 	src: url('../../_static/fonts/PulpDisplay-SemiBold.ttf');
 }
 @font-face {
-	font-family: 'Pulp Bold';
+	font-family: 'Pulp Regular';
 	font-weight: 800;
 	src: url('../../_static/fonts/PulpDisplay-Bold.ttf');
 }
 
 *:not(pre *) {
-	font-family: 'Pulp Light';
+	font-family: 'Pulp Regular';
+	font-weight: 400;
 }
 
 h1 {
