@@ -34,7 +34,6 @@
 		<link href="/sexykit/internal/immutable/assets/Text-1506e4ab.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/Card-0fb989ad.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/Divider-dfcb33aa.css" rel="stylesheet">
-		<link href="/sexykit/internal/immutable/assets/_page-3164df23.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/CollapseItem-58eccd0e.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/index-548b5b0d.css" rel="stylesheet">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/start-cdb4788a.js">
@@ -52,9 +51,9 @@
 		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/_layout.svelte-5f3e26cb.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Card-9dd2fd8c.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Divider-c82d5481.js">
-		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/container/_page.svelte-4f7d4ee2.js">
+		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/text/_page.svelte-8680c29a.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CodeBlock-d08c46e0.js">
-		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CollapseItem-044112aa.js"><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr -->
+		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CollapseItem-044112aa.js"><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr -->
 	</head>
 	<body>
 		<div>
@@ -133,81 +132,40 @@
 	<div class="sidenavItem__children"></div></div></div></div></div></div></div></div>
 	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 0px; padding: 20px; width: fit-content; height: fit-content; max-width: 100%; flex: 1;"><h1>Button</h1>
 		<div class="divider" style="margin: 20px 0"></div>
-		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">The <span class="property">Container</span> component is used to organize your elements. It is
-		flex and acts like flexboxes but embeds some useful features like
-		<span class="property">gap</span>, <span class="property">direction</span>,
-		<span class="property">alignment</span>, etc.
-	</span>
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Default container</h2>
-		<span class="text text--regular" style="color: undefined">Default container only fits to its content, and is row-based. Simply add <span class="property">fullWidth</span> property so the Container can stretch to the parent width
+		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">The text component provides a simple way to style text.</span>
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Default text</h2>
+		<span class="text text--regular" style="color: undefined">The default text you would be using. It replaces <span class="property">span</span>
+			tags and helps homogeneity between your pages.
 		</span>
 		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 0px; padding: 0px; width: fit-content; height: fit-content; max-width: 100%; "><div class="line svelte-1x5ht6s" style="width: 150px"></div>
-					<div class="line svelte-1x5ht6s" style="width: 150px"></div>
-					<div class="line svelte-1x5ht6s" style="width: 150px"></div></div>
-				<div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 0px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="line svelte-1x5ht6s" style="flex: 1"></div>
-					<div class="line svelte-1x5ht6s" style="flex: 1"></div>
-					<div class="line svelte-1x5ht6s" style="flex: 1"></div></div>
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</span></div>
 				
 
 <div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
 		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
 	</div></div></div></div></div></div>
 
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Column container</h2>
-		<span class="text text--regular" style="color: undefined">Containers inherits from flexbox, so you can use <span class="property">direction</span>
-			property to change the direction of the container. You can also use
-			<span class="property">fullHeight</span>
-			property to make the container take the full height of its parent.
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Other text types</h2>
+		<span class="text text--regular" style="color: undefined">You can use a bunch of properties to change the text type, like <span class="property">bold
+			</span>
+			,
+			<span class="property">italic</span>
+			, or even use a custom color with
+			<span class="property">color</span>
+			. Text component also offers a
+			<span class="property">size</span>
+			property to change the text size.
 		</span>
 		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: fit-content; height: fit-content; max-width: 100%; height: 150px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 0px; padding: 0px; width: fit-content; height: fit-content; max-width: 100%; "><div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div></div>
-					<div class="container" style="flex-direction: column; justify-content: space-between; align-items: start; gap: 0px; padding: 0px; width: fit-content; height: 100%; max-width: 100%; "><div class="line svelte-1x5ht6s" style="width: 150px; flex: 1;"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px; flex: 1;"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px; flex: 1;"></div></div></div>
-				
-
-<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
-		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
-	</div></div></div></div></div></div>
-
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Alignment, justifying and spacing</h2>
-		<span class="text text--regular" style="color: undefined">You can use <span class="property">align</span>, <span class="property">justify</span> and
-			<span class="property">gap</span> properties to align, justify and space your elements.
-		</span>
-		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 4px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="line svelte-1x5ht6s" style="flex: 1;"></div>
-						<div class="line svelte-1x5ht6s" style="flex: 1;"></div>
-						<div class="line svelte-1x5ht6s" style="flex: 1;"></div></div>
-					<div class="container" style="flex-direction: row; justify-content: center; align-items: start; gap: 50px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div></div>
-					<div class="container" style="flex-direction: row; justify-content: space-evenly; align-items: start; gap: 0px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div></div>
-					<div class="container" style="flex-direction: row; justify-content: space-between; align-items: start; gap: 50px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="line svelte-1x5ht6s" style="flex: 1;"></div>
-						<div class="line svelte-1x5ht6s" style="flex: 1;"></div></div>
-					<div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 4px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div></div>
-					<div class="container" style="flex-direction: column; justify-content: start; align-items: center; gap: 4px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; background-color: #f5f5f5"><div class="line svelte-1x5ht6s" style="width: 150px"></div>
-						<div class="line svelte-1x5ht6s" style="width: 150px"></div></div></div>
-				
-
-<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
-		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
-	</div></div></div></div></div></div>
-
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Custom style container</h2>
-		<span class="text text--regular" style="color: undefined">You can use <span class="property">style</span> property to add custom style to your container.
-		</span>
-		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: space-evenly; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding: 10px; background-color: #f5f5f5;"><div class="line svelte-1x5ht6s" style="width: 150px"></div>
-					<div class="line svelte-1x5ht6s" style="width: 150px"></div>
-					<div class="line svelte-1x5ht6s" style="width: 150px"></div></div>
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--small" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?
+					</span>
+					<span class="text text--regular" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</span>
+					<span class="text text--large" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?
+					</span>
+					<span class="text text--regular text--bold" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</span>
+					<span class="text text--regular text--italic" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</span>
+					<span class="text text--regular" style="color: red">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?
+					</span></div>
 				
 
 <div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
@@ -215,7 +173,7 @@
 	</div></div></div></div></div></div></div></div></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="re8hfd">
+		<script type="module" data-sveltekit-hydrate="ci87p6">
 			import { start } from "/sexykit/internal/immutable/start-cdb4788a.js";
 
 			start({
@@ -223,14 +181,14 @@
 				hydrate: {
 					status: 200,
 					error: null,
-					node_ids: [0, 2, 5],
+					node_ids: [0, 2, 6],
 					params: {},
-					routeId: "components/container",
+					routeId: "components/text",
 					data: (function(a){return [a,a,a]}(null)),
 					form: null
 				},
 				paths: {"base":"/sexykit","assets":"/sexykit"},
-				target: document.querySelector('[data-sveltekit-hydrate="re8hfd"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="ci87p6"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
