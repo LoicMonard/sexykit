@@ -12,7 +12,6 @@
 
 <span
 	class={`text text--${size}${bold ? ' text--bold' : ''}${italic ? ' text--italic' : ''}`}
-	style="color: {color}"
->
+	style="color: {color}">
 	<slot />
 </span>
