@@ -17,7 +17,7 @@
 	/**
 	 * Input placeholder
 	 */
-	export let placeholder = 'Recherche';
+	export let placeholder = 'Search';
 	/**
 	 * How large should the button be?
 	 */

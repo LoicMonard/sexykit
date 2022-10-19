@@ -15,7 +15,7 @@
 	/**
 	 * The placeholder attached to the input, passed to the Textfield
 	 */
-	export let placeholder = 'Recherche';
+	export let placeholder = 'Search';
 	/**
 	 * The size of the input, passed to the Textfield
 	 */
@@ -125,7 +125,6 @@
 <div class="select">
 	<div class="select__wrapper">
 		<Textfield
-			id="test"
 			type="select"
 			bind:value={displayedValue}
 			{placeholder}
