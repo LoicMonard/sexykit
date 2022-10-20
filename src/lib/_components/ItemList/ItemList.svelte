@@ -94,8 +94,7 @@
 	role="button"
 	on:keydown={handleKeydown}
 	on:focus={handleFocus}
-	on:blur={handleBlur}
->
+	on:blur={handleBlur}>
 	<ul class="itemlist__options" transition:fly={{ y: -10, duration: 300 }}>
 		{#each items as item}
 			<li
@@ -103,11 +102,12 @@
 				class={[
 					'itemlist__option',
 					`${item.disabled ? 'itemlist__option--disabled' : ''}`,
-					`${selectedItems.find((i) => i === item) ? 'itemlist__option--selected' : ''}`,
+					`${
+						selectedItems.find((i) => i.value === item.value) ? 'itemlist__option--selected' : ''
+					}`,
 					`${focusedItem === item ? 'itemlist__option--focused' : ''}`
 				].join(' ')}
-				on:mousedown={handleMousedown(item)}
-			>
+				on:mousedown={handleMousedown(item)}>
 				{item[itemLabel]}
 			</li>
 		{/each}
