@@ -46,8 +46,27 @@
 		}
 	}
 	&.textfield--small {
+		.textfield__label {
+			font-size: 12px;
+		}
 		.textfield__wrapper {
-			padding: 4px 6px;
+			padding: 6px 8px;
+			gap: 6px;
+			.textfield__icon {
+				font-size: 10px;
+			}
+			.textfield__inner {
+				font-size: 12px;
+				&::placeholder {
+					font-size: 12px;
+				}
+			}
+
+		}
+	}
+	&.textfield--large {
+		.textfield__wrapper {
+			padding: 8px 12px;
 			gap: 6px;
 		}
 	}
