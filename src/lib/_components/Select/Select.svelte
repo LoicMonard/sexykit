@@ -20,6 +20,10 @@
 	 * The size of the input, passed to the Textfield
 	 */
 	export let size = 'medium';
+	/** 
+	 * If the input is disabled, passed to the Textfield
+	 */
+	export let disabled = false;
 	/**
 	 * The icon of the input, passed to the Textfield
 	 */
@@ -131,6 +135,7 @@
 			{icon}
 			{size}
 			{label}
+			{disabled}
 			on:blur={(e) => toggleSelect(e, false, 'blur')}
 			on:focus={(e) => toggleSelect(e, true, 'focus')}
 		>
