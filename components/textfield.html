@@ -55,9 +55,9 @@
 		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/_layout.svelte-5932627e.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Card-850f1286.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Divider-733d2697.js">
-		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/button/_page.svelte-773f0a65.js">
+		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/textfield/_page.svelte-320081ee.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CodeBlock-5afa92e1.js">
-		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CollapseItem-4ad779a0.js"><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr -->
+		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CollapseItem-4ad779a0.js"><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr -->
 	</head>
 	<body>
 		<div>
@@ -136,40 +136,22 @@
 	<div class="sidenavItem__children"></div></div></div></div></div></div></div></div>
 	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 0px; padding: 20px; width: fit-content; height: fit-content; max-width: 100%; flex: 1;"><h1>Button</h1>
 		<div class="divider" style="margin: 20px 0"></div>
-		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">Comonly used button</span>
+		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">The <span class="property">Textfield</span>
+		component is what replaces the input type text element.
+	</span>
 	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Basic</h2>
-		<span class="text text--regular" style="color: undefined">Basic button</span>
+		<span class="text text--regular" style="color: undefined">The <span class="property">Textfield</span>
+			component supports two way data binding with the
+			<span class="property">bind:value</span>
+			directive.
+		</span>
 		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><button type="button" class="button button--medium button--primary  button--icon">
-	Button
-	</button>
-					<button type="button" class="button button--medium button--secondary  ">
-	Button
-	</button>
-					<button type="button" class="button button--medium button--secondary button--rounded ">
-	Rounded
-	</button></div>
-				
-
-<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
-		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
-	</div></div></div></div></div></div>
-
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>With icon</h2>
-		<span class="text text--regular" style="color: undefined">Button with icon</span>
-		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><button type="button" class="button button--medium button--primary  "><i class="left-icon fa-solid fa-add"></i>
-	Add
-	</button>
-					<button type="button" class="button button--medium button--secondary  ">
-	Delete
-	<i class="right-icon fa-solid fa-trash"></i></button>
-					<button type="button" class="button button--medium button--secondary  button--icon"><i class="left-icon fa-solid fa-plus"></i>
-	
-	</button>
-					<button type="button" class="button button--medium button--secondary button--rounded button--icon"><i class="left-icon fa-solid fa-plus"></i>
-	
-	</button></div>
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: center; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="textfield textfield--medium  ">
+	<div class="textfield__wrapper">
+		<input type="text" class="textfield__inner" name="input" placeholder="Placeholder" value="Hello" >
+		</div></div>
+					<span class="text text--regular text--bold" style="color: undefined">Value :</span>
+					Hello</div>
 				
 
 <div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
@@ -177,17 +159,66 @@
 	</div></div></div></div></div></div>
 
 	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Sizes</h2>
-		<span class="text text--regular" style="color: undefined">Button sizes</span>
+		<span class="text text--regular" style="color: undefined">The <span class="property">Textfield</span>
+			component supports three sizes:
+			<span class="property">small</span>
+			,
+			<span class="property">medium</span>
+			and
+			<span class="property">large</span>
+			.
+		</span>
 		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><button type="button" class="button button--large button--secondary  ">
-	Large
-	</button>
-					<button type="button" class="button button--medium button--primary  ">
-	Medium
-	</button>
-					<button type="button" class="button button--small button--secondary  ">
-	Small
-	</button></div>
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: center; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="textfield textfield--large  "><label class="textfield__label" for="input">Large</label>
+	<div class="textfield__wrapper">
+		<input type="text" class="textfield__inner" name="input" placeholder="Placeholder" value="" >
+		</div></div>
+					<div class="textfield textfield--medium  "><label class="textfield__label" for="input">Medium</label>
+	<div class="textfield__wrapper">
+		<input type="text" class="textfield__inner" name="input" placeholder="Placeholder" value="" >
+		</div></div>
+					<div class="textfield textfield--small  "><label class="textfield__label" for="input">Small</label>
+	<div class="textfield__wrapper">
+		<input type="text" class="textfield__inner" name="input" placeholder="Placeholder" value="" >
+		</div></div></div>
+				
+
+<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
+		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
+	</div></div></div></div></div></div>
+
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Disabled and readonly</h2>
+		<span class="text text--regular" style="color: undefined">The <span class="property">Textfield</span>
+      component supports two states:
+      <span class="property">disabled</span>
+      and
+      <span class="property">readonly</span>
+      .
+		</span>
+		<div class="card card-shadow--hover" style="width: 100%;">
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: center; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="textfield textfield--medium  textfield--disabled"><label class="textfield__label" for="input">Disabled</label>
+	<div class="textfield__wrapper">
+		<input type="text" class="textfield__inner" name="input" placeholder="Disabled" value="" disabled>
+		</div></div>
+					<div class="textfield textfield--medium textfield--readonly "><label class="textfield__label" for="input">Readonly</label>
+	<div class="textfield__wrapper">
+		<input type="text" class="textfield__inner" name="input" placeholder="Readonly" value="" >
+		</div></div></div>
+				
+
+<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
+		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
+	</div></div></div></div></div></div>
+
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>With icon</h2>
+		<span class="text text--regular" style="color: undefined">The <span class="property">Textfield</span>
+			component supports icons.
+		</span>
+		<div class="card card-shadow--hover" style="width: 100%;">
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: center; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="textfield textfield--medium  "><label class="textfield__label" for="input">First name</label>
+	<div class="textfield__wrapper"><i class="textfield__icon fa-solid fa-person"></i>
+		<input type="text" class="textfield__inner" name="input" placeholder="Enter your first name" value="" >
+		</div></div></div>
 				
 
 <div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
@@ -195,7 +226,7 @@
 	</div></div></div></div></div></div></div></div></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1wns0tn">
+		<script type="module" data-sveltekit-hydrate="1exj9r">
 			import { start } from "/sexykit/internal/immutable/start-2831c3b0.js";
 
 			start({
@@ -203,14 +234,14 @@
 				hydrate: {
 					status: 200,
 					error: null,
-					node_ids: [0, 2, 4],
+					node_ids: [0, 2, 8],
 					params: {},
-					routeId: "components/button",
+					routeId: "components/textfield",
 					data: (function(a){return [a,a,a]}(null)),
 					form: null
 				},
 				paths: {"base":"/sexykit","assets":"/sexykit"},
-				target: document.querySelector('[data-sveltekit-hydrate="1wns0tn"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="1exj9r"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
