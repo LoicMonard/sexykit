@@ -70,6 +70,20 @@
 			gap: 6px;
 		}
 	}
+	&.textfield--disabled {
+		.textfield__label {
+			color: $disabledText;
+		}
+		.textfield__wrapper {
+			background-color: #f5f5f5;
+			.textfield__icon {
+				color: $disabledText;
+			}
+			.textfield__inner {
+				color: $disabledText;
+			}
+		}	
+	}
 	&.textfield--readonly {
 		cursor: pointer;
 	}

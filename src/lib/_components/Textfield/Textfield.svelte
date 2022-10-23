@@ -11,6 +11,10 @@
 	 */
 	export let type = 'text';
 	/**
+	 * If the textfield is disabled
+	 */
+	export let disabled = false;
+	/**
 	 * The label for the input
 	 */
 	export let label = '';
@@ -88,8 +92,12 @@
 </script>
 
 <div
-	class={['textfield', `textfield--${size}`, `${readonly ? 'textfield--readonly' : ''}`].join(' ')}
->
+	class={[
+		'textfield',
+		`textfield--${size}`,
+		`${readonly ? 'textfield--readonly' : ''}`,
+		`${disabled ? 'textfield--disabled' : ''}`
+	].join(' ')}>
 	{#if label}
 		<label class="textfield__label" for="input">{label}</label>
 	{/if}
@@ -104,6 +112,7 @@
 			name="input"
 			{placeholder}
 			{value}
+			{disabled}
 			on:click
 			on:mouseover
 			on:mousedown
@@ -112,8 +121,7 @@
 			on:blur
 			on:focus={handleFocus}
 			on:input={handleInput}
-			on:change={handleChange}
-		/>
+			on:change={handleChange} />
 		<slot />
 	</div>
 </div>
