@@ -17,7 +17,8 @@ const config = {
 		alias: {
 			$components: 'src/components',
 			$styles: 'src/styles',
-			$utils: 'src/utils'
+			$utils: 'src/utils',
+			$statics: 'src/static'
 		}
 	},
 	package: {
