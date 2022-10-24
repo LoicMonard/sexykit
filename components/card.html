@@ -36,6 +36,7 @@
 		<link href="/sexykit/internal/immutable/assets/Text-1506e4ab.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/Card-75d42b69.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/Divider-dfcb33aa.css" rel="stylesheet">
+		<link href="/sexykit/internal/immutable/assets/_page-3fbcda01.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/CollapseItem-58eccd0e.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/index-548b5b0d.css" rel="stylesheet">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/start-977e0eae.js">
@@ -55,9 +56,9 @@
 		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/_layout.svelte-0e5a2e1f.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Card-c7b03245.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Divider-733d2697.js">
-		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/text/_page.svelte-50c52a90.js">
+		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/card/_page.svelte-0b05dbd8.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CodeBlock-5afa92e1.js">
-		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CollapseItem-4ad779a0.js"><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr -->
+		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CollapseItem-4ad779a0.js"><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr -->
 	</head>
 	<body>
 		<div>
@@ -136,40 +137,75 @@
 	<div class="sidenavItem__children"></div></div></div></div></div></div></div></div>
 	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 0px; padding: 20px; width: fit-content; height: fit-content; max-width: 100%; flex: 1; height: 100%; overflow: auto; flex-wrap: initial"><h1>Button</h1>
 		<div class="divider" style="margin: 20px 0"></div>
-		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">The text component provides a simple way to style text.</span>
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Default text</h2>
-		<span class="text text--regular" style="color: undefined">The default text you would be using. It replaces <span class="property">span</span>
-			tags and helps homogeneity between your pages.
-		</span>
+		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">The <span class="property">Card</span>
+		component is a container that can be used to group content.
+	</span>
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Default card</h2>
+		<span class="text text--regular" style="color: undefined">By default, the card component has a white background and a shadow.</span>
 		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</span></div>
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="card card-shadow--hover" style="width: fit-content">
+	<div class="card--body" style="">Hello I&#39;m a card</div></div></div>
 				
 
 <div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
 		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
 	</div></div></div></div></div></div>
 
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Other text types</h2>
-		<span class="text text--regular" style="color: undefined">You can use a bunch of properties to change the text type, like <span class="property">bold
-			</span>
-			,
-			<span class="property">italic</span>
-			, or even use a custom color with
-			<span class="property">color</span>
-			. Text component also offers a
-			<span class="property">size</span>
-			property to change the text size.
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Content</h2>
+		<span class="text text--regular" style="color: undefined">Cards support two types of slots, <span class="property">header</span>
+			which is displayed at the top of the card, and the default slot which is used for the body of the
+			<span class="property">Card</span>
+			. If the header slot is missing, the
+			<span class="property">Card</span>
+			will only display its body.
 		</span>
 		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--small" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?
-					</span>
-					<span class="text text--regular" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</span>
-					<span class="text text--large" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?
-					</span>
-					<span class="text text--regular text--bold" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</span>
-					<span class="text text--regular text--italic" style="color: undefined">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</span>
-					<span class="text text--regular" style="color: red">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?
-					</span></div>
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="card card-shadow--hover" style="width: fit-content">
+	<div class="card--body" style="">Hello I&#39;m a card</div></div>
+					<div class="card card-shadow--hover" style="width: fit-content"><div class="card--header" style=""><span class="text text--regular" style="color: undefined">I&#39;m a header</span></div>
+	<div class="card--body" style="">Hello I&#39;m a card
+					</div></div></div>
+				
+
+<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
+		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
+	</div></div></div></div></div></div>
+
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Shadows</h2>
+		<span class="text text--regular" style="color: undefined">The <span class="property">shadow</span>
+			property can be used to change the shadow of the card. The default value is
+			<span class="property">hover</span>
+			, which means that the shadow will only be visible when the mouse is over the card.
+		</span>
+		<div class="card card-shadow--hover" style="width: 100%;">
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="card card-shadow--hover" style="width: fit-content">
+	<div class="card--body" style="">You need to hover me to see my shadow</div></div>
+					<div class="card card-shadow--always" style="width: fit-content">
+	<div class="card--body" style="">You will always see my shadow</div></div>
+					<div class="card card-shadow--never" style="width: fit-content">
+	<div class="card--body" style="">You will never see my shadow</div></div></div>
+				
+
+<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
+		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
+	</div></div></div></div></div></div>
+
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Custom styles</h2>
+		<span class="text text--regular" style="color: undefined">You can customize the styles of the <span class="property">Card</span>
+			by using the
+			<span class="property">headerStyle</span>
+			and
+			<span class="property">bodyStyle</span>
+			props.
+		</span>
+		<div class="card card-shadow--hover" style="width: 100%;">
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="card card-shadow--hover" style="width: fit-content"><div class="card--header" style="padding: 0;"><img slot="header" src="/sexykit/internal/immutable/assets/pumpkin-5595e804.jpg" class="svelte-1sp0t7d"></div>
+	<div class="card--body" style="max-width: 200px;"><span class="text text--regular" style="color: undefined">A <span class="text text--regular text--bold" style="color: undefined">pumpkin</span> is a cultivar of winter squash that is round with smooth, slightly
+							ribbed skin, and is most often deep yellow to orange in coloration.
+						</span></div></div>
+					<div class="card card-shadow--hover" style="width: fit-content"><div class="card--header" style="background: #f5f5f5;"><span class="text text--regular" style="color: undefined">I&#39;m a header</span></div>
+	<div class="card--body" style="color: purple">Hello I&#39;m a card
+					</div></div></div>
 				
 
 <div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
@@ -177,7 +213,7 @@
 	</div></div></div></div></div></div></div></div></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1hfyexa">
+		<script type="module" data-sveltekit-hydrate="g7q5zy">
 			import { start } from "/sexykit/internal/immutable/start-977e0eae.js";
 
 			start({
@@ -185,14 +221,14 @@
 				hydrate: {
 					status: 200,
 					error: null,
-					node_ids: [0, 2, 8],
+					node_ids: [0, 2, 5],
 					params: {},
-					routeId: "components/text",
+					routeId: "components/card",
 					data: (function(a){return [a,a,a]}(null)),
 					form: null
 				},
 				paths: {"base":"/sexykit","assets":"/sexykit"},
-				target: document.querySelector('[data-sveltekit-hydrate="1hfyexa"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="g7q5zy"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
