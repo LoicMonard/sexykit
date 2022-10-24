@@ -115,12 +115,18 @@
 
 	onMount(() => {
 		const path = window.location.pathname.split('/');
-		activeSidenavItem = path[path.length - 1].charAt(0).toUpperCase() + path[path.length - 1].slice(1);
+		activeSidenavItem =
+			path[path.length - 1].charAt(0).toUpperCase() + path[path.length - 1].slice(1);
 	});
 </script>
 
-<Container direction="row" fullWidth padding="20px" gap="20px">
-	<Container maxWidth="240px" fullWidth>
+<Container
+	direction="row"
+	fullWidth
+	padding="20px"
+	gap="20px"
+	style="height: calc(100vh - 64px); overflow: hidden;">
+	<Container maxWidth="240px" fullWidth fullHeight>
 		<Card fullWidth shadow="never">
 			<Sidenav
 				tree={sidenavTree}
@@ -130,11 +136,13 @@
 				defaultExpandedItems={['*']}
 				on:click={(e) => {
 					selectNavItem(e.detail);
-				}}
-			/>
+				}} />
 		</Card>
 	</Container>
-	<Container style="flex: 1;" padding="20px" direction="column">
+	<Container
+		style="flex: 1; height: 100%; overflow: auto; flex-wrap: initial"
+		padding="20px"
+		direction="column">
 		<h1>{activeSidenavItem}</h1>
 		<Divider margin="20px" />
 		<slot />
