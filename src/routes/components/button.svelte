@@ -50,8 +50,7 @@
 	<Button primary label="Button" icon="user" />
 	<Button label="Button" />
 	<Button label="Rounded" rounded />
-</Container>`}
-						/>
+</Container>`} />
 					</CollapseItem>
 				</Collapse>
 			</Container>

@@ -54,8 +54,7 @@
 		on:click={toggleDropdown}
 		on:keydown={toggleDropdown}
 		tabindex="0"
-		role="button"
-	>
+		role="button">
 		<slot />
 	</div>
 	{#if open}
@@ -65,7 +64,6 @@
 			on:toggle={toggleDropdown}
 			on:close={(e) => {
 				open = false;
-			}}
-		/>
+			}} />
 	{/if}
 </div>

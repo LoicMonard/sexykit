@@ -61,7 +61,6 @@
 					font-size: 12px;
 				}
 			}
-
 		}
 	}
 	&.textfield--large {
@@ -82,7 +81,7 @@
 			.textfield__inner {
 				color: $disabledText;
 			}
-		}	
+		}
 	}
 	&.textfield--readonly {
 		cursor: pointer;

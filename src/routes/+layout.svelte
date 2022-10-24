@@ -72,8 +72,7 @@
 				justify="space-between"
 				fullWidth
 				fullHeight
-				maxWidth="1280px"
-			>
+				maxWidth="1280px">
 				<Container class="header--left" align="center" gap="10px" fullHeight>
 					<img src={Logo} alt="Sexykit logo" class="header__logo" />
 					<img src={Slogan} alt="Sexykit logo" class="header__slogan" />
@@ -85,8 +84,7 @@
 							window.scroll({
 								top: document.getElementById(e.detail).offsetTop - 74,
 								behavior: 'smooth'
-							})}
-					/>
+							})} />
 				</Container>
 				<Container class="header--right" align="center" gap="10px">
 					<Text color="#EE6783" italic>v0.0.1</Text>

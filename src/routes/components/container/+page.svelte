@@ -10,17 +10,24 @@
 
 <Container direction="column" gap="20px" fullWidth>
 	<Text>
-		The <span class="property">Container</span> component is used to organize your elements. It is
-		flex and acts like flexboxes but embeds some useful features like
-		<span class="property">gap</span>, <span class="property">direction</span>,
-		<span class="property">alignment</span>, etc.
+		The <span class="property">Container</span>
+		component is used to organize your elements. It is flex and acts like flexboxes but embeds some
+		useful features like
+		<span class="property">gap</span>
+		,
+		<span class="property">direction</span>
+		,
+		<span class="property">alignment</span>
+		, etc.
 	</Text>
 	<Container direction="column" gap="20px" fullWidth>
 		<h2>Default container</h2>
 		<Text>
 			Default container only fits to its content, and is row-based. Simply add <span
-				class="property">fullWidth</span
-			> property so the Container can stretch to the parent width
+				class="property">
+				fullWidth
+			</span>
+			 property so the Container can stretch to the parent width
 		</Text>
 		<Card fullWidth bodyStyle="padding-bottom: 0px">
 			<Container direction="column" gap="20px" fullWidth>
@@ -49,8 +56,7 @@
   <div class="line" style="flex: 1" />
   <div class="line" style="flex: 1" />
   <div class="line" style="flex: 1" />
-</Container>`}
-				/>
+</Container>`} />
 			</Container>
 		</Card>
 	</Container>
@@ -71,7 +77,7 @@
 						<div class="line" style="width: 150px" />
 						<div class="line" style="width: 150px" />
 					</Container>
-					<Container direction="column" fullHeight justify="space-between">
+					<Container direction="column" fullHeight>
 						<div class="line" style="width: 150px; flex: 1;" />
 						<div class="line" style="width: 150px; flex: 1;" />
 						<div class="line" style="width: 150px; flex: 1;" />
@@ -88,12 +94,11 @@
   <div class="line" style="width: 150px" />
 </Container>
 
-<Container direction="column" fullHeight justify="space-between">
+<Container direction="column" fullHeight>
   <div class="line" style="width: 150px; flex: 1;" />
   <div class="line" style="width: 150px; flex: 1;" />
   <div class="line" style="width: 150px; flex: 1;" />
-</Container>`}
-				/>
+</Container>`} />
 			</Container>
 		</Card>
 	</Container>
@@ -101,8 +106,12 @@
 	<Container direction="column" gap="20px" fullWidth>
 		<h2>Alignment, justifying and spacing</h2>
 		<Text>
-			You can use <span class="property">align</span>, <span class="property">justify</span> and
-			<span class="property">gap</span> properties to align, justify and space your elements.
+			You can use <span class="property">align</span>
+			,
+			<span class="property">justify</span>
+			and
+			<span class="property">gap</span>
+			 properties to align, justify and space your elements.
 		</Text>
 		<Card fullWidth bodyStyle="padding-bottom: 0px">
 			<Container direction="column" fullWidth gap="20px">
@@ -137,8 +146,7 @@
 						fullWidth
 						gap="4px"
 						align="center"
-						style="background-color: #f5f5f5"
-					>
+						style="background-color: #f5f5f5">
 						<div class="line" style="width: 150px" />
 						<div class="line" style="width: 150px" />
 					</Container>
@@ -189,8 +197,7 @@
     <div class="line" style="width: 150px" />
     <div class="line" style="width: 150px" />
   </Container>
-</Container>`}
-				/>
+</Container>`} />
 			</Container>
 		</Card>
 	</Container>
@@ -198,7 +205,8 @@
 	<Container direction="column" gap="20px" fullWidth>
 		<h2>Custom style container</h2>
 		<Text>
-			You can use <span class="property">style</span> property to add custom style to your container.
+			You can use <span class="property">style</span>
+			 property to add custom style to your container.
 		</Text>
 		<Card fullWidth bodyStyle="padding-bottom: 0px">
 			<Container direction="column" gap="20px" fullWidth>
@@ -207,8 +215,7 @@
 					gap="20px"
 					fullWidth
 					justify="space-evenly"
-					style="padding: 10px; background-color: #f5f5f5;"
-				>
+					style="padding: 10px; background-color: #f5f5f5;">
 					<div class="line" style="width: 150px" />
 					<div class="line" style="width: 150px" />
 					<div class="line" style="width: 150px" />
@@ -228,8 +235,7 @@
   <div class="line" style="width: 150px; flex: 1;" />
   <div class="line" style="width: 150px; flex: 1;" />
   <div class="line" style="width: 150px; flex: 1;" />
-</Container>`}
-				/>
+</Container>`} />
 			</Container>
 		</Card>
 	</Container>

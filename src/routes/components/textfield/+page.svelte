@@ -79,11 +79,11 @@
 		<h2>Disabled and readonly</h2>
 		<Text>
 			The <span class="property">Textfield</span>
-      component supports two states:
-      <span class="property">disabled</span>
-      and
-      <span class="property">readonly</span>
-      .
+			component supports two states:
+			<span class="property">disabled</span>
+			and
+			<span class="property">readonly</span>
+			.
 		</Text>
 		<Card fullWidth bodyStyle="padding-bottom: 0px">
 			<Container direction="column" gap="20px" fullWidth>

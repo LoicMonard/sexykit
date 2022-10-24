@@ -65,7 +65,7 @@
 			<span class="property">Textfield</span>
 			component, it supports the same sizes. It can also be used with an icon with the
 			<span class="property">icon</span>
-			 property.
+			property.
 		</Text>
 		<Card fullWidth bodyStyle="padding-bottom: 0px">
 			<Container direction="column" gap="20px" fullWidth>

@@ -67,8 +67,7 @@
 		tabindex="0"
 		role="button"
 		on:click={toggleCollapse}
-		on:keydown={toggleCollapse}
-	>
+		on:keydown={toggleCollapse}>
 		{#if item.icon}
 			<div class="sidenavItem__icon">
 				<i class="fa-solid fa-{item.icon}" />
@@ -81,8 +80,7 @@
 			<i
 				class="sidenavItem__chevron {showChildren
 					? 'sidenavItem__chevron--open'
-					: ''} fa-solid fa-chevron-right"
-			/>
+					: ''} fa-solid fa-chevron-right" />
 		{/if}
 	</div>
 	{#if showChildren}
@@ -95,8 +93,7 @@
 					{itemStyle}
 					{firstLevelItemStyle}
 					{defaultExpandedItems}
-					on:click
-				/>
+					on:click />
 			{/each}
 		</div>
 	{/if}

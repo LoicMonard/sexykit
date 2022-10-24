@@ -29,8 +29,7 @@
 		on:click={toggleModal}
 		on:keydown={(e) => toggleModal(e)}
 		tabindex="0"
-		role="button"
-	>
+		role="button">
 		<slot name="trigger" />
 	</div>
 	{#if open}

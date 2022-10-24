@@ -89,8 +89,7 @@
 						if (e?.key === 'Enter') {
 							setActiveTab(tab);
 						}
-					}}
-				>
+					}}>
 					{tab.name}
 				</div>
 			{/each}

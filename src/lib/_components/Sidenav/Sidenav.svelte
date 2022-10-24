@@ -34,7 +34,6 @@
 			{itemStyle}
 			{firstLevelItemStyle}
 			{defaultExpandedItems}
-			on:click
-		/>
+			on:click />
 	{/each}
 </div>

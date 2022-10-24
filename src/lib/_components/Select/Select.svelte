@@ -20,7 +20,7 @@
 	 * The size of the input, passed to the Textfield
 	 */
 	export let size = 'medium';
-	/** 
+	/**
 	 * If the input is disabled, passed to the Textfield
 	 */
 	export let disabled = false;
@@ -137,8 +137,7 @@
 			{label}
 			{disabled}
 			on:blur={(e) => toggleSelect(e, false, 'blur')}
-			on:focus={(e) => toggleSelect(e, true, 'focus')}
-		>
+			on:focus={(e) => toggleSelect(e, true, 'focus')}>
 			<i class="select__chevron fa-solid fa-chevron-down" />
 		</Textfield>
 		{#if open === true}
@@ -146,8 +145,7 @@
 				items={filteredOptions}
 				selectedItems={[tmpValue]}
 				noResultText="Aucun résultat"
-				on:select={selectOption}
-			/>
+				on:select={selectOption} />
 		{/if}
 	</div>
 </div>

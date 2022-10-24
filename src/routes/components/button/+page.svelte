@@ -8,7 +8,6 @@
 	import Text from '$lib/_components/Text/Text.svelte';
 </script>
 
-
 <Container direction="column" gap="20px" fullWidth>
 	<Text>Comonly used button</Text>
 	<Container direction="column" gap="20px" fullWidth>
@@ -26,8 +25,7 @@
 	<Button primary label="Button" icon="user" />
 	<Button label="Button" />
 	<Button label="Rounded" rounded />
-</Container>`}
-				/>
+</Container>`} />
 			</Container>
 		</Card>
 	</Container>
@@ -49,8 +47,7 @@
 	<Button label="Delete" rightIcon="trash" />
 	<Button leftIcon="plus" icon />
 	<Button leftIcon="plus" icon rounded />
-</Container>`}
-				/>
+</Container>`} />
 			</Container>
 		</Card>
 	</Container>
@@ -70,8 +67,7 @@
 	<Button size="large" label="Large" />
 	<Button primary label="Medium" />
 	<Button size="small" label="Small" />
-</Container>`}
-				/>
+</Container>`} />
 			</Container>
 		</Card>
 	</Container>

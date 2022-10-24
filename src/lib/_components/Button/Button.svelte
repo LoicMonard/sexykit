@@ -51,8 +51,7 @@
 		rounded ? 'button--rounded' : '',
 		icon ? 'button--icon' : ''
 	].join(' ')}
-	on:click={onClick}
->
+	on:click={onClick}>
 	{#if leftIcon}
 		<i class="left-icon fa-solid fa-{leftIcon}" />
 	{/if}

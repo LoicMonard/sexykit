@@ -148,8 +148,7 @@
 			justify="space-between"
 			fullWidth
 			fullHeight
-			maxWidth="1280px"
-		>
+			maxWidth="1280px">
 			<Container class="header--left" align="center" gap="10px" fullHeight>
 				<img src={Logo} alt="Sexykit logo" class="header__logo" />
 				<img src={Slogan} alt="Sexykit logo" class="header__slogan" />
@@ -161,8 +160,7 @@
 						window.scroll({
 							top: document.getElementById(e.detail).offsetTop - 74,
 							behavior: 'smooth'
-						})}
-				/>
+						})} />
 			</Container>
 			<Container class="header--right" align="center" gap="10px">
 				<Text color="#EE6783" italic>v0.0.1</Text>
@@ -181,8 +179,7 @@
 		gap="20px"
 		padding="20px"
 		fullWidth
-		maxWidth="1280px"
-	>
+		maxWidth="1280px">
 		<Container direction="column" justify="start" fullWidth gap="20px" id="sidenav">
 			<h1>Sidenav</h1>
 			<Card fullWidth>
@@ -192,8 +189,7 @@
 						activeItem={activeSidenavItem}
 						on:click={(e) => {
 							activeSidenavItem = e.detail.label;
-						}}
-					/>
+						}} />
 				</Container>
 			</Card>
 		</Container>
@@ -235,8 +231,7 @@
 						placeholder="Placeholder"
 						label="Select an option"
 						options={selectOptions}
-						on:change={(e) => console.log(e.detail)}
-					/>
+						on:change={(e) => console.log(e.detail)} />
 					<Select
 						on:change={(e) => console.log(e.detail)}
 						placeholder="Choose a fruit"
@@ -246,8 +241,7 @@
 						options={[
 							{ value: 'lemon', label: 'Lemon' },
 							{ value: 'orange', label: 'Orange' }
-						]}
-					/>
+						]} />
 					<Select
 						placeholder="Placeholder"
 						label="Disabled option"
@@ -255,8 +249,7 @@
 							{ value: 'option1', label: 'Option 1' },
 							{ value: 'option2', label: 'Option 2', disabled: true },
 							{ value: 'option3', label: 'Option 3' }
-						]}
-					/>
+						]} />
 				</Container>
 			</Card>
 		</Container>
@@ -316,8 +309,7 @@
 							{ value: 'option1', label: 'Action 1' },
 							{ value: 'option2', label: 'Action 2', disabled: true },
 							{ value: 'option3', label: 'Action 3' }
-						]}
-					>
+						]}>
 						<Button label="Dropdown" />
 					</Dropdown>
 					<Dropdown
@@ -326,8 +318,7 @@
 							{ value: 'option1', label: 'Action 1' },
 							{ value: 'option2', label: 'Action 2', disabled: true },
 							{ value: 'option3', label: 'Action 3' }
-						]}
-					>
+						]}>
 						<Button leftIcon="plus" icon />
 					</Dropdown>
 					<Dropdown
@@ -336,8 +327,7 @@
 							{ value: 'option1', label: 'Action 1' },
 							{ value: 'option2', label: 'Action 2', disabled: true },
 							{ value: 'option3', label: 'Action 3' }
-						]}
-					>
+						]}>
 						<Text>Custom trigger</Text>
 					</Dropdown>
 				</Container>

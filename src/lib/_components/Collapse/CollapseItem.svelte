@@ -78,8 +78,7 @@
 		role="button"
 		tabindex="0"
 		on:click={toggleCollapse('header', name)}
-		on:keydown={(e) => toggleCollapse('header focus', name, e)}
-	>
+		on:keydown={(e) => toggleCollapse('header focus', name, e)}>
 		{#if $$slots.header}
 			<slot name="header" />
 		{:else}
@@ -91,16 +90,14 @@
 				tabindex="0"
 				role="button"
 				on:click={toggleCollapse('trigger', name)}
-				on:keydown={(e) => toggleCollapse('trigger focus', name, e)}
-			>
+				on:keydown={(e) => toggleCollapse('trigger focus', name, e)}>
 				<slot name="trigger" />
 			</div>
 		{:else}
 			<i
 				class="collapse-item__chevron {open
 					? 'collapse-item__chevron--open'
-					: ''} fa-solid fa-chevron-right"
-			/>
+					: ''} fa-solid fa-chevron-right" />
 		{/if}
 	</div>
 	{#if open}

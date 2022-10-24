@@ -56,7 +56,6 @@
 		height: {fullHeight ? '100%' : 'fit-content'};
 		max-width: {maxWidth};
 		{style}
-	"
->
+	">
 	<slot />
 </div>
