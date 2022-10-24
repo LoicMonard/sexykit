@@ -94,10 +94,14 @@
 				<slot name="trigger" />
 			</div>
 		{:else}
-			<i
-				class="collapse-item__chevron {open
-					? 'collapse-item__chevron--open'
-					: ''} fa-solid fa-chevron-right" />
+			<div
+				on:click|self={toggleCollapse('trigger', name)}
+				on:keydown={(e) => toggleCollapse('trigger focus', name, e)}>
+				<i
+					class="collapse-item__chevron {open
+						? 'collapse-item__chevron--open'
+						: ''} fa-solid fa-chevron-right" />
+			</div>
 		{/if}
 	</div>
 	{#if open}
