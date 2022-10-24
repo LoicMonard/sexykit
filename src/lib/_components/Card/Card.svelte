@@ -10,6 +10,10 @@
 	 */
 	export let shadow = 'hover';
 	/**
+	 * Card header style
+	 */
+	export let headerStyle = '';
+	/**
 	 * Card body style
 	 */
 	export let bodyStyle = '';
@@ -17,10 +21,9 @@
 
 <div
 	class={`card card-shadow--${shadow}`}
-	style={fullWidth ? 'width: 100%;' : 'width: fit-content'}
->
+	style={fullWidth ? 'width: 100%;' : 'width: fit-content'}>
 	{#if $$slots.header}
-		<div class="card--header">
+		<div class="card--header" style={headerStyle}>
 			<slot name="header" />
 		</div>
 	{/if}
