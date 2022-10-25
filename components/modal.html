@@ -37,6 +37,7 @@
 		<link href="/sexykit/internal/immutable/assets/Divider-ec25637b.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/CollapseItem-58eccd0e.css" rel="stylesheet">
 		<link href="/sexykit/internal/immutable/assets/index-548b5b0d.css" rel="stylesheet">
+		<link href="/sexykit/internal/immutable/assets/Modal-462bacf1.css" rel="stylesheet">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/start-af59835a.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/index-2bfe2af9.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/singletons-09f422e7.js">
@@ -58,9 +59,10 @@
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Card-f69b3963.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Sidenav-f4ac9c72.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Divider-c5559036.js">
-		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/select/_page.svelte-d116e402.js">
+		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/modal/_page.svelte-9a717902.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CodeBlock-ed5509f7.js">
-		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CollapseItem-b3818313.js"><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr -->
+		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CollapseItem-b3818313.js">
+		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Modal-f6fc6a20.js"><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr -->
 	</head>
 	<body>
 		<div>
@@ -139,121 +141,24 @@
 	<div class="sidenavItem__children"></div></div></div></div></div></div></div></div>
 	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 0px; padding: 20px; width: fit-content; height: fit-content; max-width: 100%; flex: 1; height: 100%; overflow: auto; flex-wrap: initial"><h1>Button</h1>
 		<div class="divider" style="margin: 20px 0"></div>
-		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">Select component is perfect to display plenty of options</span>
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Basic usage</h2>
-		<span class="text text--regular" style="color: undefined">The default <span class="property">Select</span>
-			component is a simple input with a dropdown list. It works with any kind of data, as long as you
-			provide the right keys to access the desired
-			<span class="property">value</span>
-			and
-			<span class="property">label</span>
-			.
-		</span>
-		<span class="text text--regular" style="color: undefined">The <span class="property">Select</span>
-			component also includes a search input to filter the list of options.
+		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">The <span class="property">Modal</span>
+		component is used to display a modal window.
+	</span>
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Default modal</h2>
+		<span class="text text--regular" style="color: undefined">The <span class="property">Modal</span>
+			component just provides a
+			<span class="property">title</span>
+			property, and a default slot for your content.
 		</span>
 		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="select"><div class="select__wrapper"><div class="textfield textfield--medium  "><label class="textfield__label" for="input">Option</label>
-	<div class="textfield__wrapper">
-		<input type="text" class="textfield__inner" name="input" placeholder="Choose an option" value="" >
-		<i class="select__chevron fa-solid fa-chevron-down"></i></div></div>
-		</div></div></div>
-				
-
-<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
-		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
-	</div></div></div></div></div></div>
-
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Sizes</h2>
-		<span class="text text--regular" style="color: undefined">As the <span class="property">Select</span>
-			component is based on the
-			<span class="property">Textfield</span>
-			component, it supports the same sizes. It can also be used with an icon with the
-			<span class="property">icon</span>
-			property.
-		</span>
-		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="select"><div class="select__wrapper"><div class="textfield textfield--large  "><label class="textfield__label" for="input">Large</label>
-	<div class="textfield__wrapper">
-		<input type="text" class="textfield__inner" name="input" placeholder="Choose an option" value="" >
-		<i class="select__chevron fa-solid fa-chevron-down"></i></div></div>
-		</div></div>
-					<div class="select"><div class="select__wrapper"><div class="textfield textfield--medium  "><label class="textfield__label" for="input">Medium</label>
-	<div class="textfield__wrapper">
-		<input type="text" class="textfield__inner" name="input" placeholder="Choose an option" value="" >
-		<i class="select__chevron fa-solid fa-chevron-down"></i></div></div>
-		</div></div>
-					<div class="select"><div class="select__wrapper"><div class="textfield textfield--small  "><label class="textfield__label" for="input">Small</label>
-	<div class="textfield__wrapper"><i class="textfield__icon fa-solid fa-lemon"></i>
-		<input type="text" class="textfield__inner" name="input" placeholder="Choose an option" value="" >
-		<i class="select__chevron fa-solid fa-chevron-down"></i></div></div>
-		</div></div></div>
-				
-
-<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
-		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
-	</div></div></div></div></div></div>
-
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Data binding</h2>
-		<span class="text text--regular" style="color: undefined">To add two way data binding over the <span class="property">Select</span>
-			component, simply pass your reference as the
-			<span class="property">value</span>
-			property, and make sure to update your reference whenever the
-			<span class="property">Select</span>
-			<span class="property">change</span>
-			event is fired.
-		</span>
-		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="select"><div class="select__wrapper"><div class="textfield textfield--medium  ">
-	<div class="textfield__wrapper">
-		<input type="text" class="textfield__inner" name="input" placeholder="Search" value="" >
-		<i class="select__chevron fa-solid fa-chevron-down"></i></div></div>
-		</div></div>
-					<div class="select"><div class="select__wrapper"><div class="textfield textfield--medium  ">
-	<div class="textfield__wrapper">
-		<input type="text" class="textfield__inner" name="input" placeholder="Search" value="" >
-		<i class="select__chevron fa-solid fa-chevron-down"></i></div></div>
-		</div></div>
-					<div class="select"><div class="select__wrapper"><div class="textfield textfield--medium  ">
-	<div class="textfield__wrapper">
-		<input type="text" class="textfield__inner" name="input" placeholder="Search" value="" >
-		<i class="select__chevron fa-solid fa-chevron-down"></i></div></div>
-		</div></div></div>
-				
-
-<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
-		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
-	</div></div></div></div></div></div>
-
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Disabled select</h2>
-		<span class="text text--regular" style="color: undefined">To disable the <span class="property">Select</span>
-			component, simply pass the
-			<span class="property">disabled</span>
-			property.
-		</span>
-		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="select"><div class="select__wrapper"><div class="textfield textfield--medium  textfield--disabled"><label class="textfield__label" for="input">Disabled</label>
-	<div class="textfield__wrapper">
-		<input type="text" class="textfield__inner" name="input" placeholder="Search" value="" disabled>
-		<i class="select__chevron fa-solid fa-chevron-down"></i></div></div>
-		</div></div></div>
-				
-
-<div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
-		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
-	</div></div></div></div></div></div>
-
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Disabled options</h2>
-		<span class="text text--regular" style="color: undefined">To disable a specific option, simply pass the
-			<span class="property">disabled</span>
-			property to the option object.
-		</span>
-		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="select"><div class="select__wrapper"><div class="textfield textfield--medium  ">
-	<div class="textfield__wrapper">
-		<input type="text" class="textfield__inner" name="input" placeholder="Search" value="" >
-		<i class="select__chevron fa-solid fa-chevron-down"></i></div></div>
-		</div></div></div>
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="modal"><div class="modal__trigger" tabindex="0" role="button"><button type="button" class="button button--medium button--secondary  ">
+	Modal
+	</button></div>
+	</div>
+					<div class="modal"><div class="modal__trigger" tabindex="0" role="button"><button type="button" class="button button--medium button--secondary  ">
+	Modal with title
+	</button></div>
+	</div></div>
 				
 
 <div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
@@ -261,7 +166,7 @@
 	</div></div></div></div></div></div></div></div></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="1vct9wu">
+		<script type="module" data-sveltekit-hydrate="13tm3qz">
 			import { start } from "/sexykit/internal/immutable/start-af59835a.js";
 
 			start({
@@ -269,14 +174,14 @@
 				hydrate: {
 					status: 200,
 					error: null,
-					node_ids: [0, 2, 12],
+					node_ids: [0, 2, 11],
 					params: {},
-					routeId: "components/select",
+					routeId: "components/modal",
 					data: (function(a){return [a,a,a]}(null)),
 					form: null
 				},
 				paths: {"base":"/sexykit","assets":"/sexykit"},
-				target: document.querySelector('[data-sveltekit-hydrate="1vct9wu"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="13tm3qz"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
