@@ -57,7 +57,7 @@
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Card-08cd6080.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Sidenav-d3cb8396.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/Divider-5d5c7145.js">
-		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/header/_page.svelte-48d91d05.js">
+		<link rel="modulepreload" href="/sexykit/internal/immutable/components/pages/components/sidenav/_page.svelte-c38b55c2.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CodeBlock-6dc55396.js">
 		<link rel="modulepreload" href="/sexykit/internal/immutable/chunks/CollapseItem-88642265.js"><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr --><!-- HEAD_svelte-10kwchr -->
 	</head>
@@ -138,30 +138,56 @@
 	<div class="sidenavItem__children"></div></div></div></div></div></div></div></div>
 	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 0px; padding: 20px; width: fit-content; height: fit-content; max-width: 100%; flex: 1; height: 100%; overflow: auto; flex-wrap: initial"><h1>Button</h1>
 		<div class="divider" style="margin: 20px 0"></div>
-		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">Basic <span class="property">Header</span>
-		component.
+		<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><span class="text text--regular" style="color: undefined">The <span class="property">Sidenav</span>
+		component is a navigation component that can be used to display a tree of items.
 	</span>
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Default header</h2>
-		<span class="text text--regular" style="color: undefined">The <span class="property">Header</span>
-			component acts like a container, it provides a default slot.
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Default sidenav</h2>
+		<span class="text text--regular" style="color: undefined">An array of object is used to build the whole tree of items. An item can have a <span class="property">label
+			</span>
+			, an
+			<span class="property">icon</span>
+			and a
+			<span class="property">children</span>
+			array.
 		</span>
 		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><header class="header " style="border: 1px solid #e5e5e5;"><div class="container" style="flex-direction: row; justify-content: start; align-items: center; gap: 0px; padding: 0px; width: 100%; height: 100%; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: space-between; align-items: start; gap: 0px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; align-items: center"><span class="text text--regular" style="color: undefined">Header</span>
-							<button type="button" class="button button--medium button--secondary  ">
-	Header button
-	</button></div></div></header></div>
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="sidenav"><div class="sidenavItem sidenavItem--active"><div class="sidenavItem__trigger" style="padding-left: 20px; undefined" tabindex="0" role="button"><div class="sidenavItem__icon"><i class="fa-solid fa-home"></i></div>
+		<div class="sidenavItem__label">Home</div>
+		<i class="sidenavItem__chevron  fa-solid fa-chevron-right"></i></div>
+	</div><div class="sidenavItem "><div class="sidenavItem__trigger" style="padding-left: 20px; undefined" tabindex="0" role="button"><div class="sidenavItem__icon"><i class="fa-solid fa-dashboard"></i></div>
+		<div class="sidenavItem__label">Dashboard</div>
+		<i class="sidenavItem__chevron  fa-solid fa-chevron-right"></i></div>
+	</div><div class="sidenavItem "><div class="sidenavItem__trigger" style="padding-left: 20px; undefined" tabindex="0" role="button"><div class="sidenavItem__icon"><i class="fa-solid fa-gear"></i></div>
+		<div class="sidenavItem__label">Settings</div>
+		</div>
+	</div></div></div>
 				
 
 <div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
 		<div class="collapse-item__trigger" tabindex="0" role="button"><i class="fa-solid fa-code" style="font-size: 12px" slot="trigger"></i></div></div>
 	</div></div></div></div></div></div>
 
-	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Fixed header</h2>
-		<span class="text text--regular" style="color: undefined">The <span class="property">Header</span>
-			component acts like a container, it provides a default slot.
+	<div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><h2>Custom style sidenav</h2>
+		<span class="text text--regular" style="color: undefined">The <span class="property">Sidenav</span>
+			component can be customized with the following properties :
+		</span>
+		<span class="text text--regular" style="color: undefined">- <span class="property">firstLevelItemStyle</span>
+			which is used to customize the only first level item
+		</span>
+		<span class="text text--regular" style="color: undefined">- <span class="property">itemStyle</span>
+			which is used to customize every item
 		</span>
 		<div class="card card-shadow--hover" style="width: 100%;">
-	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "></div>
+	<div class="card--body" style="padding-bottom: 0px"><div class="container" style="flex-direction: column; justify-content: start; align-items: start; gap: 20px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; "><div class="container" style="flex-direction: row; justify-content: start; align-items: start; gap: 10px; padding: 0px; width: fit-content; height: fit-content; max-width: 100%; width: 200px;"><div class="sidenav"><div class="sidenavItem sidenavItem--active"><div class="sidenavItem__trigger" style="padding-left: 20px; height: 40px" tabindex="0" role="button"><div class="sidenavItem__icon"><i class="fa-solid fa-home"></i></div>
+		<div class="sidenavItem__label" style="font-weight: bold">Home</div>
+		<i class="sidenavItem__chevron  fa-solid fa-chevron-right"></i></div>
+	</div><div class="sidenavItem "><div class="sidenavItem__trigger" style="padding-left: 20px; height: 40px" tabindex="0" role="button"><div class="sidenavItem__icon"><i class="fa-solid fa-dashboard"></i></div>
+		<div class="sidenavItem__label" style="font-weight: bold">Dashboard</div>
+		<i class="sidenavItem__chevron  fa-solid fa-chevron-right"></i></div>
+	</div><div class="sidenavItem "><div class="sidenavItem__trigger" style="padding-left: 20px; height: 40px" tabindex="0" role="button"><div class="sidenavItem__icon"><i class="fa-solid fa-gear"></i></div>
+		<div class="sidenavItem__label" style="font-weight: bold">Settings</div>
+		</div>
+	</div></div></div>
 				
 
 <div class="collapse"><div class="collapse-item collapse-item--no-borders"><div class="collapse-item__header" role="button" tabindex="0"><div class="container" style="flex-direction: row; justify-content: end; align-items: start; gap: 10px; padding: 0px; width: 100%; height: fit-content; max-width: 100%; padding-right: 8px"><i class="fa-solid fa-copy" style="font-size: 12px"></i></div>
@@ -169,7 +195,7 @@
 	</div></div></div></div></div></div></div></div></div></div></div>
 
 
-		<script type="module" data-sveltekit-hydrate="17dgxoq">
+		<script type="module" data-sveltekit-hydrate="110qzjf">
 			import { start } from "/sexykit/internal/immutable/start-e33d9502.js";
 
 			start({
@@ -177,14 +203,14 @@
 				hydrate: {
 					status: 200,
 					error: null,
-					node_ids: [0, 2, 9],
+					node_ids: [0, 2, 11],
 					params: {},
-					routeId: "components/header",
+					routeId: "components/sidenav",
 					data: (function(a){return [a,a,a]}(null)),
 					form: null
 				},
 				paths: {"base":"/sexykit","assets":"/sexykit"},
-				target: document.querySelector('[data-sveltekit-hydrate="17dgxoq"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="110qzjf"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
