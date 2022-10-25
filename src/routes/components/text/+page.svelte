@@ -25,8 +25,30 @@
 	import Text from 'pathToReplace/Text.svelte';
 </script>
 
-<Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</Text>
-					`} />
+<Text>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</Text>`} />
+			</Container>
+		</Card>
+	</Container>
+
+	<Container direction="column" gap="20px" fullWidth>
+		<h2>Link text</h2>
+		<Text>
+			The <span class="property">link</span>
+			property can be used to style a text as a link. It provides the same optionnal
+			<span class="property">href</span>
+			property as a regular link.
+		</Text>
+		<Card fullWidth bodyStyle="padding-bottom: 0px">
+			<Container direction="column" gap="20px" fullWidth>
+				<Container gap="10px" fullWidth>
+					<Text link href="https://loicmonard.github.io/sexykit/components/text">Sexykit link</Text>
+				</Container>
+				<CodeBlock
+					code={`<script>
+	import Text from 'pathToReplace/Text.svelte';
+</script>
+
+<Text link href="https://loicmonard.github.io/sexykit/components/text">Sexykit link</Text>`} />
 			</Container>
 		</Card>
 	</Container>
@@ -71,8 +93,7 @@
 <Text size="large">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</Text>
 <Text bold>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</Text>
 <Text italic>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</Text>
-<Text color="red">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</Text>
-					`} />
+<Text color="red">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis?</Text>`} />
 			</Container>
 		</Card>
 	</Container>

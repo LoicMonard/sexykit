@@ -13,6 +13,14 @@
 	&.text--bold {
 		font-weight: bold;
 	}
+	&.text--link {
+		color: $brandColor;
+		cursor: pointer;
+		&:hover {
+			color: $brandColor;
+			text-decoration: underline;
+		}
+	}
 	&.text--italic {
 		font-style: italic;
 	}
