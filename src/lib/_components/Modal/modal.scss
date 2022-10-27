@@ -25,7 +25,7 @@
 			z-index: -1;
 		}
 		.modal__content {
-			background-color: $baseBackground;
+			background-color: var(--base-background);
 			border-radius: 4px;
 			padding: 32px;
 		}

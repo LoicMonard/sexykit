@@ -3,7 +3,7 @@
 .button {
 	font-family: 'Pulp Regular';
 	border: 0;
-	border-radius: $baseBorderRadius;
+	border-radius: var(--base-border-radius);
 	cursor: pointer;
 	display: inline-block;
 	line-height: 1;
@@ -12,29 +12,29 @@
 	transition: all 0.3s ease;
 	&.button--primary {
 		color: white;
-		background-color: $brandColor;
+		background-color: var(--brand-color);
 		i {
 			color: white;
 		}
 		&:hover {
-			background-color: lighten($brandColor, 10%);
+			background-color: var(--brand-color-light-1);
 		}
 		&:focus-visible {
-			background-color: lighten($brandColor, 10%);
-			outline: 1px solid $brandColor;
+			background-color: var(--brand-color-light-1);
+			outline: 1px solid var(--brand-color);
 			outline-offset: 1px;
 		}
 	}
 	&.button--secondary {
 		color: #333;
-		background-color: $baseBackground;
+		background-color: var(--base-background);
 		box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 		&:hover {
-			background-color: darken($baseBackground, 5%);
+			background-color: var(--base-background-dark-1);
 		}
 		&:focus-visible {
-			background-color: darken($baseBackground, 5%);
-			outline: 1px solid darken($baseBackground, 25%);
+			background-color: var(--base-background-dark-1);
+			outline: 1px solid var(--base-background-dark-3);
 			outline-offset: 1px;
 		}
 	}

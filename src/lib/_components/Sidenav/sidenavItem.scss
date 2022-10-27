@@ -1,18 +1,18 @@
 @import '../../_styles/global';
 
 .sidenavItem {
-	background-color: $baseBackground;
+	background-color: var(--base-background);
 	overflow: hidden;
 	width: 100%;
-	transition: all $transitionDuration ease;
+	transition: all var(--transition-duration) ease;
 	.sidenavItem__trigger {
 		display: flex;
 		align-items: center;
 		gap: 10px;
 		padding: 0 20px;
 		height: 50px;
-		background-color: $baseBackground;
-		transition: all $transitionDuration ease;
+		background-color: var(--base-background);
+		transition: all var(--transition-duration) ease;
 		cursor: pointer;
 		.sidenavItem__label {
 			@include user-select(none);
@@ -32,12 +32,12 @@
 		}
 		@include focus-visible;
 		&:focus-visible {
-			color: $brandColor;
+			color: var(--brand-color);
 		}
 	}
 	&.sidenavItem--active {
 		> .sidenavItem__trigger {
-			color: $brandColor;
+			color: var(--brand-color);
 		}
 	}
 }

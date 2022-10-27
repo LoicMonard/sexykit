@@ -23,31 +23,31 @@
 			height: 34px;
 			line-height: 34px;
 			box-sizing: border-box;
-			color: $regularText;
+			color: var(--regular-text);
 			cursor: pointer;
 			&:focus-visible {
-				color: $brandColor;
+				color: var(--brand-color);
 			}
 			&.itemlist__option--selected {
-				color: $brandColor;
-				background-color: $selectedColor;
+				color: var(--brand-color);
+				background-color: var(--selected-color);
 				font-weight: 600;
 			}
 			&.itemlist__option--disabled {
 				cursor: not-allowed;
-				color: $disabledText;
+				color: var(--disabled-text);
 				&:hover {
 					background: none;
 				}
 			}
 			&.itemlist__option--focused {
-				background-color: $selectedColor;
-				color: $brandColor;
+				background-color: var(--selected-color);
+				color: var(--brand-color);
 			}
 			&.itemlist__option--empty {
 				cursor: default;
 				text-align: center;
-				color: $disabledText;
+				color: var(--disabled-text);
 			}
 			&:hover {
 				background-color: #f5f5f5;

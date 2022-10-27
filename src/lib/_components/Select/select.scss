@@ -9,15 +9,15 @@
 		position: relative;
 		.select__chevron {
 			font-size: 10px;
-			color: $placeholderText;
-			transition: all $transitionDuration ease;
+			color: var(--placeholder-text);
+			transition: all var(--transition-duration) ease;
 			pointer-events: none;
 		}
 	}
 	&:focus-within {
 		.select__wrapper {
 			.select__chevron {
-				color: $primaryText;
+				color: var(--primary-text);
 				transform: rotate(180deg);
 			}
 		}

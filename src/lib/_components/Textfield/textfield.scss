@@ -9,39 +9,39 @@
 		font-family: 'Pulp Regular';
 		font-weight: 300;
 		font-size: 14px;
-		color: $placeholderText;
-		transition: color $transitionDuration ease;
+		color: var(--placeholder-text);
+		transition: color var(--transition-duration) ease;
 	}
 	.textfield__wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
-		border: 1px solid $baseBorderColor;
-		border-radius: $baseBorderRadius;
+		border: 1px solid var(--base-border-color);
+		border-radius: var(--base-border-radius);
 		padding: 6px 10px;
-		transition: border $transitionDuration ease;
+		transition: border var(--transition-duration) ease;
 		.textfield__icon {
-			color: $placeholderText;
+			color: var(--placeholder-text);
 			font-size: 12px;
-			transition: color $transitionDuration ease;
+			transition: color var(--transition-duration) ease;
 		}
 		.textfield__inner {
 			font-family: 'Pulp Regular';
 			font-weight: 300;
 			font-size: 14px;
 			&::placeholder {
-				color: $placeholderText;
+				color: var(--placeholder-text);
 				font-size: 14px;
 			}
 		}
 		&:hover {
-			border-color: $tintColor;
+			border-color: var(--tint-color);
 		}
 		&:focus-within {
-			border-color: $brandColor;
+			border-color: var(--brand-color);
 			.textfield__icon {
-				color: $brandColor;
+				color: var(--brand-color);
 			}
 		}
 	}
@@ -71,15 +71,15 @@
 	}
 	&.textfield--disabled {
 		.textfield__label {
-			color: $disabledText;
+			color: var(--disabled-text);
 		}
 		.textfield__wrapper {
 			background-color: #f5f5f5;
 			.textfield__icon {
-				color: $disabledText;
+				color: var(--disabled-text);
 			}
 			.textfield__inner {
-				color: $disabledText;
+				color: var(--disabled-text);
 			}
 		}
 	}
@@ -88,7 +88,7 @@
 	}
 	&:focus-within {
 		.textfield__label {
-			color: $primaryText;
+			color: var(--primary-text);
 		}
 	}
 }

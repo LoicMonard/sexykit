@@ -1,7 +1,7 @@
 @import '../../_styles/global';
 
 .tab {
-	animation: fadeIn $transitionDuration ease-in;
+	animation: fadeIn var(--transition-duration) ease-in;
 }
 
 @keyframes fadeIn {

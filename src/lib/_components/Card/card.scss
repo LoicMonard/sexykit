@@ -1,10 +1,10 @@
 @import '../../_styles/global';
 
 .card {
-	border: 1px solid $baseBorderColor;
-	border-radius: $baseBorderRadius;
-	transition: all $transitionDuration ease;
-	background-color: $baseBackground;
+	border: 1px solid var(--base-border-color);
+	border-radius: var(--base-border-radius);
+	transition: all var(--transition-duration) ease;
+	background-color: var(--base-background);
 	&.card-shadow--always {
 		box-shadow: 0px 0px 0.7px rgba(0, 0, 0, 0.04), 0px 0px 2.2px rgba(0, 0, 0, 0.06),
 			0px 0px 10px rgba(0, 0, 0, 0.07);
@@ -22,7 +22,7 @@
 	.card--header {
 		display: flex;
 		padding: 20px;
-		border-bottom: 1px solid $baseBorderColor;
+		border-bottom: 1px solid var(--base-border-color);
 	}
 	.card--body {
 		padding: 20px;

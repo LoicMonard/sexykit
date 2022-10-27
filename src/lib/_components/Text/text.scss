@@ -14,10 +14,10 @@
 		font-weight: bold;
 	}
 	&.text--link {
-		color: $brandColor;
+		color: var(--brand-color);
 		cursor: pointer;
 		&:hover {
-			color: $brandColor;
+			color: var(--brand-color);
 			text-decoration: underline;
 		}
 	}

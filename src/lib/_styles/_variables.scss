@@ -1,26 +1,63 @@
-$brandColor: #ee6783;
-$tintColor: #cccfd4;
-$selectedColor: #f5f5f5;
+$brand-color: #ee6783;
+$brand-color-light-1: lighten(#ee6783, 10%);
+$tint-color: #cccfd4;
+$selected-color: #f5f5f5;
 
-$successColor: #67c23a;
-$warningColor: #e6a23c;
-$dangerColor: #f56c6c;
-$infoColor: #909399;
+$success-color: #67c23a;
+$warning-color: #e6a23c;
+$danger-color: #f56c6c;
+$info-color: #909399;
 
-$primaryText: #303133;
-$regularText: #606266;
-$secondaryText: #909399;
-$disabledText: #c0c4cc;
-$placeholderText: #a8abb2;
+$primary-text: #303133;
+$regular-text: #606266;
+$secondary-text: #909399;
+$disabled-text: #c0c4cc;
+$placeholder-text: #a8abb2;
 
-$baseBackground: #ffffff;
+$base-background: #ffffff;
+$base-background-dark-1: darken(#ffffff, 5%);
+$base-background-dark-2: darken(#ffffff, 15%);
+$base-background-dark-3: darken(#ffffff, 25%);
 
-$baseBorderColor: #ebeef5;
-$baseBorderRadius: 0.3em;
+$base-border-color: #ebeef5;
+$base-border-radius: 0.3em;
 
-$transitionDuration: 0.3s;
+$transition-duration: 0.3s;
 
-$h1Size: 2em;
-$h2Size: 1.5em;
-$h3Size: 1.17em;
-$h4Size: 1em;
+$h1-size: 2em;
+$h2-size: 1.5em;
+$h3-size: 1.17em;
+$h4-size: 1em;
+
+:root {
+  --brand-color: #{$brand-color};
+  --brand-color-light-1: #{$brand-color-light-1};
+  --tint-color: #{$tint-color};
+  --selected-color: #{$selected-color};
+
+  --success-color: #{$success-color};
+  --warning-color: #{$warning-color};
+  --danger-color: #{$danger-color};
+  --info-color: #{$info-color};
+
+  --primary-text: #{$primary-text};
+  --regular-text: #{$regular-text};
+  --secondary-text: #{$secondary-text};
+  --disabled-text: #{$disabled-text};
+  --placeholder-text: #{$placeholder-text};
+
+  --base-background: #{$base-background};
+  --base-background-dark-1: #{$base-background-dark-1};
+  --base-background-dark-2: #{$base-background-dark-2};
+  --base-background-dark-3: #{$base-background-dark-3};
+
+  --base-border-color: #{$base-border-color};
+  --base-border-radius: #{$base-border-radius};
+
+  --transition-duration: #{$transition-duration};
+
+  --h1-size: #{$h1-size};
+  --h2-size: #{$h2-size};
+  --h3-size: #{$h3-size};
+  --h4-size: #{$h4-size};
+}
