@@ -4,8 +4,9 @@
 	import Card from '$lib/_components/Card/Card.svelte';
 	import Container from '$lib/_components/Container/Container.svelte';
 	import Sidenav from '$lib/_components/Sidenav/Sidenav.svelte';
-	import { goto } from '$app/navigation';
 	import Divider from '$lib/_components/Divider/Divider.svelte';
+	import { goto } from '$app/navigation';
+	import { navigating } from '$app/stores';
 	import { onMount } from 'svelte';
 
 	const sidenavTree = [
@@ -109,7 +110,6 @@
 	let activeSidenavItem = 'Button';
 
 	const selectNavItem = (e) => {
-		activeSidenavItem = e.label;
 		goto('/sexykit/components/' + e.path);
 	};
 
@@ -118,6 +118,12 @@
 		activeSidenavItem =
 			path[path.length - 1].charAt(0).toUpperCase() + path[path.length - 1].slice(1);
 	});
+
+	$: if ($navigating) {
+		activeSidenavItem =
+			$navigating.to.routeId.split('/')[1].charAt(0).toUpperCase() +
+			$navigating.to.routeId.split('/')[1].slice(1);
+	}
 </script>
 
 <Container

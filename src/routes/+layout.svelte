@@ -60,6 +60,12 @@
 			value: 'collapse'
 		}
 	];
+
+	import { goto } from '$app/navigation';
+
+	function routeToPage(route, replaceState) {
+		goto(`/sexykit/components/${route}`, { replaceState });
+	}
 </script>
 
 <Container direction="column" align="center" fullWidth>
@@ -80,11 +86,7 @@
 						placeholder="Find a component"
 						options={indexCategories}
 						valueKey="value"
-						on:change={(e) =>
-							window.scroll({
-								top: document.getElementById(e.detail).offsetTop - 74,
-								behavior: 'smooth'
-							})} />
+						on:change={(e) => routeToPage(e.detail, false)} />
 				</Container>
 				<Container class="header--right" align="center" gap="10px">
 					<Text color="#EE6783" italic>v0.0.1</Text>
