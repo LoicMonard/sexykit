@@ -1,5 +1,6 @@
 {
-	"name": "@loic-monard/sexykit",
+	"name": "@loicmonard/sexykit",
+	"repository": "github.com/loicmonard/sexykit",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
@@ -31,6 +32,7 @@
 		"@sveltejs/adapter-static": "^1.0.0-next.42",
 		"@sveltejs/kit": "^1.0.0-next.513",
 		"@sveltejs/package": "^1.0.0-next.5",
+		"@tsconfig/svelte": "^3.0.0",
 		"babel-loader": "^8.2.5",
 		"eslint": "^8.16.0",
 		"eslint-config-prettier": "^8.3.0",
@@ -39,10 +41,12 @@
 		"prettier": "^2.6.2",
 		"prettier-plugin-svelte": "^2.7.0",
 		"svelte": "^3.49.0",
+		"svelte-check": "^2.10.0",
 		"svelte-highlight": "^6.2.1",
 		"svelte-loader": "^3.1.3",
+		"svelte-preprocess": "^4.10.7",
 		"svelte2tsx": "^0.5.16",
-		"typescript": "^4.8.2",
+		"typescript": "^4.9.3",
 		"vite": "^3.0.0"
 	},
 	"type": "module"
