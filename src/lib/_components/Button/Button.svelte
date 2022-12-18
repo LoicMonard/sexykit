@@ -1,43 +1,43 @@
-<script>
+<script lang="ts">
 	import './button.scss';
 	import { createEventDispatcher } from 'svelte';
 	/**
 	 * Is this the principal call to action on the page?
 	 */
-	export let primary = false;
+	export let primary: boolean = false;
 	/**
 	 * How large should the button be?
 	 */
-	export let size = 'medium';
+	export let size: string = 'medium';
 	/**
 	 * Button contents
 	 */
-	export let label = '';
-	/**
+	export let label: string = '';
+	/**p
 	 * Button left icon
 	 */
-	export let leftIcon = '';
+	export let leftIcon: string = '';
 	/**
 	 * Button right icon
 	 */
-	export let rightIcon = '';
+	export let rightIcon: string = '';
 	/**
 	 * Rounded button
 	 */
-	export let rounded = false;
+	export let rounded: boolean = false;
 	/**
 	 * Icon button
 	 */
-	export let icon = false;
+	export let icon: boolean = false;
 
-	let mode = primary ? 'button--primary' : 'button--secondary';
+	let mode: string = primary ? 'button--primary' : 'button--secondary';
 
 	const dispatch = createEventDispatcher();
 
 	/**
 	 * Optional click handler
 	 */
-	function onClick(event) {
+	function onClick(event: Event): void {
 		dispatch('click', event);
 	}
 </script>
