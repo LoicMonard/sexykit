@@ -1,22 +1,22 @@
-<script>
+<script lang="ts">
 	import './card.scss';
 
 	/**
 	 * If the card should take the full width of its container
 	 */
-	export let fullWidth = false;
+	export let fullWidth: boolean = false;
 	/**
 	 * If the card should take the full width of its container
 	 */
-	export let shadow = 'hover';
+	export let shadow: string = 'hover';
 	/**
 	 * Card header style
 	 */
-	export let headerStyle = '';
+	export let headerStyle: string = '';
 	/**
 	 * Card body style
 	 */
-	export let bodyStyle = '';
+	export let bodyStyle: string = '';
 </script>
 
 <div

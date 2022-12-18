@@ -1,30 +1,32 @@
-<script>
+<script lang="ts">
 	import './text.scss';
+
+	type Size = 'small' | 'regular' | 'large';
 
 	/**
 	 * The size of the text
 	 */
-	export let size = 'regular';
+	export let size: Size = 'regular';
 	/**
 	 * If the text is bold
 	 */
-	export let bold;
+	export let bold: boolean = false;
 	/**
 	 * If the text is italic
 	 */
-	export let italic;
+	export let italic: boolean = false;
 	/**
 	 * If the text is a link
 	 */
-	export let link;
+	export let link: boolean = false;
 	/**
 	 * The url of the link
 	 */
-	export let href;
+	export let href: string = '';
 	/**
 	 * The color of the text
 	 */
-	export let color;
+	export let color: string = '';
 </script>
 
 {#if link}
