@@ -35,4 +35,18 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
+## Packaging
+
+To create a package:
+```bash
+npm run package
+```
+
+## Deploy
+
+After a package action, copy and paste the .npmrc file in the package folder and perform: 
+```bash
+npm publish
+```
+
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

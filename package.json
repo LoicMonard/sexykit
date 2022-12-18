@@ -1,7 +1,7 @@
 {
 	"name": "@loicmonard/sexykit",
 	"repository": "github.com/loicmonard/sexykit",
-	"version": "0.0.1",
+	"version": "0.0.1-dev",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
