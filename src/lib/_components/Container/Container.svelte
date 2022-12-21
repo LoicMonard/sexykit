@@ -4,7 +4,7 @@
 	/**
 	 * The id of the component
 	 */
-	export let id;
+	export let id = '';
 	/**
 	 * The direction of the container
 	 */

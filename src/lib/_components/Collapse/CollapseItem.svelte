@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { getContext } from 'svelte';
 	import { quadOut } from 'svelte/easing';
 	import './collapseItem.scss';
@@ -6,26 +6,26 @@
 	/**
 	 * The name of the collapse item
 	 */
-	export let name;
+	export let name: string;
 	/**
 	 * If the collapse can be toggled on the header click
 	 */
-	export let toggleOnTriggerOnly = false;
+	export let toggleOnTriggerOnly: boolean = false;
 	/**
 	 * If the collapse item has borders
 	 */
-	export let bordered = true;
+	export let bordered: boolean = true;
 
 	/**
 	 * If the collapse item is toggled
 	 */
-	let open = false;
+	let open: boolean = false;
 	/**
 	 * Reactive property that is updated when the collapse item is toggled
 	 * Opens or closes the collapse item depending on the parent activeItems store
 	 */
 	$: {
-		if (Array.isArray($activeItems) && $activeItems.includes(name)) {
+		if (Array.isArray(activeItems) && activeItems.includes(name)) {
 			open = true;
 		} else {
 			open = false;
@@ -34,17 +34,17 @@
 	/**
 	 * The active items store from the parent
 	 */
-	const { activeItems } = getContext('activeItems');
+	const { activeItems }: { activeItems: string[] } = getContext('activeItems');
 	/**
 	 * A function to access the parent updateCollapseItems method
 	 */
-	const { updateCollapseItems } = getContext('updateCollapseItems');
+	const { updateCollapseItems }: { updateCollapseItems: any } = getContext('updateCollapseItems');
 	/**
 	 * A function that toggles the collapse item and updates the active items store
 	 *
 	 * @param name
 	 */
-	const toggleCollapse = (from, name, e = null) => {
+	const toggleCollapse = (from: string, name: string, e = null) => {
 		if (
 			(from === 'trigger' && toggleOnTriggerOnly) ||
 			(from === 'header' && !toggleOnTriggerOnly) ||
@@ -53,8 +53,6 @@
 		) {
 			updateCollapseItems(name);
 			open = !open;
-		} else {
-			return;
 		}
 	};
 	/**
@@ -63,10 +61,10 @@
 	 * @param node
 	 * @param param1
 	 */
-	const toggleHeight = (node, { speed = 1 }) => {
+	const toggleHeight = (node: HTMLElement, { speed = 1 }) => {
 		return {
 			duration: 300 * speed,
-			css: (t) => `max-height: ${t * node.offsetHeight}px; margin-bottom: ${t * 20}px;`,
+			css: (t: number) => `max-height: ${t * node.offsetHeight}px; margin-bottom: ${t * 20}px;`,
 			easing: quadOut
 		};
 	};

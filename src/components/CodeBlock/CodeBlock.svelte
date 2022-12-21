@@ -32,7 +32,7 @@
 </svelte:head>
 
 <Collapse>
-	<CollapseItem toggleOnTriggerOnly bordered={false}>
+	<CollapseItem name="codeblock" toggleOnTriggerOnly bordered={false}>
 		<Container gap="10px" fullWidth slot="header" justify="end" style="padding-right: 8px">
 			<i class="fa-solid fa-copy" style="font-size: 12px" on:click={copyCode} />
 		</Container>
