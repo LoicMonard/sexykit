@@ -1,52 +1,97 @@
-# create-svelte
+<p align="center">
+  <img width="300px" src="https://user-images.githubusercontent.com/15014749/217295959-3bced998-909d-4a3e-bb17-a35a9e1d9060.png">
+</p>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<p align="center">
+  <a href="https://img.shields.io/github/package-json/v/LoicMonard/sexykit">
+    <img src="https://img.shields.io/github/package-json/v/LoicMonard/sexykit?style=flat-square">
+  </a>
+  <a href="https://github.com/LoicMonard/sexykit/issues">
+    <img src="https://img.shields.io/github/issues/LoicMonard/sexykit?color=red&style=flat-square" />
+  </a>
+  <a href="https://github.com/LoicMonard/sexykit/commits/dev">
+    <img src="https://img.shields.io/github/last-commit/LoicMonard/sexykit?color=ee6783&logo=github&style=flat-square" />
+  </a>
+  <br>
+</p>
 
-## Creating a project
+<p align="center">Sexykit - A Svelte based UI library</p>
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting Started
+
+Sveltekit is a library that provides a set of components to build your application. It is based on the [Svelte](https://svelte.dev/) framework. It is a work in progress, so it is not recommended to use it in production, but you can try it out on the [demo](https://loicmonard.github.io/sexykit/components/button) page and give us your feedback.
+
+### Package installation
+
+> Note: 🚸 As it is in work in progress, the library is not yet available on npm. The package is only available on github packages to granted access users.
+
+
+You can install it with the following command:
+
 
 ```bash
-# create a new project in the current directory
-npm init svelte
+npm install @loicmonard/sexykit
+```
+---
 
-# create a new project in my-app
-npm init svelte my-app
+## Project setup
+
+### Install dependencies
+
+```bash
+npm install
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+### Compiles and hot-reloads for development
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
+### Compiles and minifies for production
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+### Package the library
 
-## Packaging
-
-To create a package:
 ```bash
 npm run package
 ```
 
-## Deploy
+### Deploy the package to github packages
+After a package action, copy and paste the .npmrc file in the package folder and perform the following command:
 
-After a package action, copy and paste the .npmrc file in the package folder and perform: 
 ```bash
-npm publish
+npm run deploy
 ```
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Development sheet
+
+You can directly see how's the project growing as the demo page is updated with each new component. You can also see the code of each component on the [demo](https://loicmonard.github.io/sexykit/components/button) page.
+
+Available components:
+
+* Basic:
+    * [x] Button
+    * [x] Container
+    * [x] Text
+* Form
+    * [x] Select
+    * [x] Textfield
+* Data
+    * [x] Card
+    * [x] Collapse
+* Navigation
+    * [x] Dropdown
+    * [x] Header
+    * [x] Sidenav
+    * [x] Tabs
+* Feedback
+    * [x] Modal
+* Others
+    * [x] Divider
+
+More components are coming soon!
