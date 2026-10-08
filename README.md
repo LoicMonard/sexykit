@@ -19,7 +19,7 @@
 
 ## Getting Started
 
-Sveltekit is a library that provides a set of components to build your application. It is based on the [Svelte](https://svelte.dev/) framework. It is a work in progress, so it is not recommended to use it in production, but you can try it out on the [demo](https://loicmonard.github.io/sexykit/components/button) page and give us your feedback.
+Sexykit is a library that provides a set of components to build your application. It is based on the [Svelte](https://svelte.dev/) framework. It is a work in progress, so it is not recommended to use it in production, but you can try it out on the [demo](https://loicmonard.github.io/sexykit/components/button) page and give us your feedback.
 
 ### Package installation
 
